@@ -4,14 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images_icons/logo";
 import "./header.css";
 import { Link } from "react-scroll";
+import { Link as LinkRoute } from "react-router-dom";
 
 export default function NavbarEl() {
   return (
     <>
       <Navbar className="navbar-container">
         <Container>
-          <Navbar.Brand href="#home">
-            <Logo />
+          <Navbar.Brand>
+            <LinkRoute to="/">
+              <Logo />
+            </LinkRoute>
           </Navbar.Brand>
           <Nav className="me-auto nav-center ">
             <Link to="about" spy={true} smooth={true} offset={-400}>

@@ -30,3 +30,38 @@
     flex-direction: inherit;
   }
 }
+
+.project-page-container {
+  height: 50rem;
+  width: 100%;
+  color: black;
+  background-color: yellow;
+  border: 3px solid black;
+  margin: 3rem 0;
+}
+.project-page-Two-container {
+  height: 50rem;
+  width: 100%;
+  color: white;
+  background-color: green;
+  border: 3px solid black;
+  margin: 3rem 0;
+}
+
+.project-page-Three-container {
+  height: 50rem;
+  width: 100%;
+  color: white;
+  background-color: red;
+  border: 3px solid black;
+  margin: 3rem 0;
+}
+
+.project-page-Four-container {
+  height: 50rem;
+  width: 100%;
+  color: white;
+  background-color: blue;
+  border: 3px solid black;
+  margin: 3rem 0;
+}
