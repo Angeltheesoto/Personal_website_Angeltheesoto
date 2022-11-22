@@ -2,19 +2,28 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import Container from "react-bootstrap/esm/Container";
 
 // Components
-// import Homepage from "./views/Homepage";
-import Essential from "./views/Essential";
+import Header from "./views/Header";
+import Footer from "./views/Footer";
+import Homepage from "./views/Homepage";
+import Projectpage from "./views/Projectpage";
 
 function App() {
   return (
     <div className="App">
       {
-        <>
-          {/* <Homepage /> */}
-          <Essential />
-        </>
+        <BrowserRouter>
+          <Container>
+            <Header />
+            {/* <Homepage /> */}
+            <Route path="/" component={() => <Homepage />} exact />
+            <Route path="/project" component={() => <Projectpage />} />
+            <Footer />
+          </Container>
+        </BrowserRouter>
       }
     </div>
   );

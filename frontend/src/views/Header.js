@@ -1,17 +1,13 @@
 // Dependencies
-import Container from "react-bootstrap/Container";
 import React, { useState, useRef, useEffect } from "react";
-import "./Homepage.css";
+import "./views.css";
 
 // Components
 import NavbarEl from "../components/header/nav";
 import Hero from "../components/header/hero";
 import Lava from "../components/main/Lava";
-import Contact from "../components/footer/Contact";
-import Map from "../components/footer/Map";
-import Homepage from "./Homepage";
 
-function Essential() {
+function Header() {
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
 
@@ -44,27 +40,18 @@ function Essential() {
   };
 
   return (
-    <div className="app-container">
-      <Container>
-        <div className="header-container">
-          <div className="box-container">
-            <NavbarEl />
-            <FadeInSection>
-              <Hero />
-            </FadeInSection>
-          </div>
-          <Lava />
+    <>
+      <div className="header-container">
+        <div className="box-container">
+          <NavbarEl />
+          <FadeInSection>
+            <Hero />
+          </FadeInSection>
         </div>
-        {/* This is where we change the content - set routes. */}
-        {<Homepage />}
-        {/* This is where we change the content - set routes. */}
-        <FadeInSection>
-          <Contact />
-          <Map />
-        </FadeInSection>
-      </Container>
-    </div>
+        <Lava />
+      </div>
+    </>
   );
 }
 
-export default Essential;
+export default Header;
