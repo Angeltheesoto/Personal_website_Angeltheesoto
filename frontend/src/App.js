@@ -10,9 +10,10 @@ import Header from "./views/Header";
 import Footer from "./views/Footer";
 import Homepage from "./views/Homepage";
 import Projectpage from "./views/Projectpage";
-import ProjectpageTwo from "./views/ProjectpageTwo";
-import ProjectpageThree from "./views/ProjectpageThree";
-import ProjectpageFour from "./views/ProjectpageFour";
+import notes from "./data/notes";
+// import ProjectpageTwo from "./views/ProjectpageTwo";
+// import ProjectpageThree from "./views/ProjectpageThree";
+// import ProjectpageFour from "./views/ProjectpageFour";
 
 function App() {
   return (
@@ -23,10 +24,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/project" element={<Projectpage />} />
-              <Route path="/projectTwo" element={<ProjectpageTwo />} />
-              <Route path="/projectThree" element={<ProjectpageThree />} />
-              <Route path="/projectFour" element={<ProjectpageFour />} />
+              <Route path="/project/:id" element={<Projectpage />} />
             </Routes>
             <Footer />
           </Container>

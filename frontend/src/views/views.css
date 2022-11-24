@@ -31,37 +31,17 @@
   }
 }
 
-.project-page-container {
-  height: 50rem;
-  width: 100%;
-  color: black;
-  background-color: yellow;
-  border: 3px solid black;
-  margin: 3rem 0;
-}
-.project-page-Two-container {
-  height: 50rem;
-  width: 100%;
-  color: white;
-  background-color: green;
-  border: 3px solid black;
-  margin: 3rem 0;
+.project-container {
+  margin: 5rem 0rem 7rem 0rem;
+  text-align: center;
+  height: 100%;
 }
 
-.project-page-Three-container {
-  height: 50rem;
-  width: 100%;
-  color: white;
-  background-color: red;
-  border: 3px solid black;
-  margin: 3rem 0;
-}
-
-.project-page-Four-container {
-  height: 50rem;
-  width: 100%;
-  color: white;
-  background-color: blue;
-  border: 3px solid black;
-  margin: 3rem 0;
+.caption-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
 }

@@ -10,14 +10,23 @@ app.get("/", (req, res) => {
   res.send("API is running..");
 });
 
-app.get("/api/notes", (req, res) => {
+// app.get("/api/notes", (req, res) => {
+//   res.json(notes);
+// });
+
+// app.get("/api/notes/:id", (req, res) => {
+//   const note = notes.find((n) => n._id === req.params.id);
+//   // console.log(req.params);
+
+//   res.send(note);
+// });
+
+app.get("/project", (req, res) => {
   res.json(notes);
 });
 
-app.get("/api/notes/:id", (req, res) => {
+app.get("/project/:id", (req, res) => {
   const note = notes.find((n) => n._id === req.params.id);
-  // console.log(req.params);
-
   res.send(note);
 });
 

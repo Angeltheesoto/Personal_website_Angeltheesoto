@@ -12,9 +12,9 @@ function LinkedIn() {
         <feColorMatrix
           color-interpolation-filters="sRGB"
           type="matrix"
-          values="0 0   0   0   0
-                  0   0.47  0   0   0
-                  0   0   0.71  0   0
+          values="0.98 0   0   0   0
+                  0   0  0   0   0
+                  0   0   0  0   0
                   0   0   0   1   0 "
         />
       </filter>
