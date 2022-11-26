@@ -9,7 +9,7 @@ import { Link as LinkRoute } from "react-router-dom";
 export default function NavbarEl() {
   return (
     <>
-      <Navbar className="navbar-container">
+      <Navbar className="navbar-container" id="navbar-container">
         <Container>
           <Navbar.Brand>
             <LinkRoute to="/">

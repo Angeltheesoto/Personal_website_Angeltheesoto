@@ -10,10 +10,6 @@ import Header from "./views/Header";
 import Footer from "./views/Footer";
 import Homepage from "./views/Homepage";
 import Projectpage from "./views/Projectpage";
-import notes from "./data/notes";
-// import ProjectpageTwo from "./views/ProjectpageTwo";
-// import ProjectpageThree from "./views/ProjectpageThree";
-// import ProjectpageFour from "./views/ProjectpageFour";
 
 function App() {
   return (
