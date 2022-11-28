@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 // blank
 app.get("/project", (req, res) => {
   res.json(notes);
+  res.send(notes);
 });
 
 // project id route
@@ -26,27 +27,7 @@ app.get("/project/:id", (req, res) => {
 
 //wild card route
 // app.get("*", (req, res) => {
-//   res.status(404).send(`<div style='
-//                background-color: blue;
-//                height: 50%;
-//                width: 50%;
-//                border-radius: 10px;
-//                margin-left: 25%;
-//                margin-top: 25%;
-//                ' >
-//                <div
-//                style=' color: white;
-//                text-align: center;
-
-//                ' >
-//                  <h1>404</h1>
-//                  <h2>Page Not Found</h2>
-//                  <h3>this page doesn't exist </h3>
-//                </div>
-
-//              </div>
-
-//              `);
+//   res.status(404).send(`Error 404 : page not found`);
 // });
 
 const PORT = process.env.PORT || 5000;
