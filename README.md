@@ -14,6 +14,8 @@ Frontend --
 [react-router-dom] - lets you change content on click in page.
 [axios] - links backend and frontend. Makes api calls easy.
 [concurrently] - lets you run frontend and backend with one command.npm run start
+[mongoose] - Provides everything that lets us connect to mongoDB.
+[] -
 -->
 
 [Angeltheesoto](angeltheesoto.com) is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
