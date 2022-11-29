@@ -1,37 +1,91 @@
-// dependencies
+// DEPENDENCIES ---
 const express = require("express");
-const notes = require("./data/notes");
+// const router = express.Router();
 const dotenv = require("dotenv");
 const cors = require("cors");
-const connectDB = require("./config/db");
+const mongoose = require("mongoose");
 
+// FILES ---
+const connectDB = require("./config/db");
+// const projectController = require("./controller/projectController");
+
+// VARIABLES & FUNCTIONS ---
 const app = express();
+const PORT = process.env.PORT || 5000;
 dotenv.config();
 connectDB();
-
 app.use(cors());
+// projectController();
+
+mongoose.connection.on("connected", () => {
+  console.log("mongoose is connected!!");
+});
+
+// Schema --------------
+const Schema = mongoose.Schema;
+const ProjectSchema = new mongoose.Schema({
+  _id: { type: String },
+  title: { type: String },
+  content: { type: String },
+  category: { type: String },
+  link: { type: String },
+  imgOne: { type: String },
+  imgTwo: { type: String },
+  imgThree: { type: String },
+});
+// Schema --------------
+// Model --------------
+const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
+
+// Test data to be sent --
+// const data = {
+//   _id: "1",
+//   title: "Test Title",
+// };
+
+// Instance of the model
+// const newProjectModel = new ProjectModel(data);
+
+// Save data - log if data has been sent.
+// newProjectModel.save((error) => {
+//   if (error) {
+//     console.log("Oops, something happened");
+//   } else {
+//     console.log("Data has been saved!");
+//   }
+// });
+// Model --------------
+
+// ROUTES ---
 // root route - homepage
 app.get("/", (req, res) => {
   res.send("API is running..");
 });
 
-// blank
+// project route
 app.get("/project", (req, res) => {
-  res.json(notes);
-  res.send(notes);
+  // res.send(notes);
+  ProjectModel.find({})
+    .then((data) => {
+      console.log("Data: ", data);
+      res.json(data);
+    })
+    .catch((data) => {
+      console.log("Data: ", data);
+    });
 });
 
 // project id route
 app.get("/project/:id", (req, res) => {
-  const data = notes.find((n) => n._id === req.params.id);
-  res.send(data);
+  ProjectModel.find({})
+    .then((data) => {
+      // console.log("Data: ", data);
+      const newdata = data.find((n) => n._id === req.params.id);
+      res.json(newdata);
+    })
+    .catch((data) => {
+      console.log("Data: ", data);
+    });
 });
-
-//wild card route
-// app.get("*", (req, res) => {
-//   res.status(404).send(`Error 404 : page not found`);
-// });
-
-const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
