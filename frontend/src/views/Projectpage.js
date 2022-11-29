@@ -64,63 +64,65 @@ const Projectpage = () => {
       {/* <h2>{newData.title}</h2>
       <p>{newData._id}</p>
       <p>{newData.content}</p> */}
-      <h2>{newData.title}</h2>
-      <Carousel id="project">
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={newData.imgOne}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <div className="caption-container">
-              <h3>First slide Image</h3>
-              <p>See source code on github link below</p>
-              <a href={newData.link} target="_Blank" className="socials">
-                <GitHub />
-              </a>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={newData.imgTwo}
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <div className="caption-container">
-              <h3>Second slide Image</h3>
-              <p>See source code on github link below</p>
-              <a href={newData.link} target="_Blank" className="socials">
-                <GitHub />
-              </a>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={newData.imgThree}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <div className="caption-container">
-              <h3>Third slide Image</h3>
-              <p>See source code on github link below</p>
-              <a href={newData.link} target="_Blank" className="socials">
-                <GitHub />
-              </a>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
       <FadeInSection>
-        <Projects handleClick={handleClick} />
+        <h2>{newData.title}</h2>
+        <Carousel id="project">
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={newData.imgOne}
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <div className="caption-container">
+                <h3>First slide Image</h3>
+                <p>See source code on github link below</p>
+                <a href={newData.link} target="_Blank" className="socials">
+                  <GitHub />
+                </a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={newData.imgTwo}
+              alt="Second slide"
+            />
+
+            <Carousel.Caption>
+              <div className="caption-container">
+                <h3>Second slide Image</h3>
+                <p>See source code on github link below</p>
+                <a href={newData.link} target="_Blank" className="socials">
+                  <GitHub />
+                </a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={newData.imgThree}
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <div className="caption-container">
+                <h3>Third slide Image</h3>
+                <p>See source code on github link below</p>
+                <a href={newData.link} target="_Blank" className="socials">
+                  <GitHub />
+                </a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </FadeInSection>
+
+      {/* <FadeInSection> */}
+      <Projects handleClick={handleClick} />
+      {/* </FadeInSection> */}
     </div>
   );
 };

@@ -3,9 +3,11 @@ const express = require("express");
 const notes = require("./data/notes");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const connectDB = require("./config/db");
 
 const app = express();
 dotenv.config();
+connectDB();
 
 app.use(cors());
 // root route - homepage
