@@ -5,6 +5,10 @@ Backend --
 [dotenv] - Loads environment variables from a .env file.
 [express] - is a back end web application framework for building RESTful APIs with Node.js
 [nodemon] - It simply restarts the node application whenever it observes the changes in the file present in the working directory of your project.
+[concurrently] - lets you run frontend and backend with one command.npm run start.
+[cors] - CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+[mongoose] - Provides everything that lets us connect to mongoDB.
+
 Frontend --
 [bootstrap react-bootstrap] - used for fast styling
 [emailjs-com] - used to send emails in the form.
@@ -13,8 +17,7 @@ Frontend --
 [react-toastify] - makes a toast appear when form is submited
 [react-router-dom] - lets you change content on click in page.
 [axios] - links backend and frontend. Makes api calls easy.
-[concurrently] - lets you run frontend and backend with one command.npm run start
-[mongoose] - Provides everything that lets us connect to mongoDB.
+
 [] -
 -->
 
@@ -22,11 +25,16 @@ Frontend --
 
 ![angeltheesoto](./frontend/angeltheesoto.png)
 
+## Bugs
+
+Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
+
 ## Technologies
 
 - HTML | CSS
-- JavaScritp | React
+- JavaScript | React
 - Node.js
-- Git
+- MongoDB Atlas
+- Git | Github
 - React-Bootstrap
 - Adobe XD
