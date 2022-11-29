@@ -46,7 +46,7 @@ const Projectpage = () => {
         headers: `/project/${id}`,
       });
 
-      console.log("data is: ", JSON.stringify(data, null, 4));
+      // console.log("data is: ", JSON.stringify(data, null, 4));
 
       setNewData(data);
       setNewData(data);
@@ -120,9 +120,7 @@ const Projectpage = () => {
         </Carousel>
       </FadeInSection>
 
-      {/* <FadeInSection> */}
       <Projects handleClick={handleClick} />
-      {/* </FadeInSection> */}
     </div>
   );
 };
