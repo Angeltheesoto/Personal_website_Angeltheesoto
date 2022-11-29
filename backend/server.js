@@ -17,10 +17,6 @@ connectDB();
 app.use(cors());
 // projectController();
 
-mongoose.connection.on("connected", () => {
-  console.log("mongoose is connected!!");
-});
-
 // Schema --------------
 const Schema = mongoose.Schema;
 const ProjectSchema = new mongoose.Schema({
@@ -34,6 +30,7 @@ const ProjectSchema = new mongoose.Schema({
   imgThree: { type: String },
 });
 // Schema --------------
+
 // Model --------------
 const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
 
@@ -56,13 +53,13 @@ const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
 // });
 // Model --------------
 
-// ROUTES ---
+// ROUTES -------------
 // root route - homepage
 app.get("/", (req, res) => {
   res.send("API is running..");
 });
 
-// project route
+// project route -----------
 app.get("/project", (req, res) => {
   // res.send(notes);
   ProjectModel.find({})
@@ -75,7 +72,7 @@ app.get("/project", (req, res) => {
     });
 });
 
-// project id route
+// project id route ----------
 app.get("/project/:id", (req, res) => {
   ProjectModel.find({})
     .then((data) => {
@@ -87,5 +84,6 @@ app.get("/project/:id", (req, res) => {
       console.log("Data: ", data);
     });
 });
+// ROUTES -------------
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
