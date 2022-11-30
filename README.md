@@ -27,7 +27,8 @@ Frontend --
 
 ## Bugs
 
-Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
+- Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
+- Another bug is when the url is loaded you have to manually put /projects at the end of the url to go to the project. If not it just displays the backend data.
 
 ## Technologies
 
