@@ -18,8 +18,8 @@ connectDB();
 app.use(cors());
 // projectController();
 
-// Static Files ------------
-app.use(express.static("public"));
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, "../../frontend/build")));
 
 // Schema --------------
 const Schema = mongoose.Schema;
@@ -88,6 +88,12 @@ app.get("/project/:id", (req, res) => {
       console.log("Data: ", data);
     });
 });
+
+// All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+});
+
 // ROUTES -------------
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
