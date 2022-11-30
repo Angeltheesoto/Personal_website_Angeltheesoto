@@ -57,9 +57,9 @@ const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
 
 // ROUTES -------------
 // root route - homepage
-app.get("/", (req, res) => {
-  res.send("API is running..");
-});
+// app.get("/", (req, res) => {
+//   res.send("API is running..");
+// });
 
 // project route -----------
 app.get("/project", (req, res) => {
