@@ -18,8 +18,8 @@ connectDB();
 app.use(cors());
 // projectController();
 
-// Have Node serve the files for our built React app
-// app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+// STATIC
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 // Schema --------------
 const Schema = mongoose.Schema;
