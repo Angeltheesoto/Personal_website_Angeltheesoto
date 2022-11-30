@@ -4,6 +4,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // FILES ---
 const connectDB = require("./config/db");
@@ -16,6 +17,9 @@ dotenv.config();
 connectDB();
 app.use(cors());
 // projectController();
+
+// Static Files ------------
+app.use(express.static(path.join(__dirname, "client/build")));
 
 // Schema --------------
 const Schema = mongoose.Schema;
