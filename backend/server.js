@@ -19,7 +19,7 @@ app.use(cors());
 // projectController();
 
 // Static Files ------------
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static("public"));
 
 // Schema --------------
 const Schema = mongoose.Schema;
