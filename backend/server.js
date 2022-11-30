@@ -13,13 +13,11 @@ const connectDB = require("./config/db");
 // VARIABLES & FUNCTIONS ---
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.use(express.json());
 dotenv.config();
 connectDB();
 app.use(cors());
 // projectController();
-
-// STATIC
-app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 // Schema --------------
 const Schema = mongoose.Schema;
@@ -88,12 +86,19 @@ app.get("/project/:id", (req, res) => {
       console.log("Data: ", data);
     });
 });
-
-// All other GET requests not handled before will return our React app
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-});
-
 // ROUTES -------------
+
+// DEPLOYMENT --------------
+__dirname = path.resolve();
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
