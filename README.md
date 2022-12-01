@@ -28,8 +28,7 @@ Frontend --
 ## Bugs
 
 - Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
-- The custom map at the bottom of the application is no longer visible when deployed.
-- The data is no longer being passed from the backend.
+- The data is no longer being passed from the backend to the frontend.
 
 ## Technologies
 
