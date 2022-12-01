@@ -11,11 +11,10 @@ import Education from "../components/main/Education";
 import Projects from "../components/main/Projects";
 
 function Homepage() {
+  // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
-
     const [isVisible, setVisible] = React.useState(false);
-
     useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         // There's only one element to observe
@@ -26,12 +25,9 @@ function Homepage() {
           observer.unobserve(domRef.current);
         }
       });
-
       observer.observe(domRef.current);
-
       return () => observer.disconnect();
     }, []);
-
     return (
       <section
         ref={domRef}

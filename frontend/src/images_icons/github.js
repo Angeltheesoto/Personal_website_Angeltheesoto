@@ -10,7 +10,7 @@ function GitHub() {
     >
       <filter id="github-change-color">
         <feColorMatrix
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           type="matrix"
           values="0.98 0   0   0   0
                   0   0  0   0   0

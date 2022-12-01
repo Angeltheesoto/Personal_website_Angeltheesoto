@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Projectpage = () => {
+  // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
     const [isVisible, setVisible] = React.useState(false);
@@ -61,6 +62,7 @@ const Projectpage = () => {
 
   return (
     <div className="project-container">
+      {/* Test Data is passing through */}
       {/* <h2>{newData.title}</h2>
       <p>{newData._id}</p>
       <p>{newData.content}</p> */}

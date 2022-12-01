@@ -10,7 +10,7 @@ function Instagram() {
     >
       <filter id="instagram-change-color">
         <feColorMatrix
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           type="matrix"
           values=".98 0   0   0   0
                   0   0  0   0   0

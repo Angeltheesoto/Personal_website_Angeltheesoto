@@ -17,26 +17,26 @@ export default function NavbarEl() {
             </LinkRoute>
           </Navbar.Brand>
           <Nav className="me-auto nav-center ">
-            <Link to="about" spy={true} smooth={true} offset={-400}>
-              <Nav.Link href="#about" className="text-white link-hover-effect">
+            <Nav href="#about" className="text-white link-hover-effect">
+              <Link to="about" spy={true} smooth={true} offset={-400}>
                 About{" "}
-              </Nav.Link>
-            </Link>
-            <Nav.Link href="#skills" className="text-white link-hover-effect">
+              </Link>
+            </Nav>
+            <Nav href="#skills" className="text-white link-hover-effect">
               <Link to="skills" spy={true} smooth={true} offset={-400}>
                 Skills
               </Link>
-            </Nav.Link>
-            <Nav.Link href="#projects" className="text-white link-hover-effect">
+            </Nav>
+            <Nav href="#projects" className="text-white link-hover-effect">
               <Link to="projects" spy={true} smooth={true} offset={-400}>
                 Projects
               </Link>
-            </Nav.Link>
-            <Nav.Link href="#contact" className="text-white link-hover-effect">
+            </Nav>
+            <Nav href="#contact" className="text-white link-hover-effect">
               <Link to="contact" spy={true} smooth={true}>
                 Contact
               </Link>
-            </Nav.Link>
+            </Nav>
           </Nav>
         </Container>
       </Navbar>
