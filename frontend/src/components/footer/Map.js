@@ -18,21 +18,8 @@ export default function MyMap() {
     },
   };
 
-  // basic map function
-  // useEffect(() => {
-  //   const key = "xZe8iMkEoxPig8xgKbR2";
-  //   const map = new maplibregl.Map({
-  //     container: "map", // container id
-  //     style: `https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/style.json?key=${key}`, // style URL
-  //     center: [-73.86676, 40.727155], // starting position [lng, lat]
-  //     zoom: 9, // starting zoom
-  //   });
-  //   map.addControl(new maplibregl.NavigationControl(), "top-right");
-  // });
-
   return (
     <div className="map-container">
-      {/* <div id="map"></div> */}
       <Map
         mapLib={maplibregl}
         initialViewState={{
