@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-<!-- Npm packages | for react comp [rafce]
+<!-- Npm packages | Shorthand react component boilerplate [rafce]
 Backend --
 [dotenv] - Loads environment variables from a .env file.
 [express] - is a back end web application framework for building RESTful APIs with Node.js
@@ -8,6 +8,7 @@ Backend --
 [concurrently] - lets you run frontend and backend with one command.npm run start.
 [cors] - CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 [mongoose] - Provides everything that lets us connect to mongoDB.
+[] -
 
 Frontend --
 [bootstrap react-bootstrap] - used for fast styling
@@ -17,7 +18,6 @@ Frontend --
 [react-toastify] - makes a toast appear when form is submited
 [react-router-dom] - lets you change content on click in page.
 [axios] - links backend and frontend. Makes api calls easy.
-
 [] -
 -->
 
@@ -28,7 +28,8 @@ Frontend --
 ## Bugs
 
 - Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
-- Another bug is when the url is loaded you have to manually put /projects at the end of the url to go to the project. If not it just displays the backend data.
+- The custom map at the bottom of the application is no longer visible when deployed.
+- The data is no longer being passed from the backend.
 
 ## Technologies
 

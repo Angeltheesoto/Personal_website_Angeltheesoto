@@ -20,8 +20,15 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "heroku": "^7.67.0",
+    "maplibre-gl": "^2.4.0",
     "mongodb": "^4.12.1",
     "mongoose": "^6.7.4",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "react-map-gl": "^7.0.19"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7",
+    "transform-loader": "^0.2.4",
+    "webworkify-webpack": "^1.0.6"
   }
 }
