@@ -21,7 +21,7 @@ Frontend --
 [] -
 -->
 
-[Angeltheesoto](angeltheesoto.com) is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
+[Angeltheesoto]([angeltheesoto.com](https://www.angeltheesoto.com/)) is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
 
 ![angeltheesoto](./frontend/angeltheesoto.png)
 
