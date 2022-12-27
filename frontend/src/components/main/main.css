@@ -213,3 +213,8 @@
     margin-top: 4rem;
   }
 }
+
+.skills-li-container {
+  /* color: red; */
+  display: flex;
+}
