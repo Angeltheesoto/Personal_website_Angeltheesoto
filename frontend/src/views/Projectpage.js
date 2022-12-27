@@ -47,10 +47,12 @@ const Projectpage = () => {
         headers: `/project/${id}`,
       });
 
-      // console.log("data is: ", JSON.stringify(data, null, 4));
+      console.log("data is: ", JSON.stringify(data, null, 4));
+      // console.log("data is: ", JSON.stringify(data));
 
       setNewData(data);
-      setNewData(data);
+
+      //   let dblClick = document.getElementById("double_click");
     } catch (err) {
       setErr(err.message);
     } finally {
@@ -58,15 +60,17 @@ const Projectpage = () => {
     }
   };
 
-  console.log(newData);
+  // console.log(newData);
 
   return (
     <div className="project-container">
       {/* Test Data is passing through */}
-      {/* <h2>{newData.title}</h2>
+      {console.log({ newData })}
+      <h2>{newData.title}</h2>
       <p>{newData._id}</p>
-      <p>{newData.content}</p> */}
-      <FadeInSection>
+      <p>{newData.content}</p>
+
+      {/* <FadeInSection>
         <h2>{newData.title}</h2>
         <Carousel id="project">
           <Carousel.Item>
@@ -120,7 +124,7 @@ const Projectpage = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </FadeInSection>
+      </FadeInSection> */}
 
       <Projects handleClick={handleClick} />
     </div>

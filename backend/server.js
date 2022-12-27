@@ -78,8 +78,8 @@ app.get("/project", (req, res) => {
 app.get("/project/:id", (req, res) => {
   ProjectModel.find({})
     .then((data) => {
-      // console.log("Data: ", data);
       const newdata = data.find((n) => n._id === req.params.id);
+      console.log("Data: ", newdata);
       res.json(newdata);
     })
     .catch((data) => {
