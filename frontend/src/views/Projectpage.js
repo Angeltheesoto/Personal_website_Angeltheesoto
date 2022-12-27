@@ -52,7 +52,7 @@ const Projectpage = () => {
 
       setNewData(data);
 
-      //   let dblClick = document.getElementById("double_click");
+      // let dblClick = document.getElementById("double_click");
     } catch (err) {
       setErr(err.message);
     } finally {
