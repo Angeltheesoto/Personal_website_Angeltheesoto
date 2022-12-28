@@ -12,7 +12,7 @@ function Projects({ handleClick }) {
       <Link
         // href="/project/1"
         className="project-links"
-        // to="navbar"
+        to="navbar"
         spy={true}
         smooth={false}
         offset={-250}
@@ -25,7 +25,7 @@ function Projects({ handleClick }) {
       <Link
         // href="/project/2"
         className="project-links"
-        // to="navbar"
+        to="navbar"
         spy={true}
         smooth={false}
         offset={-250}
@@ -38,7 +38,7 @@ function Projects({ handleClick }) {
       <Link
         // href="/project/3"
         className="project-links"
-        // to="navbar"
+        to="navbar"
         spy={true}
         smooth={false}
         offset={-250}
@@ -51,7 +51,7 @@ function Projects({ handleClick }) {
       <Link
         // href="/project/4"
         className="project-links"
-        // to="navbar"
+        to="navbar"
         spy={true}
         smooth={false}
         offset={-250}

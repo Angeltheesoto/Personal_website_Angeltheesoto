@@ -35,7 +35,7 @@ const Projectpage = () => {
   };
   // -------------------------------------------------
   const { id } = useParams();
-  const [newData, setNewData] = useState({ data: [] });
+  const [projectData, setprojectData] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
 
@@ -44,46 +44,44 @@ const Projectpage = () => {
     try {
       const { data } = await axios.get(`http://127.0.0.1:5000/project/${id}`, {
         method: "GET",
-        headers: `/project/${id}`,
+        headers: {
+          "Content-type": "application/json",
+        },
       });
-
       console.log("data is: ", JSON.stringify(data, null, 4));
-      // console.log("data is: ", JSON.stringify(data));
-
-      setNewData(data);
-
-      // let dblClick = document.getElementById("double_click");
+      setprojectData(data);
     } catch (err) {
-      setErr(err.message);
-    } finally {
-      setIsLoading(false);
+      setErr(err.response.data.message);
+      console.log(`Error: ${err}`);
     }
   };
 
-  // console.log(newData);
+  useEffect(() => {
+    handleClick();
+  }, []);
 
   return (
     <div className="project-container">
       {/* Test Data is passing through */}
-      {console.log({ newData })}
-      <h2>{newData.title}</h2>
-      <p>{newData._id}</p>
-      <p>{newData.content}</p>
+      {/* {console.log({ projectData })}
+      <h2>{projectData.title}</h2>
+      <p>{projectData._id}</p>
+      <p>{projectData.content}</p> */}
 
-      {/* <FadeInSection>
-        <h2>{newData.title}</h2>
+      <FadeInSection>
+        <h2>{projectData.title}</h2>
         <Carousel id="project">
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={newData.imgOne}
+              src={projectData.imgOne}
               alt="First slide"
             />
             <Carousel.Caption>
               <div className="caption-container">
                 <h3>First slide Image</h3>
                 <p>See source code on github link below</p>
-                <a href={newData.link} target="_Blank" className="socials">
+                <a href={projectData.link} target="_Blank" className="socials">
                   <GitHub />
                 </a>
               </div>
@@ -92,7 +90,7 @@ const Projectpage = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={newData.imgTwo}
+              src={projectData.imgTwo}
               alt="Second slide"
             />
 
@@ -100,7 +98,7 @@ const Projectpage = () => {
               <div className="caption-container">
                 <h3>Second slide Image</h3>
                 <p>See source code on github link below</p>
-                <a href={newData.link} target="_Blank" className="socials">
+                <a href={projectData.link} target="_Blank" className="socials">
                   <GitHub />
                 </a>
               </div>
@@ -109,7 +107,7 @@ const Projectpage = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={newData.imgThree}
+              src={projectData.imgThree}
               alt="Third slide"
             />
 
@@ -117,14 +115,14 @@ const Projectpage = () => {
               <div className="caption-container">
                 <h3>Third slide Image</h3>
                 <p>See source code on github link below</p>
-                <a href={newData.link} target="_Blank" className="socials">
+                <a href={projectData.link} target="_Blank" className="socials">
                   <GitHub />
                 </a>
               </div>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </FadeInSection> */}
+      </FadeInSection>
 
       <Projects handleClick={handleClick} />
     </div>

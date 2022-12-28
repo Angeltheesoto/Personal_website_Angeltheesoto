@@ -30,10 +30,7 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
 ## Bugs
 
-- Currently when you click on the projects in project page, you have to click the same button twice in order for the data to show up. Also on refresh the projects data doesnt show until after a button is clicked.
-- The data is no longer being passed from the backend to the frontend.
-- The map is not displaying the tiles.
-- The data being passed in
+- Currently when you click on the projects in /project, you have to click the same button twice for the data to show up.
 
 ## Technologies
 
