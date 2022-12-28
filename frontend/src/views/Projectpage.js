@@ -35,24 +35,24 @@ const Projectpage = () => {
   };
   // -------------------------------------------------
   const { id } = useParams();
-  const [projectData, setprojectData] = useState({ data: [] });
+  const [projectData, setProjectData] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
 
   const handleClick = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axios.get(`http://127.0.0.1:5000/project/${id}`, {
+      const { data } = await axios.get(`http://127.0.0.1:5000/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
         },
       });
-      // console.log("data is: ", JSON.stringify(data, null, 4));
-      setprojectData(data);
+      console.log("data is: ", JSON.stringify(data, null, 4));
+      setProjectData(data);
     } catch (err) {
       setErr(err.response.data.message);
-      // console.log(`Error: ${err}`);
+      console.log(`Error: ${err}`);
     }
   };
 
