@@ -48,11 +48,11 @@ const Projectpage = () => {
           "Content-type": "application/json",
         },
       });
-      console.log("data is: ", JSON.stringify(data, null, 4));
+      // console.log("data is: ", JSON.stringify(data, null, 4));
       setProjectData(data);
     } catch (err) {
       setErr(err.response.data.message);
-      console.log(`Error: ${err}`);
+      // console.log(`Error: ${err}`);
     }
   };
 
