@@ -42,7 +42,7 @@ function Contact() {
       e.target.reset();
       setComment((prev) => (prev = ""));
     } else {
-      console.log("Cannot send email.");
+      // console.log("Cannot send email.");
     }
   }
 
