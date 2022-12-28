@@ -1,24 +1,20 @@
 const mongoose = require("mongoose");
-const ProjectSchema = require("./projecSchema");
 
-// MODEL - The model defines what data the app should contain
-const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
-
-// Save data to our mongo database
-const data = {
-  _id: "1",
-  title: "Test Title",
-};
-
-// Instance of the model
-const newProjectModel = new ProjectModel(data);
-
-newProjectModel.save((error) => {
-  if (error) {
-    console.log("Oops, something happened");
-  } else {
-    console.log("Data has been saved!");
-  }
+// Schema --------------
+const Schema = mongoose.Schema;
+const ProjectSchema = new mongoose.Schema({
+  _id: { type: String },
+  title: { type: String },
+  content: { type: String },
+  category: { type: String },
+  link: { type: String },
+  imgOne: { type: String },
+  imgTwo: { type: String },
+  imgThree: { type: String },
 });
+// Schema --------------
+
+// Model --------------
+const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
 
 module.exports = ProjectModel;

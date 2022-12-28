@@ -17,9 +17,6 @@ export default function MyMap() {
   //   },
   // };
 
-  // const key = process.env.key;
-  // console.log(process.env.key);
-
   return (
     <div className="map-container">
       {/* <Map

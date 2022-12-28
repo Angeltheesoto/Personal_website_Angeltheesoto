@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <div id="skills" className="info-container pos-rel">
       <h2>Skills</h2>
-      <p className="skills-li-container">
+      <div className="skills-li-container">
         <ul>
           <li>HTML | CSS</li>
           <li>Python</li>
@@ -17,7 +17,7 @@ export default function Skills() {
           <li>Git | GitHub</li>
           <li>Bootstrap</li>
         </ul>
-      </p>
+      </div>
     </div>
   );
 }
