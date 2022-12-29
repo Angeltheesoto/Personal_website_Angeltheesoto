@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/";
+const API_URL = "http://localhost:5000/projects";
 
 // get data from the back-end
 export async function getProjectsApi() {
