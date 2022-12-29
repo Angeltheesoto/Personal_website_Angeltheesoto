@@ -5,7 +5,7 @@ const getProjects = (req, res, next) => {
   projectModel
     .find({})
     .then((data) => {
-      // console.log("Data: ", data);
+      console.log("Data: ", data);
       res.json(data);
     })
     .catch((data) => {
