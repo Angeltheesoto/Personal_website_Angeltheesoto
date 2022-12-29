@@ -17,7 +17,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/1" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/0" onClick={handleClick} id="double_click">
           <div className="project-cards link-one">Project 1</div>
         </LinkRoute>
       </Link>
@@ -30,7 +30,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/2" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/1" onClick={handleClick} id="double_click">
           <div className="project-cards link-two">Project 2</div>
         </LinkRoute>
       </Link>
@@ -43,7 +43,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/3" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/2" onClick={handleClick} id="double_click">
           <div className="project-cards link-three">Project 3</div>
         </LinkRoute>
       </Link>
@@ -56,7 +56,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/4" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/3" onClick={handleClick} id="double_click">
           <div className="project-cards link-four">Project 4</div>
         </LinkRoute>
       </Link>
