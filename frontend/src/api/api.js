@@ -1,9 +1,11 @@
-const API_URL = "http://localhost:5000/projects";
-
 // get data from the back-end
-export async function getProjectsApi() {
-  return fetch(API_URL)
-    .then((resp) => resp.json())
-    .then((data) => data)
-    .catch((e) => console.log(e));
+export default async function getProjectsApi() {
+  try {
+    const API_URL = "http://localhost:5000/projects";
+    const resp = await fetch(API_URL);
+    const data = await resp.json();
+    return data;
+  } catch (e) {
+    return console.log(e);
+  }
 }
