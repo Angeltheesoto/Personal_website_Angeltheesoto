@@ -5,7 +5,7 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { getProjectsApi } from "../api/api";
+import getProjectsApi from "../api/api";
 
 const Projectpage = () => {
   // Fade effect
