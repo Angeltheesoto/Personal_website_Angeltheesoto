@@ -5,7 +5,7 @@ const getProjects = (req, res, next) => {
   projectModel
     .find({})
     .then((data) => {
-      console.log("Data: ", data);
+      // console.log("Data: ", data);
       res.json(data);
     })
     .catch((data) => {
@@ -18,7 +18,7 @@ const getProjectsByIds = (req, res, next) => {
     .find({})
     .then((data) => {
       const newdata = data.find((n) => n._id === req.params.id);
-      console.log("Data: ", newdata);
+      // console.log("Data: ", newdata);
       res.json(newdata);
     })
     .catch((data) => {

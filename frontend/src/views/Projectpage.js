@@ -5,6 +5,7 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { getProjectsApi } from "../api/api";
 
 const Projectpage = () => {
   // Fade effect
@@ -35,94 +36,95 @@ const Projectpage = () => {
   };
   // -------------------------------------------------
   const { id } = useParams();
+  let newId = id * 1 + 1;
   const [projectData, setProjectData] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
+  const [data, setData] = useState([]);
 
-  const handleClick = async () => {
+  const handleClick = () => {
     setIsLoading(true);
-    try {
-      const { data } = await axios.get(`http://127.0.0.1:5000/projects/${id}`, {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
-      console.log("data is: ", JSON.stringify(data, null, 4));
-      setProjectData(data);
-    } catch (err) {
-      setErr(err.message);
-      console.log(`Error: ${err}`);
-    }
+    getProjectsApi().then((projects) => setData(projects));
   };
 
   useEffect(() => {
     handleClick();
   }, []);
 
+  const newData = data.filter((e) => e._id == newId);
+  // console.log(`url id:${newId}, data id: ${data._id}`);
+
+  // const projectItems = newData.map((data) => (
+  //   <h2 key={data._id} id={data._id}>
+  //     {data.title}
+  //   </h2>
+  // ));
+
   return (
     <div className="project-container">
       {/* Test Data is passing through */}
-      {/* {console.log({ projectData })}
-      <h2>{projectData.title}</h2>
-      <p>{projectData._id}</p>
-      <p>{projectData.content}</p> */}
+      {/* {projectItems} */}
 
-      <FadeInSection>
-        <h2>{projectData.title}</h2>
-        <Carousel id="project">
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={projectData.imgOne}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <div className="caption-container">
-                <h3>First slide Image</h3>
-                <p>See source code on github link below</p>
-                <a href={projectData.link} target="_Blank" className="socials">
-                  <GitHub />
-                </a>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={projectData.imgTwo}
-              alt="Second slide"
-            />
+      {newData &&
+        newData.map((data) => (
+          <div key={data._id}>
+            <FadeInSection>
+              <h2 key={data._id}>{data.title}</h2>
+              <Carousel id="project">
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={data.imgOne}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                    <div className="caption-container">
+                      <h3>First slide Image</h3>
+                      <p>See source code on github link below</p>
+                      <a href={data.link} target="_Blank" className="socials">
+                        <GitHub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={data.imgTwo}
+                    alt="Second slide"
+                  />
 
-            <Carousel.Caption>
-              <div className="caption-container">
-                <h3>Second slide Image</h3>
-                <p>See source code on github link below</p>
-                <a href={projectData.link} target="_Blank" className="socials">
-                  <GitHub />
-                </a>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={projectData.imgThree}
-              alt="Third slide"
-            />
+                  <Carousel.Caption>
+                    <div className="caption-container">
+                      <h3>Second slide Image</h3>
+                      <p>See source code on github link below</p>
+                      <a href={data.link} target="_Blank" className="socials">
+                        <GitHub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={data.imgThree}
+                    alt="Third slide"
+                  />
 
-            <Carousel.Caption>
-              <div className="caption-container">
-                <h3>Third slide Image</h3>
-                <p>See source code on github link below</p>
-                <a href={projectData.link} target="_Blank" className="socials">
-                  <GitHub />
-                </a>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </FadeInSection>
+                  <Carousel.Caption>
+                    <div className="caption-container">
+                      <h3>Third slide Image</h3>
+                      <p>See source code on github link below</p>
+                      <a href={data.link} target="_Blank" className="socials">
+                        <GitHub />
+                      </a>
+                    </div>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
+            </FadeInSection>
+          </div>
+        ))}
 
       <Projects handleClick={handleClick} />
     </div>
