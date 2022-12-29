@@ -37,7 +37,7 @@ const Projectpage = () => {
   // -------------------------------------------------
   const { id } = useParams();
   let newId = id * 1 + 1;
-  const [projectData, setProjectData] = useState({ data: [] });
+  // const [projectData, setProjectData] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
   const [data, setData] = useState([]);
