@@ -1,4 +1,6 @@
 // get data from the back-end
+import axios from "axios";
+
 export default async function getProjectsApi() {
   try {
     const API_URL = "http://localhost:5000/projects";

@@ -5,9 +5,9 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import getProjectsApi from "../api/api";
+// import getProjectsApi from "../api/api";
 
-const Projectpage = () => {
+const Projectpage = ({ homePageData }) => {
   // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
@@ -37,14 +37,24 @@ const Projectpage = () => {
   // -------------------------------------------------
   const { id } = useParams();
   let newId = id * 1 + 1;
-  // const [projectData, setProjectData] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
   const [data, setData] = useState([]);
 
-  const handleClick = () => {
-    setIsLoading(true);
-    getProjectsApi().then((projects) => setData(projects));
+  const handleClick = (e) => {
+    try {
+      setIsLoading(true);
+      // getProjectsApi().then((projects) => setData(projects));
+      // axios
+      //   .get("http://localhost:5000/projects")
+      //   .then((response) => setData(response.data));
+      let test = homePageData;
+      setData(test);
+      console.log("data updated successfully!");
+      setIsLoading(false);
+    } catch (error) {
+      console.error(`Data did not update. Error: ${error}`);
+    }
   };
 
   useEffect(() => {
@@ -62,7 +72,6 @@ const Projectpage = () => {
 
   return (
     <div className="project-container">
-      {/* Test Data is passing through */}
       {/* {projectItems} */}
 
       {newData &&
