@@ -11,24 +11,44 @@ import Header from "./views/Header";
 import Footer from "./views/Footer";
 import Homepage from "./views/Homepage";
 import Projectpage from "./views/Projectpage";
+// import { response } from "express";
 
 function App() {
   // fetch data
   const [homePageData, setHomePageData] = useState();
-  const fetchData = async (e) => {
-    try {
-      const response = await axios.get("http://localhost:5000/projects");
-      setHomePageData(response.data);
-      console.log("data fetched successfully!");
-    } catch (error) {
-      console.error(`Data did not fetch. Error: ${error}`);
-    }
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/projects");
+  //     setHomePageData(response.data);
+  //     console.log("data fetched successfully!");
+  //   } catch (error) {
+  //     console.error(`Data did not fetch. Error: ${error}`);
+  //   }
+  // };
+
+  const dataUrl = "http://localhost:5000/projects/";
+  const options = {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  };
+  const getAllData = async () => {
+    await axios
+      .get(dataUrl, options)
+      .then((response) => {
+        setHomePageData(response.data);
+        console.log(homePageData);
+      })
+      .catch((err) => console.log(`Error: ${err}`));
   };
 
   useEffect(() => {
-    fetchData();
-    console.log({ homePageData });
+    // fetchData();
+    getAllData();
   }, []);
+  console.log(homePageData);
 
   return (
     <div className="App">
