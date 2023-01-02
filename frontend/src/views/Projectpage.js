@@ -5,7 +5,6 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import getProjectsApi from "../api/api";
 
 const Projectpage = ({ homePageData }) => {
   // Fade effect
@@ -44,13 +43,9 @@ const Projectpage = ({ homePageData }) => {
   const handleClick = (e) => {
     try {
       setIsLoading(true);
-      // getProjectsApi().then((projects) => setData(projects));
-      // axios
-      //   .get("http://localhost:5000/projects")
-      //   .then((response) => setData(response.data));
       let test = homePageData;
-      setData(test);
-      console.log("data updated successfully!");
+      setData((prevData) => (prevData = test));
+      // console.log("data updated successfully!");
       setIsLoading(false);
     } catch (error) {
       console.error(`Data did not update. Error: ${error}`);
@@ -60,20 +55,15 @@ const Projectpage = ({ homePageData }) => {
   useEffect(() => {
     handleClick();
   }, []);
+  let newData = data.filter((e) => e._id == newId);
+  // console.log(`url id:${newId}, data id: ${newData[0]._id}`);
+  // console.log(newData);
 
-  const newData = data.filter((e) => e._id == newId);
-  // console.log(`url id:${newId}, data id: ${data._id}`);
-
-  // const projectItems = newData.map((data) => (
-  //   <h2 key={data._id} id={data._id}>
-  //     {data.title}
-  //   </h2>
-  // ));
+  // const projectItems = newData.map((data) => <h2>{data.title}</h2>);
 
   return (
     <div className="project-container">
       {/* {projectItems} */}
-
       {newData &&
         newData.map((data) => (
           <div key={data._id}>
