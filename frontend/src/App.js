@@ -27,8 +27,8 @@ function App() {
   // };
 
   const dataUrl = "http://localhost:5000/projects";
-  const options = {
-    method: "POST",
+  const config = {
+    method: "GET",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
@@ -36,7 +36,7 @@ function App() {
   };
   const getAllData = async () => {
     await axios
-      .get(dataUrl, options)
+      .get(dataUrl, config)
       .then((response) => {
         setHomePageData(response.data);
         console.log(`Data fetched Successfully: ${homePageData}`);
