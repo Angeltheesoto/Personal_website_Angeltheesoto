@@ -18,7 +18,7 @@ function Projects({ handleClick }) {
         offset={-250}
       >
         <LinkRoute to="/project/0" onClick={handleClick} id="double_click">
-          <div className="project-cards link-one">Project 1</div>
+          <div className="project-cards link-one">Personal Website</div>
         </LinkRoute>
       </Link>
 
@@ -31,7 +31,7 @@ function Projects({ handleClick }) {
         offset={-250}
       >
         <LinkRoute to="/project/1" onClick={handleClick} id="double_click">
-          <div className="project-cards link-two">Project 2</div>
+          <div className="project-cards link-two">Notes App</div>
         </LinkRoute>
       </Link>
 
@@ -44,7 +44,7 @@ function Projects({ handleClick }) {
         offset={-250}
       >
         <LinkRoute to="/project/2" onClick={handleClick} id="double_click">
-          <div className="project-cards link-three">Project 3</div>
+          <div className="project-cards link-three">JavaScript Game</div>
         </LinkRoute>
       </Link>
 
@@ -57,7 +57,7 @@ function Projects({ handleClick }) {
         offset={-250}
       >
         <LinkRoute to="/project/3" onClick={handleClick} id="double_click">
-          <div className="project-cards link-four">Project 4</div>
+          <div className="project-cards link-four">Vanilla JS Projects</div>
         </LinkRoute>
       </Link>
     </Container>

@@ -8,18 +8,22 @@ const path = require("path");
 // FILES ---
 const connectDB = require("./config/db");
 const routes = require("./routes/projectRoute");
+const data = require("./data/data");
 
 // VARIABLES & FUNCTIONS ---
-const app = express();
-const PORT = process.env.PORT || 5000;
 dotenv.config();
 connectDB();
+const app = express();
+const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
 // ROUTES ---
 app.use("/", routes);
 app.use("/:id", routes);
+app.get("/test/data", (req, res) => {
+  res.json(data);
+});
 
 // DEPLOYMENT --------------
 __dirname = path.resolve();

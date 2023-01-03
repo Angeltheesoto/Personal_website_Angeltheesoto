@@ -41,42 +41,45 @@ const Projectpage = ({ homePageData }) => {
   const [data, setData] = useState();
   const [newData, setNewData] = useState();
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     try {
       setIsLoading(true);
-      let test = homePageData;
+      let test = homePageData.filter((e) => e._id == newId);
+      // let test = homePageData;
       setData((prevData) => (prevData = test));
-      // console.log("data updated successfully!");
-      console.log(newData);
-      console.log(data);
+      console.log("data updated successfully!");
       setIsLoading(false);
     } catch (error) {
       console.error(`Data did not update. Error: ${error}`);
     }
   };
-  // let newData = data.filter((e) => e._id == newId);
 
   useEffect(() => {
     handleClick();
-    setNewData((prevData) => {
-      try {
-        prevData = data.filter((e) => e._id == newId);
-        console.log(prevData);
-      } catch (error) {
-        console.error(`Error in setNewData: ${error}`);
-      }
-    });
+
+    // setNewData((prevData) => {
+    //   try {
+    //     prevData = data.filter((e) => e._id == newId);
+    //     console.log(prevData);
+    //   } catch (error) {
+    //     console.error(`Error in setNewData: ${error}`);
+    //   }
+    // });
   }, []);
   // console.log(`url id:${newId}, data id: ${newData[0]._id}`);
-  console.log(newData);
+  // console.log(newData);
 
-  // const projectItems = newData.map((data) => <h2>{data.title}</h2>);
+  // const projectItems = () => {
+  //   newData.map((data) => <h2>{data.title}</h2>);
+  //   console.log(data);
+  //   console.log(newData);
+  // };
 
   return (
     <div className="project-container">
       {/* {projectItems} */}
-      {newData &&
-        newData.map((data) => (
+      {data &&
+        data.map((data) => (
           <div key={data._id}>
             <FadeInSection>
               <h2 key={data._id}>{data.title}</h2>

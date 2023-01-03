@@ -11,22 +11,13 @@ import Header from "./views/Header";
 import Footer from "./views/Footer";
 import Homepage from "./views/Homepage";
 import Projectpage from "./views/Projectpage";
-// import { response } from "express";
 
 function App() {
   // fetch data -----------------------
   const [homePageData, setHomePageData] = useState();
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:5000/projects");
-  //     setHomePageData(response.data);
-  //     console.log("data fetched successfully!");
-  //   } catch (error) {
-  //     console.error(`Data did not fetch. Error: ${error}`);
-  //   }
-  // };
 
-  const dataUrl = "http://localhost:5000/projects";
+  const dataUrl = "http://localhost:5000/test/data";
+  // const dataUrl = "http://localhost:5000/projects";
   const config = {
     method: "GET",
     headers: {
@@ -46,7 +37,6 @@ function App() {
   };
 
   useEffect(() => {
-    // fetchData();
     getAllData();
   }, []);
   console.log(homePageData);
