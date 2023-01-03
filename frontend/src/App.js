@@ -26,7 +26,7 @@ function App() {
   //   }
   // };
 
-  const dataUrl = "http://localhost:5000/projects/";
+  const dataUrl = "http://localhost:5000/projects";
   const options = {
     method: "POST",
     headers: {
@@ -40,6 +40,7 @@ function App() {
       .then((response) => {
         setHomePageData(response.data);
         console.log(`Data fetched Successfully: ${homePageData}`);
+        console.log(homePageData);
       })
       .catch((err) => console.log(`New Error: ${err}`));
   };
