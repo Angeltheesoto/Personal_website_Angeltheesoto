@@ -14,7 +14,7 @@ import Projectpage from "./views/Projectpage";
 // import { response } from "express";
 
 function App() {
-  // fetch data
+  // fetch data -----------------------
   const [homePageData, setHomePageData] = useState();
   // const fetchData = async () => {
   //   try {
@@ -39,9 +39,9 @@ function App() {
       .get(dataUrl, options)
       .then((response) => {
         setHomePageData(response.data);
-        console.log(homePageData);
+        console.log(`Data fetched Successfully: ${homePageData}`);
       })
-      .catch((err) => console.log(`Error: ${err}`));
+      .catch((err) => console.log(`New Error: ${err}`));
   };
 
   useEffect(() => {
@@ -49,6 +49,9 @@ function App() {
     getAllData();
   }, []);
   console.log(homePageData);
+  console.log(`Data fetched Successfully: ${homePageData}`);
+
+  // fetch data -----------------------
 
   return (
     <div className="App">

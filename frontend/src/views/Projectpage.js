@@ -38,7 +38,8 @@ const Projectpage = ({ homePageData }) => {
   let newId = id * 1 + 1;
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
+  const [newData, setNewData] = useState();
 
   const handleClick = (e) => {
     try {
@@ -46,18 +47,28 @@ const Projectpage = ({ homePageData }) => {
       let test = homePageData;
       setData((prevData) => (prevData = test));
       // console.log("data updated successfully!");
+      console.log(newData);
+      console.log(data);
       setIsLoading(false);
     } catch (error) {
       console.error(`Data did not update. Error: ${error}`);
     }
   };
+  // let newData = data.filter((e) => e._id == newId);
 
   useEffect(() => {
     handleClick();
+    setNewData((prevData) => {
+      try {
+        prevData = data.filter((e) => e._id == newId);
+        console.log(prevData);
+      } catch (error) {
+        console.error(`Error in setNewData: ${error}`);
+      }
+    });
   }, []);
-  let newData = data.filter((e) => e._id == newId);
   // console.log(`url id:${newId}, data id: ${newData[0]._id}`);
-  // console.log(newData);
+  console.log(newData);
 
   // const projectItems = newData.map((data) => <h2>{data.title}</h2>);
 
