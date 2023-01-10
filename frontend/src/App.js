@@ -16,8 +16,11 @@ function App() {
   // fetch data -----------------------
   const [homePageData, setHomePageData] = useState();
 
-  const dataUrl = "http://localhost:5000/test/data";
-  // const dataUrl = "http://localhost:5000/projects";
+  // data from backend
+  // const dataUrl = "http://localhost:5000/test/data";
+
+  // data from mongodb
+  const dataUrl = "http://localhost:5000/projects";
   const config = {
     method: "GET",
     headers: {
