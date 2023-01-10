@@ -5,6 +5,7 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import displayData from "../data/data";
 
 const Projectpage = ({ homePageData }) => {
   // Fade effect
@@ -44,7 +45,11 @@ const Projectpage = ({ homePageData }) => {
   const handleClick = async (e) => {
     try {
       setIsLoading(true);
-      let test = homePageData.filter((e) => e._id == newId);
+      // This filters the data passed from app.js(homePageData)
+      // let test = homePageData.filter((e) => e._id == newId);
+
+      // This filters temp data in frontend(../data/data)
+      let test = displayData.filter((e) => e._id == newId);
       // let test = homePageData;
       setData((prevData) => (prevData = test));
       console.log("data updated successfully!");
