@@ -8,7 +8,8 @@ const path = require("path");
 // FILES ---
 const connectDB = require("./config/db");
 const routes = require("./routes/projectRoute");
-const data = require("./data/data");
+// This is test data to be sent to front end.
+// const data = require("./data/data");
 
 // VARIABLES & FUNCTIONS ---
 dotenv.config();
@@ -21,9 +22,10 @@ app.use(express.json());
 // ROUTES ---
 app.use("/", routes);
 app.use("/:id", routes);
-app.get("/test/data", (req, res) => {
-  res.json(data);
-});
+// This is test data route.
+// app.get("/test/data", (req, res) => {
+//   res.json(data);
+// });
 
 // DEPLOYMENT --------------
 __dirname = path.resolve();
