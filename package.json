@@ -1,0 +1,35 @@
+{
+  "name": "angeltheesoto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "proxy": "http://localhost:5000",
+  "scripts": {
+    "start": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "build": "^0.1.4",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "heroku": "^7.67.0",
+    "maplibre-gl": "^2.4.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4",
+    "nodemon": "^2.0.20",
+    "react-map-gl": "^7.0.19"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7",
+    "transform-loader": "^0.2.4",
+    "webworkify-webpack": "^1.0.6"
+  }
+}
