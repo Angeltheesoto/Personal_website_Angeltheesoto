@@ -8,11 +8,10 @@ import Hero from "../components/header/hero";
 import Lava from "../components/main/Lava";
 
 function Header() {
+  // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
-
     const [isVisible, setVisible] = React.useState(false);
-
     useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         // There's only one element to observe
@@ -23,12 +22,9 @@ function Header() {
           observer.unobserve(domRef.current);
         }
       });
-
       observer.observe(domRef.current);
-
       return () => observer.disconnect();
     }, []);
-
     return (
       <section
         ref={domRef}

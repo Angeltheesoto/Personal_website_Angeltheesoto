@@ -5,13 +5,11 @@ export default function Education() {
     <div className="info-container2 pos-rel ">
       <h2>Education</h2>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
+        I have recently graduated in November 2022 fom NJIT coding boot camp.
+        With a strong understanding on MERN stack applications.
         <br />
-        <br /> sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed.
+        <br /> I graduated from Hostos community college in May 2020 with an
+        associates for digital design and animation.
       </p>
     </div>
   );
