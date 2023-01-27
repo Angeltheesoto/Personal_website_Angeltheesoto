@@ -6,13 +6,12 @@ export default function Aboutme() {
       <div className="info-container ">
         <h2>About Me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          I am a passionate and inventive Entry-Level Web Developer with a
+          record of developing complex web-based applications using best
+          software practices.
           <br />
-          <br /> sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed.
+          <br /> Experienced at enhancing user interfaces, writing efficient
+          code, and creating dynamic products.
         </p>
       </div>
     </div>

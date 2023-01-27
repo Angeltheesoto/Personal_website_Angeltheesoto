@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./views.css";
 
 // Components
@@ -7,11 +7,10 @@ import Contact from "../components/footer/Contact";
 import Map from "../components/footer/Map";
 
 function Footer() {
+  // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
-
     const [isVisible, setVisible] = React.useState(false);
-
     useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         // There's only one element to observe
@@ -22,12 +21,9 @@ function Footer() {
           observer.unobserve(domRef.current);
         }
       });
-
       observer.observe(domRef.current);
-
       return () => observer.disconnect();
     }, []);
-
     return (
       <section
         ref={domRef}

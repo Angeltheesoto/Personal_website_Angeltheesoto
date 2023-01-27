@@ -1,5 +1,5 @@
 // dependencies
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Emailjs npm
 import emailjs from "emailjs-com";
@@ -42,7 +42,7 @@ function Contact() {
       e.target.reset();
       setComment((prev) => (prev = ""));
     } else {
-      console.log("Cannot send email.");
+      // console.log("Cannot send email.");
     }
   }
 
