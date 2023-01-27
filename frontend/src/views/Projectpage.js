@@ -5,7 +5,7 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import displayData from "../data/data";
+// import displayData from "../data/data";
 
 const Projectpage = ({ homePageData }) => {
   // Fade effect
@@ -46,10 +46,10 @@ const Projectpage = ({ homePageData }) => {
     try {
       setIsLoading(true);
       // This filters the data passed from app.js(homePageData)
-      // let test = homePageData.filter((e) => e._id == newId);
+      let test = homePageData.filter((e) => e._id == newId);
 
       // This filters temp data in frontend(../data/data)
-      let test = displayData.filter((e) => e._id == newId);
+      // let test = displayData.filter((e) => e._id == newId);
       // let test = homePageData;
       setData((prevData) => (prevData = test));
       console.log("data updated successfully!");
@@ -62,14 +62,14 @@ const Projectpage = ({ homePageData }) => {
   useEffect(() => {
     handleClick();
 
-    // setNewData((prevData) => {
-    //   try {
-    //     prevData = data.filter((e) => e._id == newId);
-    //     console.log(prevData);
-    //   } catch (error) {
-    //     console.error(`Error in setNewData: ${error}`);
-    //   }
-    // });
+    setNewData((prevData) => {
+      try {
+        prevData = data.filter((e) => e._id == newId);
+        console.log(prevData);
+      } catch (error) {
+        console.error(`Error in setNewData: ${error}`);
+      }
+    });
   }, []);
   // console.log(`url id:${newId}, data id: ${newData[0]._id}`);
   // console.log(newData);
