@@ -34,7 +34,9 @@ function App() {
       .then((response) => {
         setHomePageData(response.data);
         console.log(`Data fetched Successfully: ${homePageData}`);
-        console.log(homePageData);
+        // console.log(homePageData);
+        // console.log(homePageData[0]._id);
+        // console.log(homePageData[0].title);
       })
       .catch((err) => console.log(`New Error: ${err}`));
   };
@@ -42,8 +44,8 @@ function App() {
   useEffect(() => {
     getAllData();
   }, []);
-  console.log(homePageData);
-  console.log(`Data fetched Successfully: ${homePageData}`);
+  // console.log(homePageData);
+  // console.log(`Data fetched Successfully: ${homePageData}`);
 
   // fetch data -----------------------
 

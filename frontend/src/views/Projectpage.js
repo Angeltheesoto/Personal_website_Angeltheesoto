@@ -39,52 +39,36 @@ const Projectpage = ({ homePageData }) => {
   let newId = id * 1 + 1;
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
-  const [data, setData] = useState();
-  const [newData, setNewData] = useState();
+  // const [data, setData] = useState();
+  // const [newData, setNewData] = useState();
 
-  const handleClick = async (e) => {
-    try {
-      setIsLoading(true);
-      // This filters the data passed from app.js(homePageData)
-      let test = homePageData.filter((e) => e._id == newId);
-
-      // This filters temp data in frontend(../data/data)
-      // let test = displayData.filter((e) => e._id == newId);
-      // let test = homePageData;
-      setData((prevData) => (prevData = test));
-      console.log("data updated successfully!");
-      setIsLoading(false);
-    } catch (error) {
-      console.error(`Data did not update. Error: ${error}`);
-    }
-  };
-
-  useEffect(() => {
-    handleClick();
-
-    setNewData((prevData) => {
-      try {
-        prevData = data.filter((e) => e._id == newId);
-        console.log(prevData);
-      } catch (error) {
-        console.error(`Error in setNewData: ${error}`);
-      }
-    });
-  }, []);
-  // console.log(`url id:${newId}, data id: ${newData[0]._id}`);
-  // console.log(newData);
-
-  // const projectItems = () => {
-  //   newData.map((data) => <h2>{data.title}</h2>);
-  //   console.log(data);
-  //   console.log(newData);
+  // const handleClick = async (e) => {
+  //   try {
+  // This filters the data passed from app.js(homePageData)
+  // console.log(`all homePageData: `, homePageData);
+  // let test = homePageData.filter((e) => e._id == newId);
+  // setData((prevData) => (prevData = test));
+  //   } catch (error) {
+  //     console.error(`Data did not update. Error: ${error}`);
+  //   }
   // };
+  // useEffect(() => {
+  //   handleClick();
+  // }, []);
 
+  // This is for Demonstration for seeing how homePageData is being passed into projectpage.js
+  // let mappingId = homePageData.map((val, i) => {
+  //   return val._id, i;
+  // });
+  // console.log(`Filtering: `, mappingId);
   return (
     <div className="project-container">
-      {/* {projectItems} */}
-      {data &&
-        data.map((data) => (
+      {/* {homePageData.map((val) => {
+        return <h1 key={val._id}>{val.title}</h1>;
+      })} */}
+      {homePageData.map((data) =>
+        data._id == newId ? (
+          // ? <h1 key={val._id}>{val.title}</h1>
           <div key={data._id}>
             <FadeInSection>
               <h2 key={data._id}>{data.title}</h2>
@@ -142,9 +126,11 @@ const Projectpage = ({ homePageData }) => {
               </Carousel>
             </FadeInSection>
           </div>
-        ))}
+        ) : null
+      )}
 
-      <Projects handleClick={handleClick} />
+      {/* <Projects handleClick={handleClick} /> */}
+      <Projects />
     </div>
   );
 };
