@@ -53,7 +53,7 @@ const Projectpage = ({ homePageData }) => {
   //   }
   // };
   // useEffect(() => {
-  //   handleClick();
+  // handleClick();
   // }, []);
 
   // This is for Demonstration for seeing how homePageData is being passed into projectpage.js
