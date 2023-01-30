@@ -24,7 +24,7 @@ function App() {
 
   // data from mongodb
   // const dataUrl = "http://localhost:5000/projects";
-  const dataUrl = "http://angeltheesoto/projects";
+  const dataUrl = "https://angeltheesoto/projects";
   const config = {
     method: "GET",
     headers: {
