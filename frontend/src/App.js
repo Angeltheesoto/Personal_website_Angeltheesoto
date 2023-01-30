@@ -23,7 +23,7 @@ function App() {
   // const dataUrl = "http://localhost:5000/test/data";
 
   // data from mongodb
-  const dataUrl = "http://localhost:5000/projects";
+  const dataUrl = "/projects";
   // const dataUrl = "https://angeltheesoto/projects";
   const config = {
     method: "GET",
@@ -38,9 +38,9 @@ function App() {
       .then((response) => {
         setHomePageData(response.data);
         console.log(`Data fetched Successfully: ${homePageData}`);
-        console.log(homePageData);
-        console.log(homePageData[0]._id);
-        console.log(homePageData[0].title);
+        // console.log(homePageData);
+        // console.log(homePageData[0]._id);
+        // console.log(homePageData[0].title);
       })
       .catch((err) => console.log(`New Error: ${err}`));
   };
