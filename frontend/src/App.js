@@ -14,17 +14,10 @@ import Projectpage from "./views/Projectpage";
 
 function App() {
   // fetch data ----------------------->>>>
-  // TRY ALTERNATIVE WAYS TO FETCH THE DATA BECAUSE THE DATA BEING FETCHED IN PRODUCTION HAS AN ERROR:
-  // PROJECTS -> REQUEST HEADERS -> PROVISIONAL HEADERS ARE SHOWN
-  // DevTools can also display only provisional headers due to security reasons.
   const [homePageData, setHomePageData] = useState();
-
-  // data from backend.
-  // const dataUrl = "http://localhost:5000/test/data";
 
   // data from mongodb
   const dataUrl = "/projects";
-  // const dataUrl = "https://angeltheesoto/projects";
   const config = {
     method: "GET",
     headers: {
@@ -37,18 +30,13 @@ function App() {
       .get(dataUrl, config)
       .then((response) => {
         setHomePageData(response.data);
-        console.log(`Data fetched Successfully: ${homePageData}`);
-        // console.log(homePageData);
-        // console.log(homePageData[0]._id);
-        // console.log(homePageData[0].title);
+        // console.log(`Data fetched Successfully: ${homePageData}`);
       })
       .catch((err) => console.log(`New Error: ${err}`));
   };
-
   useEffect(() => {
     getAllData();
   }, []);
-
   // fetch data ----------------------->>>>
 
   return (
@@ -62,7 +50,6 @@ function App() {
               <Route
                 path="/project/:id"
                 element={<Projectpage homePageData={homePageData} />}
-                // element={<Projectpage />}
               />
             </Routes>
             <Footer />

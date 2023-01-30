@@ -4,7 +4,7 @@ import "./main.css";
 import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
 
-function Projects({ handleClick }) {
+function Projects() {
   return (
     <Container id="projects" className="hero-container projects-container">
       <h2>Projects</h2>
@@ -17,7 +17,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/0" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/0" id="double_click">
           <div className="project-cards link-one">Personal Website</div>
         </LinkRoute>
       </Link>
@@ -30,7 +30,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/1" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/1" id="double_click">
           <div className="project-cards link-two">Notes App</div>
         </LinkRoute>
       </Link>
@@ -43,7 +43,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/2" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/2" id="double_click">
           <div className="project-cards link-three">JavaScript Game</div>
         </LinkRoute>
       </Link>
@@ -56,7 +56,7 @@ function Projects({ handleClick }) {
         smooth={false}
         offset={-250}
       >
-        <LinkRoute to="/project/3" onClick={handleClick} id="double_click">
+        <LinkRoute to="/project/3" id="double_click">
           <div className="project-cards link-four">Vanilla JS Projects</div>
         </LinkRoute>
       </Link>
