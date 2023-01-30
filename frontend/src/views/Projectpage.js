@@ -71,7 +71,7 @@ const Projectpage = ({ homePageData }) => {
           // ? <h1 key={val._id}>{val.title}</h1>
           <div key={data._id}>
             <FadeInSection>
-              <h2 key={data._id}>{data.title}</h2>
+              <h2>{data.title}</h2>
               <Carousel id="project">
                 <Carousel.Item>
                   <img
