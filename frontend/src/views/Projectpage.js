@@ -5,7 +5,6 @@ import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import displayData from "../data/data";
 
 const Projectpage = ({ homePageData }) => {
   // Fade effect
@@ -34,27 +33,17 @@ const Projectpage = ({ homePageData }) => {
       </section>
     );
   };
-  // -------------------------------------------------
+  // Fade effect
   const { id } = useParams();
   let newId = id * 1 + 1;
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
-  // const [data, setData] = useState();
-  // const [newData, setNewData] = useState();
 
-  // const handleClick = async (e) => {
-  //   try {
-  // This filters the data passed from app.js(homePageData)
-  // console.log(`all homePageData: `, homePageData);
-  // let test = homePageData.filter((e) => e._id == newId);
-  // setData((prevData) => (prevData = test));
-  //   } catch (error) {
-  //     console.error(`Data did not update. Error: ${error}`);
-  //   }
-  // };
+  // fetch data ----------------------->>>>
   // useEffect(() => {
-  // handleClick();
+  //   getAllData();
   // }, []);
+  // fetch data ----------------------->>>>
 
   // This is for Demonstration for seeing how homePageData is being passed into projectpage.js
   // let mappingId = homePageData.map((val, i) => {
@@ -129,7 +118,6 @@ const Projectpage = ({ homePageData }) => {
         ) : null
       )}
 
-      {/* <Projects handleClick={handleClick} /> */}
       <Projects />
     </div>
   );
