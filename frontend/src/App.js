@@ -25,15 +25,20 @@ function App() {
       "Content-Type": "application/json",
     },
   };
-  const getAllData = async () => {
-    await axios
+
+  const getAllData = () => {
+    axios
       .get(dataUrl, config)
       .then((response) => {
-        setHomePageData(response.data);
-        // console.log(`Data fetched Successfully: ${homePageData}`);
+        setHomePageData((prev) => (prev = response.data));
+        if (!localStorage.getItem("homepagedata")) {
+          localStorage.setItem("homepagedata", JSON.stringify(response.data));
+        }
+        // console.log(`Data fetched Successfully: `, homePageData);
       })
       .catch((err) => console.log(`New Error: ${err}`));
   };
+
   useEffect(() => {
     getAllData();
   }, []);
