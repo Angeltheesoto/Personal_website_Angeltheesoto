@@ -35,92 +35,158 @@ const Projectpage = ({ homePageData }) => {
   };
   // Fade effect
   const { id } = useParams();
-  let newId = id * 1 + 1;
+  const newId = id * 1 + 1;
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState("");
-
-  // fetch data ----------------------->>>>
-  // useEffect(() => {
-  //   getAllData();
-  // }, []);
-  // fetch data ----------------------->>>>
+  const [data, setData] = useState();
+  const LS = JSON.parse(localStorage.getItem("homepagedata"));
 
   // This is for Demonstration for seeing how homePageData is being passed into projectpage.js
   // let mappingId = homePageData.map((val, i) => {
   //   return val._id, i;
   // });
   // console.log(`Filtering: `, mappingId);
-  return (
-    <div className="project-container">
-      {/* {homePageData.map((val) => {
+
+  // Use homepage data
+  if (!homePageData) {
+    return (
+      <div className="project-container">
+        {/* {homePageData.map((val) => {
         return <h1 key={val._id}>{val.title}</h1>;
       })} */}
-      {homePageData.map((data) =>
-        data._id == newId ? (
-          // ? <h1 key={val._id}>{val.title}</h1>
-          <div key={data._id}>
-            <FadeInSection>
-              <h2>{data.title}</h2>
-              <Carousel id="project">
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={data.imgOne}
-                    alt="First slide"
-                  />
-                  <Carousel.Caption>
-                    <div className="caption-container">
-                      <h3>First slide Image</h3>
-                      <p>See source code on github link below</p>
-                      <a href={data.link} target="_Blank" className="socials">
-                        <GitHub />
-                      </a>
-                    </div>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={data.imgTwo}
-                    alt="Second slide"
-                  />
 
-                  <Carousel.Caption>
-                    <div className="caption-container">
-                      <h3>Second slide Image</h3>
-                      <p>See source code on github link below</p>
-                      <a href={data.link} target="_Blank" className="socials">
-                        <GitHub />
-                      </a>
-                    </div>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={data.imgThree}
-                    alt="Third slide"
-                  />
+        {LS.map((data) =>
+          data._id == newId ? (
+            <div key={data._id}>
+              <FadeInSection>
+                <h2>{data.title}</h2>
+                <Carousel id="project">
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgOne}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>First slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgTwo}
+                      alt="Second slide"
+                    />
 
-                  <Carousel.Caption>
-                    <div className="caption-container">
-                      <h3>Third slide Image</h3>
-                      <p>See source code on github link below</p>
-                      <a href={data.link} target="_Blank" className="socials">
-                        <GitHub />
-                      </a>
-                    </div>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
-            </FadeInSection>
-          </div>
-        ) : null
-      )}
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>Second slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgThree}
+                      alt="Third slide"
+                    />
 
-      <Projects />
-    </div>
-  );
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>Third slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                </Carousel>
+              </FadeInSection>
+            </div>
+          ) : null
+        )}
+        <Projects />
+      </div>
+    );
+  } else {
+    return (
+      <div className="project-container">
+        {homePageData.map((data) =>
+          data._id == newId ? (
+            <div key={data._id}>
+              <FadeInSection>
+                <h2>{data.title}</h2>
+                <Carousel id="project">
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgOne}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>First slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgTwo}
+                      alt="Second slide"
+                    />
+
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>Second slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={data.imgThree}
+                      alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                      <div className="caption-container">
+                        <h3>Third slide Image</h3>
+                        <p>See source code on github link below</p>
+                        <a href={data.link} target="_Blank" className="socials">
+                          <GitHub />
+                        </a>
+                      </div>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                </Carousel>
+              </FadeInSection>
+            </div>
+          ) : null
+        )}
+        <Projects />
+      </div>
+    );
+  }
 };
 
 export default Projectpage;
