@@ -17,6 +17,8 @@ export default function MyMap() {
   //   },
   // };
 
+  let key = process.env.REACT_APP_MAP_KEY;
+
   return (
     <div className="map-container">
       {/* <Map
@@ -36,7 +38,7 @@ export default function MyMap() {
       <iframe
         width="100%"
         height="100%"
-        src="https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/?key=xZe8iMkEoxPig8xgKbR2#9.4/40.74724/-73.92658"
+        src={`https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/?key=${key}#9.4/40.74724/-73.92658`}
       ></iframe>
     </div>
   );
