@@ -41,3 +41,16 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Git | Github
 - React-Bootstrap
 - Adobe XD
+
+<!--
+WORKING ON:
+ 1. Add loader when data is being rendered in in the projectpage.js
+ 2. Make the data be dynamic in project.js so it will display as much buttons as there are data being passed into localstorage or backend.
+ 3. Change Profile section to something else. Dont show your face.
+ 4. Add Scroll to top button at bottom of page.
+
+ ⭐5. Try and hide important information:
+      1. environment variables to heroku
+      2. untrack env file
+      3. maptiler key.
+ -->
