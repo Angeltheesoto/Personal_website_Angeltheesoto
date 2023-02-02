@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,9 +15,10 @@ import Projectpage from "./views/Projectpage";
 function App() {
   // fetch data ----------------------->>>>
   const [homePageData, setHomePageData] = useState();
+  const [envData, setEnvData] = useState();
 
   // data from mongodb
-  const dataUrl = "/projects";
+  const dataUrl = ["/projects", "/API"];
   const config = {
     method: "GET",
     headers: {
@@ -26,21 +27,34 @@ function App() {
     },
   };
 
-  const getAllData = () => {
-    axios
-      .get(dataUrl, config)
-      .then((response) => {
-        setHomePageData((prev) => (prev = response.data));
-        if (!localStorage.getItem("homepagedata")) {
-          localStorage.setItem("homepagedata", JSON.stringify(response.data));
-        }
-        // console.log(`Data fetched Successfully: `, homePageData);
+  // My original data fetching only projects.
+  // const getAllData = () => {
+  //   axios
+  //     .get(dataUrl, config)
+  //     .then((response) => {
+  //       setHomePageData((prev) => (prev = response.data));
+  //       if (!localStorage.getItem("homepagedata")) {
+  //         localStorage.setItem("homepagedata", JSON.stringify(response.data));
+  //       }
+  //       // console.log(`Data fetched Successfully: `, homePageData);
+  //     })
+  //     .catch((err) => console.log(`New Error: ${err}`));
+  // };
+
+  // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there.___>>>
+  let requests = () => {
+    axios.all(dataUrl.map((promise) => axios.get(promise, config))).then(
+      axios.spread((res1, res2) => {
+        setHomePageData((prev) => (prev = res1.data));
+        setEnvData((prev) => (prev = res2.data));
       })
-      .catch((err) => console.log(`New Error: ${err}`));
+    );
   };
+  // This fetches data from more than one url___>>>
 
   useEffect(() => {
-    getAllData();
+    // getAllData();
+    requests();
   }, []);
   // fetch data ----------------------->>>>
 
@@ -57,7 +71,7 @@ function App() {
                 element={<Projectpage homePageData={homePageData} />}
               />
             </Routes>
-            <Footer />
+            <Footer envData={envData} />
           </Container>
         </BrowserRouter>
       }

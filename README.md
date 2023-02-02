@@ -50,7 +50,6 @@ WORKING ON:
  4. Add Scroll to top button at bottom of page.
 
  ⭐5. Try and hide important information:
-      1. environment variables to heroku
-      2. untrack env file
-      3. maptiler key.
+      1. environment variables to heroku and untrack env files
+      2. hide maptiler key
  -->
