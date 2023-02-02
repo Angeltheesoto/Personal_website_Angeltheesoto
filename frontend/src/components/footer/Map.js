@@ -1,8 +1,10 @@
-import Map, { NavigationControl, Marker, Layer } from "react-map-gl";
-import maplibregl from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import React, { Suspense, useEffect, useState } from "react";
 
-export default function MyMap() {
+// import Map, { NavigationControl, Marker, Layer } from "react-map-gl";
+// import maplibregl from "maplibre-gl";
+// import "maplibre-gl/dist/maplibre-gl.css";
+
+export default function Map({ envData }) {
   // const circleLayer = {
   //   id: "landuse_park",
   //   type: "circle",
@@ -17,7 +19,19 @@ export default function MyMap() {
   //   },
   // };
 
+  const [mapKey, setMapKey] = useState();
   let key = process.env.REACT_APP_MAP_KEY;
+
+  // This lets us assign mapKey with the key data coming from app.js.
+  useEffect(() => {
+    try {
+      setMapKey((prev) => (prev = envData));
+    } catch (err) {
+      console.log(`Error: `, err);
+    }
+  }, []);
+  console.log(`mapKey:`, mapKey);
+  console.log(`mapKey:`, mapKey);
 
   return (
     <div className="map-container">
@@ -34,11 +48,13 @@ export default function MyMap() {
         <Marker longitude={-73.99676} latitude={40.727155} color="red" />
         <Layer {...circleLayer} />
       </Map> */}
-
       <iframe
         width="100%"
         height="100%"
-        src={`https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/?key=${key}#9.4/40.74724/-73.92658`}
+        //   src={`https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/?key=${mapKey}#9.4/40.
+        // 74724/-73.92658`}
+        src={`https://api.maptiler.com/maps/c409819f-850d-4d69-b2ad-5c95fdc642d8/?key=${key}#9.4/40.
+          74724/-73.92658`}
       ></iframe>
     </div>
   );

@@ -7,6 +7,7 @@ const path = require("path");
 
 // FILES ---
 const connectDB = require("./config/db");
+const connectApiDB = require("./config/envdb");
 const routes = require("./routes/projectRoute");
 // This is test data to be sent to front end.
 // const data = require("./data/data");
@@ -14,6 +15,7 @@ const routes = require("./routes/projectRoute");
 // VARIABLES & FUNCTIONS ---
 dotenv.config();
 connectDB();
+connectApiDB();
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors());
@@ -22,9 +24,10 @@ app.use(express.json());
 // ROUTES ---
 app.use("/", routes);
 app.use("/:id", routes);
+app.use("/API", routes);
 // This is test data route.
-// app.get("/test/data", (req, res) => {
-//   res.json(data);
+// app.get("/API", (req, res) => {
+//   res.json("API DATA HERE");
 // });
 
 // DEPLOYMENT --------------
