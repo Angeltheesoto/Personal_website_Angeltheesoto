@@ -34,8 +34,6 @@ function Footer({ envData }) {
     );
   };
 
-  // console.log(envData);
-
   return (
     <>
       <FadeInSection>

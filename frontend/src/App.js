@@ -18,7 +18,8 @@ function App() {
   const [envData, setEnvData] = useState();
 
   // data from mongodb
-  const dataUrl = ["/projects", "/API"];
+  const dataUrl = ["/projects", "/api/map_key"];
+
   const config = {
     method: "GET",
     headers: {
@@ -27,33 +28,17 @@ function App() {
     },
   };
 
-  // My original data fetching only projects.
-  // const getAllData = () => {
-  //   axios
-  //     .get(dataUrl, config)
-  //     .then((response) => {
-  //       setHomePageData((prev) => (prev = response.data));
-  //       if (!localStorage.getItem("homepagedata")) {
-  //         localStorage.setItem("homepagedata", JSON.stringify(response.data));
-  //       }
-  //       // console.log(`Data fetched Successfully: `, homePageData);
-  //     })
-  //     .catch((err) => console.log(`New Error: ${err}`));
-  // };
-
   // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there.___>>>
-  let requests = () => {
-    axios.all(dataUrl.map((promise) => axios.get(promise, config))).then(
+  let requests = async () => {
+    await axios.all(dataUrl.map((promise) => axios.get(promise, config))).then(
       axios.spread((res1, res2) => {
         setHomePageData((prev) => (prev = res1.data));
         setEnvData((prev) => (prev = res2.data));
       })
     );
   };
-  // This fetches data from more than one url___>>>
 
   useEffect(() => {
-    // getAllData();
     requests();
   }, []);
   // fetch data ----------------------->>>>
