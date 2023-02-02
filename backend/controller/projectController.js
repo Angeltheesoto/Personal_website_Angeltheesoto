@@ -31,8 +31,8 @@ const getEnv = (req, res, next) => {
   envModel
     .find({})
     .then((data) => {
-      console.log("Data: ", data);
-      res.json(data);
+      console.log("Data: ", data[0].content);
+      res.json(data[0].content);
     })
     .catch((data) => {
       console.log("Data: ", data);

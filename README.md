@@ -48,8 +48,4 @@ WORKING ON:
  2. Make the data be dynamic in project.js so it will display as much buttons as there are data being passed into localstorage or backend.
  3. Change Profile section to something else. Dont show your face.
  4. Add Scroll to top button at bottom of page.
-
- ⭐5. Try and hide important information:
-      1. environment variables to heroku and untrack env files
-      2. hide maptiler key
  -->
