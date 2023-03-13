@@ -12,9 +12,14 @@ const ProjectSchema = new mongoose.Schema({
   imgTwo: { type: String },
   imgThree: { type: String },
 });
+
 // Schema --------------
 
 // Model --------------
-const ProjectModel = mongoose.model("ProjectModel", ProjectSchema);
+const ProjectModel = mongoose.model(
+  "ProjectModel",
+  ProjectSchema,
+  "projectmodels"
+);
 
 module.exports = ProjectModel;

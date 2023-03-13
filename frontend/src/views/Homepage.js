@@ -10,7 +10,7 @@ import Skills from "../components/main/Skills";
 import Education from "../components/main/Education";
 import Projects from "../components/main/Projects";
 
-function Homepage() {
+function Homepage({ homePageData }) {
   // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
@@ -59,7 +59,7 @@ function Homepage() {
       <div className="header-container margin-bottom">
         <div className="box-container">
           <FadeInSection>
-            <Projects />
+            <Projects projectsData={homePageData} />
           </FadeInSection>
         </div>
         <Lava />
