@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./views.css";
 import Carousel from "react-bootstrap/Carousel";
 import GitHub from "../images_icons/github";
 import Projects from "../components/main/Projects";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 const Projectpage = ({ homePageData }) => {
   // Fade effect
@@ -36,9 +35,6 @@ const Projectpage = ({ homePageData }) => {
   // Fade effect
   const { id } = useParams();
   const newId = id * 1 + 1;
-  const [isLoading, setIsLoading] = useState(false);
-  const [err, setErr] = useState("");
-  const [data, setData] = useState();
   const LS = JSON.parse(localStorage.getItem("homepagedata"));
 
   // This is for Demonstration for seeing how homePageData is being passed into projectpage.js
@@ -50,11 +46,10 @@ const Projectpage = ({ homePageData }) => {
   // Use homepage data
   if (!homePageData) {
     return (
-      <div className="project-container">
+      <div className="project-container" id="showPrjects">
         {/* {homePageData.map((val) => {
         return <h1 key={val._id}>{val.title}</h1>;
       })} */}
-
         {LS.map((data) =>
           data._id == newId ? (
             <div key={data._id}>
@@ -116,12 +111,12 @@ const Projectpage = ({ homePageData }) => {
             </div>
           ) : null
         )}
-        <Projects />
+        <Projects projectsData={LS} />
       </div>
     );
   } else {
     return (
-      <div className="project-container">
+      <div className="project-container" id="showPrjects">
         {homePageData.map((data) =>
           data._id == newId ? (
             <div key={data._id}>
@@ -183,7 +178,7 @@ const Projectpage = ({ homePageData }) => {
             </div>
           ) : null
         )}
-        <Projects />
+        <Projects projectsData={homePageData} />
       </div>
     );
   }

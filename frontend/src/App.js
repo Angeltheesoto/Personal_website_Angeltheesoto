@@ -29,16 +29,20 @@ function App() {
   };
 
   // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there.___>>>
-  let requests = async () => {
-    await axios.all(dataUrl.map((promise) => axios.get(promise, config))).then(
-      axios.spread((res1, res2) => {
-        setHomePageData((prev) => (prev = res1.data));
-        setEnvData((prev) => (prev = res2.data));
-      })
-    );
-  };
-
   useEffect(() => {
+    let requests = async () => {
+      await axios
+        .all(dataUrl.map((promise) => axios.get(promise, config)))
+        .then(
+          axios.spread((res1, res2) => {
+            setHomePageData((prev) => (prev = res1.data));
+            setEnvData((prev) => (prev = res2.data));
+            if (!localStorage.getItem("homepagedata")) {
+              localStorage.setItem("homepagedata", JSON.stringify(res1.data));
+            }
+          })
+        );
+    };
     requests();
   }, []);
   // fetch data ----------------------->>>>
@@ -50,7 +54,10 @@ function App() {
           <Container>
             <Header />
             <Routes>
-              <Route path="/" element={<Homepage />} />
+              <Route
+                path="/"
+                element={<Homepage homePageData={homePageData} />}
+              />
               <Route
                 path="/project/:id"
                 element={<Projectpage homePageData={homePageData} />}
