@@ -6,7 +6,7 @@ import "./views.css";
 import Contact from "../components/footer/Contact";
 import Map from "../components/footer/Map";
 
-function Footer() {
+function Footer({ envData }) {
   // Fade effect
   const FadeInSection = ({ children }) => {
     const domRef = React.useRef();
@@ -38,7 +38,7 @@ function Footer() {
     <>
       <FadeInSection>
         <Contact />
-        <Map />
+        <Map envData={envData} />
       </FadeInSection>
     </>
   );

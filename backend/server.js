@@ -21,10 +21,10 @@ app.use(express.json());
 
 // ROUTES ---
 app.use("/", routes);
-app.use("/:id", routes);
+
 // This is test data route.
-// app.get("/test/data", (req, res) => {
-//   res.json(data);
+// app.get("/API", (req, res) => {
+//   res.json("API DATA HERE");
 // });
 
 // DEPLOYMENT --------------

@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,9 +15,11 @@ import Projectpage from "./views/Projectpage";
 function App() {
   // fetch data ----------------------->>>>
   const [homePageData, setHomePageData] = useState();
+  const [envData, setEnvData] = useState();
 
   // data from mongodb
-  const dataUrl = "/projects";
+  const dataUrl = ["/projects", "/api/map_key"];
+
   const config = {
     method: "GET",
     headers: {
@@ -26,21 +28,22 @@ function App() {
     },
   };
 
-  const getAllData = () => {
-    axios
-      .get(dataUrl, config)
-      .then((response) => {
-        setHomePageData((prev) => (prev = response.data));
-        if (!localStorage.getItem("homepagedata")) {
-          localStorage.setItem("homepagedata", JSON.stringify(response.data));
-        }
-        // console.log(`Data fetched Successfully: `, homePageData);
-      })
-      .catch((err) => console.log(`New Error: ${err}`));
-  };
-
+  // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there
   useEffect(() => {
-    getAllData();
+    let requests = async () => {
+      await axios
+        .all(dataUrl.map((promise) => axios.get(promise, config)))
+        .then(
+          axios.spread((res1, res2) => {
+            setHomePageData((prev) => (prev = res1.data));
+            setEnvData((prev) => (prev = res2.data));
+            if (!localStorage.getItem("homepagedata")) {
+              localStorage.setItem("homepagedata", JSON.stringify(res1.data));
+            }
+          })
+        );
+    };
+    requests();
   }, []);
   // fetch data ----------------------->>>>
 
@@ -51,13 +54,16 @@ function App() {
           <Container>
             <Header />
             <Routes>
-              <Route path="/" element={<Homepage />} />
+              <Route
+                path="/"
+                element={<Homepage homePageData={homePageData} />}
+              />
               <Route
                 path="/project/:id"
                 element={<Projectpage homePageData={homePageData} />}
               />
             </Routes>
-            <Footer />
+            <Footer envData={envData} />
           </Container>
         </BrowserRouter>
       }
