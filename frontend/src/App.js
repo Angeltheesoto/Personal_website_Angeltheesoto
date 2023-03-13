@@ -28,7 +28,7 @@ function App() {
     },
   };
 
-  // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there.
+  // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there
   useEffect(() => {
     let requests = async () => {
       await axios
