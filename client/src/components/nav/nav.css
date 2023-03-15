@@ -1,0 +1,50 @@
+.navbar-container {
+  background-color: #061d3a;
+}
+
+.nav-center {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.text-white {
+  padding-right: 10px;
+}
+
+.text-white:hover {
+  cursor: pointer;
+}
+
+/* link hover effect */
+.link-hover-effect {
+  position: relative;
+}
+
+.link-hover-effect:before {
+  content: "";
+  /* background: rgba(0, 212, 255, 1); */
+  background: red;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-hover-effect:hover::before {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-container {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .text-white {
+    font-size: 2.2rem;
+  }
+}

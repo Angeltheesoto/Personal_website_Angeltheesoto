@@ -1,0 +1,49 @@
+/* Project js */
+.hero-container {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.projects-container {
+  height: 46rem;
+  margin: 0;
+}
+
+.project-links {
+  width: 100%;
+  max-width: 100% !important;
+  text-decoration: none;
+}
+
+.project-cards {
+  height: 6rem;
+  width: 100%;
+  color: #061d3a;
+  background-color: white;
+  border: none;
+  border-radius: 17px;
+  padding: 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+  background: linear-gradient(to left, white 34%, red 65%) right;
+  background-size: 300% 100%;
+  /* background: linear-gradient(to left, white 50%, red 50%) right;
+  background-size: 200% 100%; */
+  transition: 1s ease-in-out;
+}
+
+.link-one:hover,
+.link-two:hover,
+.link-three:hover,
+.link-four:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  background-position: left;
+}
+
+@media screen and (max-width: 997px) {
+  .projects-container {
+    margin-top: 4rem;
+  }
+}
