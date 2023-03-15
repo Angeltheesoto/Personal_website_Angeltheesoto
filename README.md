@@ -24,7 +24,7 @@ Frontend --
 Angeltheesoto is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
 Check out the link below!
 
-![angeltheesoto](./frontend/angeltheesoto.png)
+![angeltheesoto](https://i.postimg.cc/mZKHs7xL/angeltheesoto.png)
 
 Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
