@@ -1,0 +1,15 @@
+.info-container2 {
+  padding: 0 4rem 3rem 4rem;
+  z-index: 9999;
+  align-self: center;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .info-container2 {
+    padding: 3rem 4rem;
+  }
+}
