@@ -16,7 +16,7 @@ export default function NavbarEl() {
               <Logo />
             </LinkRoute>
           </Navbar.Brand>
-          <Nav className="me-auto nav-center ">
+          <Nav className="me-auto nav-center">
             <Nav href="#about" className="text-white link-hover-effect">
               <Link to="about" spy={true} smooth={true} offset={-400}>
                 About{" "}
