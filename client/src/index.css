@@ -124,3 +124,23 @@ li::before {
 .block {
   display: block;
 }
+
+.show-container {
+  display: block;
+  width: 2.5rem;
+  height: 4rem;
+  bottom: 2rem;
+  left: 100%;
+  z-index: 9999;
+  position: sticky;
+  cursor: pointer;
+  text-align: center;
+  transition: 1s ease;
+  border-radius: 10% 0 0 10%;
+  background-color: red;
+}
+
+.show-container:hover {
+  transition: 1s ease;
+  bottom: 3rem;
+}

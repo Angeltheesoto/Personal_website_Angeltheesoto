@@ -1,23 +1,13 @@
-// dependencies
 import React, { useState } from "react";
-
-// Emailjs npm
 import emailjs from "emailjs-com";
-
-// Css / imgs
 import "./contact.css";
-import ProfilePic from "../../misc/picture_of_me.jpg";
-
-// Bootstrap
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-
-// Toast npm
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Technologies from "../technologies/Technologies";
 
 function Contact() {
-  // Variables
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
@@ -137,8 +127,10 @@ function Contact() {
         </Form>
       </div>
       <div className="footer-links">
-        <h4>Profile</h4>
-        <img src={ProfilePic} alt="angel soto" className="profilepic" />
+        <h4>Technologies</h4>
+        <div className="technologies-container">
+          <Technologies />
+        </div>
       </div>
       <ToastContainer
         position="top-center"

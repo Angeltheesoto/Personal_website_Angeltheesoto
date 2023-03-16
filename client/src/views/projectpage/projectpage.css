@@ -12,3 +12,8 @@
   width: fit-content;
   margin: 0 auto;
 }
+
+.loader-container {
+  height: 100%;
+  width: 100%;
+}

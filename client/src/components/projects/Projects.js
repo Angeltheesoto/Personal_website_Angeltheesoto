@@ -2,10 +2,25 @@ import Container from "react-bootstrap/Container";
 import "./projects.css";
 import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
+import { MutatingDots } from "react-loader-spinner";
 
 function Projects({ projectsData }) {
   if (!projectsData) {
-    return <div>Loading...</div>;
+    return (
+      <Container id="projects" className="hero-container projects-container">
+        <MutatingDots
+          height="100"
+          width="100"
+          color="red"
+          secondaryColor="red"
+          radius="20.5"
+          ariaLabel="mutating-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass="loader-container"
+          visible={true}
+        />
+      </Container>
+    );
   } else {
     return (
       <Container id="projects" className="hero-container projects-container">
