@@ -1,0 +1,17 @@
+/* .technologies-link {
+  margin: 15px;
+} */
+
+.technologies-img {
+  width: 3rem;
+  height: auto;
+  margin: 15px;
+  transition: 1s ease;
+}
+
+.technologies-img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+}

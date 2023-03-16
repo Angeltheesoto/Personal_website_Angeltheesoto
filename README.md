@@ -8,7 +8,6 @@ Backend --
 [concurrently] - lets you run frontend and backend with one command.npm run start.
 [cors] - CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 [mongoose] - Provides everything that lets us connect to mongoDB.
-[] -
 
 Frontend --
 [bootstrap react-bootstrap] - used for fast styling
@@ -18,7 +17,9 @@ Frontend --
 [react-toastify] - makes a toast appear when form is submited
 [react-router-dom] - lets you change content on click in page.
 [axios] - links backend and frontend. Makes api calls easy.
-[] -
+[react-loader-spinner] - load spinner
+[react-helmet] - manipulate html head attributes from components
+[@mui/icons-material @mui/material @emotion/styled @emotion/react] - material ui icons
 -->
 
 Angeltheesoto is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
@@ -44,9 +45,5 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
 <!--
 WORKING ON:
- 1. Add loader when data is being rendered in in the projectpage.js
- 2. Make the data be dynamic in project.js so it will display as much buttons as there are data being passed into localstorage or backend.
- 3. Change Profile section to something else. Dont show your face.
- 4. Add Scroll to top button at bottom of page.
- 5. Create a wrong page render for when someone goes to a different page.
+  1. Work on blog page.
  -->
