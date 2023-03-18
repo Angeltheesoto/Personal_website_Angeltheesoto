@@ -5,8 +5,9 @@ import Logo from "../../misc/logo";
 import "./nav.css";
 import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
+import React from "react";
 
-export default function NavbarEl() {
+const NavbarEl: React.FC = () => {
   return (
     <>
       <Navbar className="navbar-container" id="navbar-container">
@@ -17,22 +18,22 @@ export default function NavbarEl() {
             </LinkRoute>
           </Navbar.Brand>
           <Nav className="me-auto nav-center">
-            <Nav href="#about" className="text-white link-hover-effect">
+            <Nav className="text-white link-hover-effect">
               <Link to="about" spy={true} smooth={true} offset={-400}>
                 About{" "}
               </Link>
             </Nav>
-            <Nav href="#skills" className="text-white link-hover-effect">
+            <Nav className="text-white link-hover-effect">
               <Link to="skills" spy={true} smooth={true} offset={-400}>
                 Skills
               </Link>
             </Nav>
-            <Nav href="#projects" className="text-white link-hover-effect">
+            <Nav className="text-white link-hover-effect">
               <Link to="projects" spy={true} smooth={true} offset={-400}>
                 Projects
               </Link>
             </Nav>
-            <Nav href="#contact" className="text-white link-hover-effect">
+            <Nav className="text-white link-hover-effect">
               <Link to="contact" spy={true} smooth={true}>
                 Contact
               </Link>
@@ -42,4 +43,6 @@ export default function NavbarEl() {
       </Navbar>
     </>
   );
-}
+};
+
+export default NavbarEl;

@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function FadeInSection({ children }) {
-  const domRef = React.useRef();
-  const [isVisible, setVisible] = React.useState(false);
+interface Props {
+  children: React.ReactNode;
+}
+
+const FadeInSection: React.FC<Props> = ({ children }) => {
+  const domRef = useRef<HTMLElement>(null);
+  const [isVisible, setVisible] = useState<boolean>(false);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       // There's only one element to observe
@@ -10,10 +14,10 @@ export default function FadeInSection({ children }) {
         // Not possible to set it back to false like this
         setVisible(true);
         // No need to keep observing
-        observer.unobserve(domRef.current);
+        observer.unobserve(domRef.current!);
       }
     });
-    observer.observe(domRef.current);
+    observer.observe(domRef.current!);
     return () => observer.disconnect();
   }, []);
 
@@ -25,4 +29,6 @@ export default function FadeInSection({ children }) {
       {children}
     </section>
   );
-}
+};
+
+export default FadeInSection;

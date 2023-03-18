@@ -1,5 +1,5 @@
 import "./svg.css";
-function GitHub() {
+function GitHub(): JSX.Element {
   return (
     <svg
       className="socials github"

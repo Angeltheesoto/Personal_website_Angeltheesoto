@@ -1,5 +1,5 @@
 import "./svg.css";
-function Logo() {
+function Logo(): JSX.Element {
   return (
     <svg
       className="logo"

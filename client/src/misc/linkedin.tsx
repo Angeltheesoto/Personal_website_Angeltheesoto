@@ -1,5 +1,5 @@
 import "./svg.css";
-function LinkedIn() {
+function LinkedIn(): JSX.Element {
   return (
     <svg
       className="socials linkedin"

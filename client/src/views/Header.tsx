@@ -1,4 +1,5 @@
 // Dependencies
+import React from "react";
 import "./views.css";
 
 // Components
@@ -7,7 +8,7 @@ import Hero from "../components/hero/Hero";
 import Orbs from "../components/orbs/Orbs";
 import FadeInEffect from "../components/fadeineffect/FadeInEffect";
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <>
       <div className="header-container">
@@ -21,6 +22,6 @@ function Header() {
       </div>
     </>
   );
-}
+};
 
 export default Header;

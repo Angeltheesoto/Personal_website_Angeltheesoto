@@ -1,6 +1,7 @@
+import React from "react";
 import "./skills.css";
 
-export default function Skills() {
+const Skills: React.FC = () => {
   return (
     <div id="skills" className="info-container pos-rel">
       <h2>Skills</h2>
@@ -20,4 +21,6 @@ export default function Skills() {
       </div>
     </div>
   );
-}
+};
+
+export default Skills;
