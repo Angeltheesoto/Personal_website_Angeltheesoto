@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
@@ -7,20 +7,37 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Technologies from "../technologies/Technologies";
 
-function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [comment, setComment] = useState("");
+function Contact(): JSX.Element {
+  interface FormData {
+    name: string;
+    email: string;
+    comment: string;
+  }
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    comment: "",
+  });
+
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, name: event.target.value });
+  };
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, email: event.target.value });
+  };
+  const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, comment: event.target.value });
+  };
 
   // This function handles the email being sent and logs when it fails.
-  function sendEmail(e) {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (name && email && comment) {
+    if (formData.name && formData.email && formData.comment) {
       emailjs
         .sendForm(
           `service_kq3g3p2`,
           `template_0cl4ohp`,
-          e.target,
+          e.currentTarget,
           `cABl6iw7PSwCXKddN`
         )
         .then((res) => {
@@ -29,16 +46,16 @@ function Contact() {
         .catch((err) => {
           console.log(err);
         });
-      e.target.reset();
-      setComment((prev) => (prev = ""));
+      e.currentTarget.reset();
+      // setComment((prev) => (prev = ""));
     } else {
       // console.log("Cannot send email.");
     }
   }
 
   // This function is the two submit buttons that display different effects in browser when clicked.
-  function SubmitButton() {
-    if (name && email && comment) {
+  function SubmitButton(): JSX.Element {
+    if (formData.name && formData.email && formData.comment) {
       const notify = () => {
         toast.success("Your message was successfully sent!", {
           position: "top-center",
@@ -83,11 +100,12 @@ function Contact() {
         <h4>Contact me</h4>
         <Form onSubmit={sendEmail} method="post">
           <FloatingLabel
+            {...(formData.name as any)}
             controlId="floatingInput"
             label="Name"
             className="mb-3"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleNameChange}
           >
             <Form.Control
               type="text"
@@ -98,11 +116,12 @@ function Contact() {
           </FloatingLabel>
 
           <FloatingLabel
+            {...(formData.name as any)}
             controlId="floatingInput"
             label="Email address"
             className="mb-3"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleEmailChange}
           >
             <Form.Control
               type="email"
@@ -114,13 +133,14 @@ function Contact() {
 
           <FloatingLabel controlId="floatingTextarea2" label="Comments">
             <Form.Control
+              {...(formData.name as any)}
               as="textarea"
               name="message"
               placeholder="Leave a comment here"
               style={{ height: "100px" }}
               className="mb-3"
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
+              value={formData.comment}
+              onChange={handleCommentChange}
             />
           </FloatingLabel>
           <SubmitButton />

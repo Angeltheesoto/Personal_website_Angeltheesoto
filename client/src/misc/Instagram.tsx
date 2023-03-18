@@ -1,5 +1,5 @@
 import "./svg.css";
-function Instagram() {
+function Instagram(): JSX.Element {
   return (
     <svg
       className="socials instagram"

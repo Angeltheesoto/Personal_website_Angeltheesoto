@@ -31,7 +31,7 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
 ## Bugs
 
-- Currently when you click on the projects in /project, you have to click the same button twice for the data to show up.
+- There are currently no bugs that I am aware of. If you do happen to spot any bugs please report them through the contact page below. Thank you 😄
 
 ## Technologies
 
@@ -46,4 +46,6 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 <!--
 WORKING ON:
   1. Work on blog page.
+  2. Fix text size, its too small.
+  3. Convert css to sass
  -->
