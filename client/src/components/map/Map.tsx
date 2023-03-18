@@ -2,7 +2,11 @@
 // import maplibregl from "maplibre-gl";
 // import "maplibre-gl/dist/maplibre-gl.css";
 
-export default function Map() {
+interface Props {
+  envData?: string;
+}
+
+export default function Map({ envData }: Props) {
   // const circleLayer = {
   //   id: "landuse_park",
   //   type: "circle",
@@ -16,6 +20,9 @@ export default function Map() {
   //     "circle-stroke-color": "green",
   //   },
   // };
+
+  // const myString = envData || "";
+  // console.log(myString);
 
   return (
     <div className="map-container">

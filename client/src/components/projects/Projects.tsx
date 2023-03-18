@@ -3,8 +3,13 @@ import "./projects.css";
 import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
 import { MutatingDots } from "react-loader-spinner";
+import React from "react";
 
-function Projects({ projectsData }) {
+interface Props {
+  projectsData: object[];
+}
+
+const Projects: React.FC<Props> = ({ projectsData }) => {
   if (!projectsData) {
     return (
       <Container id="projects" className="hero-container projects-container">
@@ -25,8 +30,8 @@ function Projects({ projectsData }) {
     return (
       <Container id="projects" className="hero-container projects-container">
         <h2>Projects</h2>
-        {projectsData?.map((item) => (
-          <>
+        {projectsData?.map((item: any) => (
+          <React.Fragment>
             <Link
               className="project-links"
               to="navbar"
@@ -39,11 +44,11 @@ function Projects({ projectsData }) {
                 <div className="project-cards link-one">{item.title}</div>
               </LinkRoute>
             </Link>
-          </>
+          </React.Fragment>
         ))}
       </Container>
     );
   }
-}
+};
 
 export default Projects;

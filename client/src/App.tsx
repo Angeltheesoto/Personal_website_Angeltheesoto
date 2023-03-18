@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { Helmet } from "react-helmet";
 import { Link } from "react-scroll";
 import NorthIcon from "@mui/icons-material/North";
@@ -17,13 +17,13 @@ import NotFoundPage from "./components/notfoundpage/NotFoundPage";
 
 function App() {
   // ?fetch data ----------------------->>>>
-  const [homePageData, setHomePageData] = useState();
-  const [envData, setEnvData] = useState();
-  const [showButton, setShowButton] = useState();
+  const [homePageData, setHomePageData] = useState<any | undefined>();
+  const [envData, setEnvData] = useState<string | undefined>(undefined);
+  const [showButton, setShowButton] = useState<boolean>();
 
   // data from mongodb
   const dataUrl = ["/projects", "/api/map_key"];
-  const config = {
+  const config: AxiosRequestConfig = {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -38,7 +38,7 @@ function App() {
         .all(dataUrl.map((promise) => axios.get(promise, config)))
         .then(
           axios.spread((res1, res2) => {
-            setHomePageData((prev) => (prev = res1.data));
+            setHomePageData((prev: any) => (prev = res1.data));
             setEnvData((prev) => (prev = res2.data));
             if (!localStorage.getItem("homepagedata")) {
               localStorage.setItem("homepagedata", JSON.stringify(res1.data));
@@ -46,6 +46,7 @@ function App() {
           })
         );
     };
+    // This slows down the requests so you can see the loader when fetching project links.
     // const timer = setTimeout(() => {
     //   requests();
     // }, 5000);

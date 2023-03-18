@@ -1,9 +1,10 @@
+import React from "react";
 import "./orbs.css";
 
-export default function Lava() {
+const Lava2: React.FC = () => {
   return (
     <div className="orbs-main-container">
-      <div className="orbs-container">
+      <div className="orbs-container orbs-c-2">
         <div className="gooey-container">
           <div className="obj-1 goo"></div>
           <div className="obj-2 goo"></div>
@@ -17,4 +18,6 @@ export default function Lava() {
       </div>
     </div>
   );
-}
+};
+
+export default Lava2;
