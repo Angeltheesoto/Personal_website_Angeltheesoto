@@ -1,11 +1,12 @@
+import React from "react";
 import "./technologies.css";
-export default function Technologies() {
+const Technologies: any = () => {
   return [
     <>
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -19,7 +20,7 @@ export default function Technologies() {
       <a
         href="https://www.python.org/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -33,7 +34,7 @@ export default function Technologies() {
       <a
         href="https://www.typescriptlang.org/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -47,7 +48,7 @@ export default function Technologies() {
       <a
         href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -61,7 +62,7 @@ export default function Technologies() {
       <a
         href="https://www.w3.org/TR/CSS/#css"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -75,7 +76,7 @@ export default function Technologies() {
       <a
         href="https://reactjs.org/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -89,7 +90,7 @@ export default function Technologies() {
       <a
         href="https://sass-lang.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -103,7 +104,7 @@ export default function Technologies() {
       <a
         href="https://getbootstrap.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -117,7 +118,7 @@ export default function Technologies() {
       <a
         href="https://webpack.js.org/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -131,7 +132,7 @@ export default function Technologies() {
       <a
         href="https://babeljs.io/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -145,7 +146,7 @@ export default function Technologies() {
       <a
         href="https://nodejs.org/en/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -159,7 +160,7 @@ export default function Technologies() {
       <a
         href="https://expressjs.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -173,7 +174,7 @@ export default function Technologies() {
       <a
         href="https://www.mongodb.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -187,7 +188,7 @@ export default function Technologies() {
       <a
         href="https://www.postgresql.org/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -201,7 +202,7 @@ export default function Technologies() {
       <a
         href="https://www.heroku.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -215,7 +216,7 @@ export default function Technologies() {
       <a
         href="https://flask.palletsprojects.com/en/2.0.x/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -229,7 +230,7 @@ export default function Technologies() {
       <a
         href="https://www.adobe.com/uk/products/xd.html"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="technologies-link"
       >
         <img
@@ -242,4 +243,6 @@ export default function Technologies() {
       </a>
     </>,
   ];
-}
+};
+
+export default Technologies;

@@ -4,7 +4,7 @@ import "./notfoundpage.css";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import FadeInEffect from "../fadeineffect/FadeInEffect";
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <>
       <div className="notfoundpage-container">

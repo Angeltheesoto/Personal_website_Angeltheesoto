@@ -9,8 +9,13 @@ import Skills from "../../components/skills/Skills";
 import Education from "../../components/education/Education";
 import Projects from "../../components/projects/Projects";
 import FadeInEffect from "../../components/fadeineffect/FadeInEffect";
+import React from "react";
 
-function Homepage({ homePageData }) {
+interface Props {
+  homePageData: object[];
+}
+
+const Homepage: React.FC<Props> = ({ homePageData }) => {
   return (
     <>
       <div className="header-container flex-row-reverse">
@@ -39,6 +44,6 @@ function Homepage({ homePageData }) {
       </div>
     </>
   );
-}
+};
 
 export default Homepage;
