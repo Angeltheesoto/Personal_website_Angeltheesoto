@@ -4,24 +4,9 @@
   align-self: center;
 }
 
-.orbs-main-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 20rem;
-  width: 100%;
-  margin-top: 2rem;
-}
-
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;
   }
 }
-
-@media screen and (min-width: 992px) {
-  .orbs-main-container {
-    max-width: 40rem;
-    height: 48rem;
-  }
-}
+/*# sourceMappingURL=aboutme.css.map */

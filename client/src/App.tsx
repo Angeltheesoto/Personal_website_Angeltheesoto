@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
+import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import axios, { AxiosRequestConfig } from "axios";
@@ -66,49 +66,52 @@ function App() {
 
   return (
     <div className="App">
-      {
-        <BrowserRouter>
-          <Helmet>
-            <title>Home Page</title>
-            <meta
-              name="Description"
-              content="My personal website showcasing my skills as a software engineer."
-            />
-            <meta
-              name="keywords"
-              content="angeltheesoto, Angel Soto, software developer, frontend developer, backend developer, fullstack developer, portfolio"
-            />
-          </Helmet>
-          <Container>
-            <Header />
-            <Routes>
-              <Route
-                path="/"
-                element={<Homepage homePageData={homePageData} />}
+      <div className="cursor-circle">
+        {
+          <BrowserRouter>
+            <Helmet>
+              <title>Home Page</title>
+              <meta
+                name="Description"
+                content="My personal website showcasing my skills as a software engineer."
               />
-              <Route
-                path="/project/:id"
-                element={<Projectpage homePageData={homePageData} />}
+              <meta
+                name="keywords"
+                content="angeltheesoto, Angel Soto, software developer, frontend developer, backend developer, fullstack developer, portfolio"
               />
-              <Route path="/*" element={<NotFoundPage />} />
-            </Routes>
-            <Footer envData={envData} />
-          </Container>
-          {showButton && (
-            <Link to="navbar-container">
-              <div className={showButton ? "show-container" : "none"}>
-                <NorthIcon
-                  sx={{
-                    fontSize: 50,
-                    color: "white",
-                    padding: "10px 7px 0 0",
-                  }}
+            </Helmet>
+            <Container>
+              <div className="header-display"></div>
+              <Header />
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Homepage homePageData={homePageData} />}
                 />
+                <Route
+                  path="/project/:id"
+                  element={<Projectpage homePageData={homePageData} />}
+                />
+                <Route path="/*" element={<NotFoundPage />} />
+              </Routes>
+              <Footer envData={envData} />
+            </Container>
+            {showButton && (
+              <div className={showButton ? "show-container" : "none"}>
+                <Link to="hero" offset={-300}>
+                  <NorthIcon
+                    sx={{
+                      fontSize: 50,
+                      color: "white",
+                      padding: "10px 7px 0 0",
+                    }}
+                  />
+                </Link>
               </div>
-            </Link>
-          )}
-        </BrowserRouter>
-      }
+            )}
+          </BrowserRouter>
+        }
+      </div>
     </div>
   );
 }

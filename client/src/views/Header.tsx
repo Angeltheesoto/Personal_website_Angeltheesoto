@@ -1,6 +1,5 @@
 // Dependencies
 import React from "react";
-import "./views.css";
 
 // Components
 import NavbarEl from "../components/nav/Nav";
@@ -10,17 +9,17 @@ import FadeInEffect from "../components/fadeineffect/FadeInEffect";
 
 const Header: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
+      <NavbarEl />
       <div className="header-container">
         <div className="box-container">
-          <NavbarEl />
           <FadeInEffect>
             <Hero />
           </FadeInEffect>
         </div>
         <Orbs />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

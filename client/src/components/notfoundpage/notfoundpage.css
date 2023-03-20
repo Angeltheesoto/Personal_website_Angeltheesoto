@@ -1,25 +1,22 @@
 .notfoundpage-container {
   width: 100%;
   height: auto;
-  margin: 3rem 0;
+  margin: 10rem 0;
   text-align: center;
   justify-content: center;
 }
-
-.notfoundpage-heading {
+.notfoundpage-container .notfoundpage-heading {
   font-size: 10rem;
   color: white;
 }
-
-.notfoundpage-text {
+.notfoundpage-container .notfoundpage-text {
   font-size: 3rem;
 }
-
-.notfoundpage-span {
+.notfoundpage-container .notfoundpage-span {
   font-size: 2rem;
 }
 
 .notfoundpage-heading,
 .notfoundpage-text:hover {
   cursor: default;
-}
+}/*# sourceMappingURL=notfoundpage.css.map */

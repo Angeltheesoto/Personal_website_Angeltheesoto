@@ -4,11 +4,12 @@
   text-align: center;
   height: 46rem;
   margin: 0;
-}
-.hero-container .project-links {
-  width: 100%;
-  max-width: 100% !important;
-  text-decoration: none;
+
+  .project-links {
+    width: 100%;
+    max-width: 100% !important;
+    text-decoration: none;
+  }
 }
 
 .project-cards {
@@ -24,6 +25,8 @@
   background: linear-gradient(to left, white 34%, red 65%) right;
   background-size: 300% 100%;
   transition: 1s ease-in-out;
+  // background: linear-gradient(to left, white 50%, red 50%) right;
+  // background-size: 200% 100%;
 }
 
 .link-one:hover,
@@ -41,4 +44,4 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=projects.css.map */
+}
