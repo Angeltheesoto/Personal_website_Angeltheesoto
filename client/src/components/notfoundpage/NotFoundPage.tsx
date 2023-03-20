@@ -6,7 +6,7 @@ import FadeInEffect from "../fadeineffect/FadeInEffect";
 
 const NotFoundPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <div className="notfoundpage-container">
         <FadeInEffect>
           <div>
@@ -21,7 +21,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </FadeInEffect>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

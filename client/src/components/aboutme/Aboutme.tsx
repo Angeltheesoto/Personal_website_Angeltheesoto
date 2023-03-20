@@ -2,7 +2,7 @@ import "./aboutme.css";
 
 export default function Aboutme() {
   return (
-    <div id="about" className="orbs-main-container">
+    <div id="about">
       <div className="info-container">
         <h2>About Me</h2>
         <p>

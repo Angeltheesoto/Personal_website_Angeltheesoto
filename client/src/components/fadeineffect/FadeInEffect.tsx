@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import "./fadeineffect.css";
 
 interface Props {
   children: React.ReactNode;

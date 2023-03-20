@@ -28,13 +28,13 @@ const Projects: React.FC<Props> = ({ projectsData }) => {
     );
   } else {
     return (
-      <Container id="projects" className="hero-container projects-container">
+      <Container id="projects" className="hero-container">
         <h2>Projects</h2>
         {projectsData?.map((item: any) => (
           <React.Fragment>
             <Link
               className="project-links"
-              to="navbar"
+              to="hero"
               spy={true}
               smooth={false}
               offset={800}

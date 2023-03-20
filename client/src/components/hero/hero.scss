@@ -6,14 +6,16 @@
   height: 30rem;
   align-items: center;
   margin-top: 5rem !important;
-}
-.hero-container a {
-  max-width: 4rem;
-}
-.hero-container .hero-text {
-  margin: 0 auto;
-  text-align: center;
-  align-content: center;
+
+  a {
+    max-width: 4rem;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+  }
 }
 
 .socials {
@@ -27,6 +29,7 @@
 
 @media screen and (min-width: 992px) {
   .header-container {
+    // margin-top: 5rem;
     height: 50rem;
     align-items: center;
   }
@@ -34,6 +37,7 @@
     height: 46rem;
   }
 }
+
 @media screen and (min-width: 1400px) {
   h1 {
     font-size: 6rem;
@@ -41,4 +45,4 @@
   h3 {
     font-size: 1.3rem;
   }
-}/*# sourceMappingURL=hero.css.map */
+}

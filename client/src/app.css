@@ -43,65 +43,6 @@ a:hover {
   color: white;
 }
 
-.app-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.leaflet-container {
-  height: 30rem;
-}
-
-.toast-container {
-  position: -webkit-fixed;
-  position: fixed;
-  top: -6rem;
-  /* top: 2rem; */
-  left: 50%;
-  transform: translateX(-50%);
-  margin: auto;
-  padding: 10px 2rem 1px 2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 10px;
-  background-color: red;
-  opacity: 0;
-  transition: 1s ease;
-}
-
-.toast-transition {
-  top: 2rem;
-  opacity: 1;
-  transition: 1s ease;
-}
-
-@media screen and (min-width: 992px) {
-  .header-container {
-    display: flex;
-    max-height: 50rem;
-  }
-  .box-container {
-    width: 100%;
-  }
-}
-
-.test {
-  position: absolute;
-  z-index: 9999;
-  background-color: red;
-  color: white;
-  border-radius: 3px;
-}
-
-.test:hover {
-  cursor: pointer;
-}
-
-.fade-in-section {
-  width: 100%;
-  /* max-height: 20rem; */
-}
-
 li {
   /* list-style-type: circle; */
   list-style: none;
@@ -144,3 +85,48 @@ li::before {
   transition: 1s ease;
   bottom: 3rem;
 }
+
+.header-display {
+  height: 5rem;
+  width: 100%;
+}
+
+/* scroll bar styles */
+/* For Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #061d3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 5px;
+}
+
+::-moz-scrollbar-track {
+  background-color: #061d3a;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .header-container {
+    display: flex;
+    max-height: auto;
+  }
+  .box-container {
+    width: 100%;
+  }
+}
+/* background-color: rgba(0, 0, 0, 0.2); */

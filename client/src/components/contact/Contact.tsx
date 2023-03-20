@@ -58,7 +58,7 @@ function Contact(): JSX.Element {
     if (formData.name && formData.email && formData.comment) {
       const notify = () => {
         toast.success("Your message was successfully sent!", {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -76,7 +76,7 @@ function Contact(): JSX.Element {
     } else {
       const notify = () => {
         toast.error("Sorry, you must fill in all fields.", {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -146,14 +146,14 @@ function Contact(): JSX.Element {
           <SubmitButton />
         </Form>
       </div>
-      <div className="footer-links">
+      <div className="technologies-container">
         <h4>Technologies</h4>
-        <div className="technologies-container">
+        <div className="technologies-links">
           <Technologies />
         </div>
       </div>
       <ToastContainer
-        position="top-center"
+        position="top-right"
         autoClose={5000}
         limit={1}
         hideProgressBar={false}

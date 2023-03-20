@@ -9,9 +9,9 @@ import React from "react";
 
 const NavbarEl: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Navbar className="navbar-container" id="navbar-container">
-        <Container>
+        <Container className="bootstrap-container">
           <Navbar.Brand>
             <LinkRoute to="/">
               <Logo />
@@ -19,29 +19,29 @@ const NavbarEl: React.FC = () => {
           </Navbar.Brand>
           <Nav className="me-auto nav-center">
             <Nav className="text-white link-hover-effect">
-              <Link to="about" spy={true} smooth={true} offset={-400}>
+              <Link to="about" spy={true} offset={-400}>
                 About{" "}
               </Link>
             </Nav>
             <Nav className="text-white link-hover-effect">
-              <Link to="skills" spy={true} smooth={true} offset={-400}>
+              <Link to="skills" spy={true} offset={-400}>
                 Skills
               </Link>
             </Nav>
             <Nav className="text-white link-hover-effect">
-              <Link to="projects" spy={true} smooth={true} offset={-400}>
+              <Link to="projects" spy={true} offset={-200}>
                 Projects
               </Link>
             </Nav>
             <Nav className="text-white link-hover-effect">
-              <Link to="contact" spy={true} smooth={true}>
+              <Link to="contact" spy={true} offset={-200}>
                 Contact
               </Link>
             </Nav>
           </Nav>
         </Container>
       </Navbar>
-    </>
+    </React.Fragment>
   );
 };
 

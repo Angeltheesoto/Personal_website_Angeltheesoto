@@ -46,6 +46,6 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 <!--
 WORKING ON:
   1. Work on blog page.
-  2. Fix text size, its too small.
-  3. Convert css to sass
+  2. Add a mouse effect that follows it around.
+  3. Fix navbar font size, and width(make it span the whole top.)
  -->

@@ -1,3 +1,8 @@
+@mixin obj-styles($left: 10%, $animationTime: 1s) {
+  left: $left;
+  animation: ani-1 $animationTime ease infinite;
+}
+
 .orbs-main-container {
   display: flex;
   flex-wrap: wrap;
@@ -33,23 +38,29 @@
     max-height: 50rem;
     max-width: 100%;
   }
+
   .Orbs2 {
     width: 57rem;
   }
+
   .orbs-main-container {
     max-width: 40rem;
     height: 48rem;
   }
+
   .orbs-main-container2 {
     height: 48rem !important;
   }
+
   .gooey-container {
     max-width: 40rem;
   }
 }
+
 /* GOO EFFECT | BASIC STYLES */
 .gooey-container {
   border: 10px solid rgb(2, 0, 36);
+  // border: 10px solid rgb(36, 0, 0);
   border-radius: 10px;
   height: 100%;
   top: 50%;
@@ -60,7 +71,6 @@
   filter: blur(10px) contrast(20);
   overflow: hidden;
 }
-
 .goo {
   width: 100px;
   height: 100px;
@@ -68,8 +78,20 @@
   left: 50%;
   position: absolute;
   border-radius: 50%;
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(9, 9, 121, 1) 94%,
+  //   rgba(0, 212, 255, 1) 100%
+  // );
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(126, 69, 23) 0%, rgb(9, 9, 121) 94%, rgb(0, 212, 255) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(126, 69, 23) 0%,
+    rgba(9, 9, 121, 1) 94%,
+    rgba(0, 212, 255, 1) 100%
+  );
   transform: translate(-50%, -50%);
 }
 
@@ -79,45 +101,31 @@
     height: 130px;
   }
 }
+
 /* ANIMATION */
 .obj-1 {
-  left: 10%;
-  animation: ani-1 5.2s ease infinite;
+  @include obj-styles(10%, 5.2s);
 }
-
 .obj-2 {
-  left: 20%;
-  animation: ani-1 3.4s ease infinite;
+  @include obj-styles(20%, 3.4s);
 }
-
 .obj-3 {
-  left: 30%;
-  animation: ani-1 7.6s ease infinite;
+  @include obj-styles(30%, 7.6s);
 }
-
 .obj-4 {
-  left: 70%;
-  animation: ani-1 9.3s ease infinite;
+  @include obj-styles(70%, 9.3s);
 }
-
 .obj-5 {
-  left: 90%;
-  animation: ani-1 4.2s ease infinite;
+  @include obj-styles(90%, 4.2s);
 }
-
 .obj-6 {
-  left: 50%;
-  animation: ani-1 5.3s ease infinite;
+  @include obj-styles(50%, 5.3s);
 }
-
 .obj-7 {
-  left: 75%;
-  animation: ani-1 9s ease infinite;
+  @include obj-styles(75%, 9s);
 }
-
 .obj-8 {
-  left: 80%;
-  animation: ani-1 3.5s ease infinite;
+  @include obj-styles(80%, 3.5s);
 }
 
 /* KEYFRAMES */
@@ -128,4 +136,4 @@
   100% {
     top: -19%;
   }
-}/*# sourceMappingURL=orbs.css.map */
+}
