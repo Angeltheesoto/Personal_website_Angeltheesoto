@@ -43,9 +43,7 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - React-Bootstrap
 - Adobe XD
 
-<!--
-WORKING ON:
+<!-- WORKING ON:
   1. Work on blog page.
-  2. Add a mouse effect that follows it around.
-  3. Fix navbar font size, and width(make it span the whole top.)
- -->
+  2. Change Skills to show a bar of how well you know certain skills. Add more content and information to the pages.
+  -->

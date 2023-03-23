@@ -32,18 +32,11 @@ const Projects: React.FC<Props> = ({ projectsData }) => {
         <h2>Projects</h2>
         {projectsData?.map((item: any) => (
           <React.Fragment>
-            <Link
-              className="project-links"
-              to="hero"
-              spy={true}
-              smooth={false}
-              offset={800}
-              key={item._id}
-            >
+            <div className="project-links">
               <LinkRoute to={`/project/${item._id - 1}`} id="double_click">
                 <div className="project-cards link-one">{item.title}</div>
               </LinkRoute>
-            </Link>
+            </div>
           </React.Fragment>
         ))}
       </Container>

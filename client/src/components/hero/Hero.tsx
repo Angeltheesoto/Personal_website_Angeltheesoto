@@ -7,7 +7,7 @@ import Instagram from "../../misc/Instagram";
 
 function Hero() {
   return (
-    <Container id="hero" className="hero-container">
+    <Container id="hero" className="hero-container hero-reverse-container">
       <Nav defaultActiveKey="/home" className="flex-column">
         <Nav.Link
           href="https://github.com/Angeltheesoto"
