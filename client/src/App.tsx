@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Router,
+  useLocation,
+} from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import axios, { AxiosRequestConfig } from "axios";
 import { Helmet } from "react-helmet";
@@ -14,6 +20,10 @@ import Footer from "./views/Footer";
 import Homepage from "./views/homepage/Homepage";
 import Projectpage from "./views/projectpage/Projectpage";
 import NotFoundPage from "./components/notfoundpage/NotFoundPage";
+import Aboutme from "./components/aboutme/Aboutme";
+import Skills from "./components/skills/Skills";
+import Education from "./components/education/Education";
+import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 
 function App() {
   // ?fetch data ----------------------->>>>
@@ -62,10 +72,8 @@ function App() {
   }, []);
   // ?fetch data ----------------------->>>>
 
-  // console.log(showButton);
-
   return (
-    <div className="App">
+    <div className="App" id="top">
       <div className="cursor-circle">
         {
           <BrowserRouter>
@@ -80,9 +88,11 @@ function App() {
                 content="angeltheesoto, Angel Soto, software developer, frontend developer, backend developer, fullstack developer, portfolio"
               />
             </Helmet>
+            <div className="header-display"></div>
+            <Header />
             <Container>
-              <div className="header-display"></div>
-              <Header />
+              {/* This automatically scrolls to top when page url changes */}
+              <ScrollToTop />
               <Routes>
                 <Route
                   path="/"
@@ -92,6 +102,10 @@ function App() {
                   path="/project/:id"
                   element={<Projectpage homePageData={homePageData} />}
                 />
+                <Route path="/aboutme" element={<Aboutme />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/education" element={<Education />} />
+
                 <Route path="/*" element={<NotFoundPage />} />
               </Routes>
               <Footer envData={envData} />

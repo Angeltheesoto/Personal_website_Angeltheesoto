@@ -25,6 +25,19 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 550px) {
+  .hero-reverse-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .flex-column {
+    margin-top: 3rem;
+    flex-direction: row !important;
+  }
+  .socials {
+    width: auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .header-container {
     height: 50rem;
