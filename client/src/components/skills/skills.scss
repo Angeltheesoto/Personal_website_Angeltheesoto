@@ -1,0 +1,21 @@
+.info-container {
+  background-color: #061d3a;
+  padding: 3rem 4rem;
+  align-self: center;
+
+  .skills-li-container {
+    color: white;
+    display: flex;
+  }
+}
+
+.pos-rel {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .info-container {
+    margin-top: 0;
+    padding: 3rem 4rem;
+  }
+}

@@ -17,7 +17,7 @@ interface Props {
 
 const Homepage: React.FC<Props> = ({ homePageData }) => {
   return (
-    <>
+    <React.Fragment>
       <div className="header-container flex-row-reverse">
         <div className="box-container">
           <FadeInEffect>
@@ -42,7 +42,7 @@ const Homepage: React.FC<Props> = ({ homePageData }) => {
         </div>
         <Orbs />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

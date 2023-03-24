@@ -3,8 +3,8 @@ import "./orbs.css";
 
 const Lava2: React.FC = () => {
   return (
-    <div className="orbs-main-container">
-      <div className="orbs-container orbs-c-2">
+    <div className="orbs-main-container orbs-main-container2">
+      <div className="orbs-container orbs-container-2">
         <div className="gooey-container">
           <div className="obj-1 goo"></div>
           <div className="obj-2 goo"></div>

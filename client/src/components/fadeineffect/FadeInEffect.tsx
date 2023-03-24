@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import "./fadeineffect.css";
 
 interface Props {
   children: React.ReactNode;
 }
 
-const FadeInSection: React.FC<Props> = ({ children }) => {
+const FadeInEffect: React.FC<Props> = ({ children }) => {
   const domRef = useRef<HTMLElement>(null);
   const [isVisible, setVisible] = useState<boolean>(false);
   useEffect(() => {
@@ -31,4 +32,4 @@ const FadeInSection: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default FadeInSection;
+export default FadeInEffect;

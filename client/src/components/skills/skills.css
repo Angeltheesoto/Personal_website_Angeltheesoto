@@ -3,18 +3,18 @@
   padding: 3rem 4rem;
   align-self: center;
 }
+.info-container .skills-li-container {
+  color: white;
+  display: flex;
+}
 
 .pos-rel {
   position: relative;
 }
 
-.skills-li-container {
-  color: white;
-  display: flex;
-}
-
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;
+    padding: 3rem 4rem;
   }
-}
+}/*# sourceMappingURL=skills.css.map */

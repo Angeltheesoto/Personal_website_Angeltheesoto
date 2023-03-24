@@ -2,7 +2,7 @@ import React from "react";
 import "./technologies.css";
 const Technologies: any = () => {
   return [
-    <>
+    <React.Fragment>
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         target="_blank"
@@ -241,7 +241,7 @@ const Technologies: any = () => {
           className="technologies-img"
         />
       </a>
-    </>,
+    </React.Fragment>,
   ];
 };
 

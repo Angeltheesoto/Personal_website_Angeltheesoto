@@ -3,12 +3,12 @@
   text-align: center;
   height: 100%;
 }
-
-.caption-container {
+.project-container .caption-container {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   /* border: 1px solid black; */
   border-radius: 10px;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
@@ -16,4 +16,4 @@
 .loader-container {
   height: 100%;
   width: 100%;
-}
+}/*# sourceMappingURL=projectpage.css.map */

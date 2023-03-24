@@ -1,0 +1,15 @@
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30vh);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+  width: 100%;
+  /* max-height: 20rem; */
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}/*# sourceMappingURL=fadeineffect.css.map */
