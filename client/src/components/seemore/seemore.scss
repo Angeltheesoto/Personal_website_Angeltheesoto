@@ -1,0 +1,66 @@
+.seemore-link {
+  display: block;
+  width: 100%;
+}
+
+.seemore-container {
+  width: fit-content;
+}
+
+.seemore-text {
+  height: 1rem;
+}
+
+.seemore-arrow {
+  transition: 2s ease;
+  display: none;
+}
+
+.seemore-hover-effect:hover {
+  .seemore-arrow {
+    -webkit-animation: slide 2s linear infinite;
+    animation: slide 2s linear infinite;
+    display: inline-block;
+    color: red;
+  }
+  .seemore-single-arrow {
+    display: none;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}

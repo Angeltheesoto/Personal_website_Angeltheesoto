@@ -1,0 +1,139 @@
+@mixin obj-styles($left: 10%, $animationTime: 1s) {
+  left: $left;
+  animation: ani-1 $animationTime ease infinite;
+}
+
+.orbs-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 20rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.orbs-main-container2 {
+  height: 15rem !important;
+}
+
+.orbs-container {
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, white, transparent, transparent);
+  border-radius: 30px;
+}
+
+.orbs-container-2 {
+  background-image: linear-gradient(to bottom, white, transparent, transparent);
+}
+
+.Orbs {
+  max-width: 110vw;
+}
+
+@media screen and (min-width: 992px) {
+  .Orbs {
+    max-height: 50rem;
+    max-width: 100%;
+  }
+
+  .Orbs2 {
+    width: 57rem;
+  }
+
+  .orbs-main-container {
+    max-width: 40rem;
+    height: 48rem;
+  }
+
+  .orbs-main-container2 {
+    height: 48rem !important;
+  }
+
+  .gooey-container {
+    max-width: 40rem;
+  }
+}
+
+/* GOO EFFECT | BASIC STYLES */
+.gooey-container {
+  border: 10px solid rgb(2, 0, 36);
+  // border: 10px solid rgb(36, 0, 0);
+  border-radius: 10px;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  filter: blur(10px) contrast(20);
+  overflow: hidden;
+}
+.goo {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 50%;
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(9, 9, 121, 1) 94%,
+  //   rgba(0, 212, 255, 1) 100%
+  // );
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(126, 69, 23) 0%,
+    rgba(9, 9, 121, 1) 94%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 600px) {
+  .goo {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* ANIMATION */
+.obj-1 {
+  @include obj-styles(10%, 5.2s);
+}
+.obj-2 {
+  @include obj-styles(20%, 3.4s);
+}
+.obj-3 {
+  @include obj-styles(30%, 7.6s);
+}
+.obj-4 {
+  @include obj-styles(70%, 9.3s);
+}
+.obj-5 {
+  @include obj-styles(90%, 4.2s);
+}
+.obj-6 {
+  @include obj-styles(50%, 5.3s);
+}
+.obj-7 {
+  @include obj-styles(75%, 9s);
+}
+.obj-8 {
+  @include obj-styles(80%, 3.5s);
+}
+
+/* KEYFRAMES */
+@keyframes ani-1 {
+  0% {
+    top: 119%;
+  }
+  100% {
+    top: -19%;
+  }
+}

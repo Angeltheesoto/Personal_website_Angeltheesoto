@@ -2,14 +2,10 @@
 .hero-container {
   flex-wrap: wrap;
   text-align: center;
-}
-
-.projects-container {
   height: 46rem;
   margin: 0;
 }
-
-.project-links {
+.hero-container .project-links {
   width: 100%;
   max-width: 100% !important;
   text-decoration: none;
@@ -27,8 +23,6 @@
   font-size: 1.5rem;
   background: linear-gradient(to left, white 34%, red 65%) right;
   background-size: 300% 100%;
-  /* background: linear-gradient(to left, white 50%, red 50%) right;
-  background-size: 200% 100%; */
   transition: 1s ease-in-out;
 }
 
@@ -47,10 +41,4 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-}
-
-@media screen and (max-width: 997px) {
-  .projects-container {
-    margin-top: 4rem;
-  }
-}
+}/*# sourceMappingURL=projects.css.map */

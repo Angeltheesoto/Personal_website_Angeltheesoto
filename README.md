@@ -43,9 +43,8 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - React-Bootstrap
 - Adobe XD
 
-<!--
-WORKING ON:
-  1. Work on blog page.
-  2. Fix text size, its too small.
-  3. Convert css to sass
- -->
+<!-- WORKING ON:
+  1. Start blog page.
+  2. Change Skills to show a bar of how well you know certain skills. Add more content and information to the pages.
+  3. hello
+  -->
