@@ -112,7 +112,7 @@ function App() {
             </Container>
             {showButton && (
               <div className={showButton ? "show-container" : "none"}>
-                <Link to="hero" offset={-300}>
+                <Link to="top" offset={-300}>
                   <NorthIcon
                     sx={{
                       fontSize: 50,
