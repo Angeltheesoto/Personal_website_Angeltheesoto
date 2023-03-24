@@ -4,6 +4,10 @@
   align-self: center;
 }
 
+.aboutme-space {
+  margin: 15rem 0 !important;
+}
+
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;
