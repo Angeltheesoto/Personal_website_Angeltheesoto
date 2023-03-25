@@ -14,12 +14,11 @@ export default function Aboutme() {
             <h2>About Me</h2>
             <p>
               My journey in web-development started when I wanted to create my
-              very own e-commerce website. I was curious on how to build such a
-              website from start to finish. I would spend countless hours and
-              days just learning HTML, CSS and javaScript untill I wanted to
-              take things more serious. That is when I enrolled myself in a
-              coding boot-camp to better develop my skills and to gain real
-              world experiences.
+              very own e-commerce website, I was curious on how to build such a
+              website from scratch. I would spend countless hours and days just
+              learning HTML, CSS and javaScript untill I wanted to take things
+              more serious. That is when I enrolled myself in a coding boot-camp
+              to better develop my skills and to gain real world experiences.
             </p>
             <p>
               As a dedicated and passionate web developer, I specialize in
@@ -33,7 +32,8 @@ export default function Aboutme() {
               As a developer, I am always on the lookout for new opportunities
               to expand my knowledge and skills. If you're seeking a highly
               motivated and enthusiastic team player to help create exceptional
-              web applications, let's collaborate!
+              web applications, let's collaborate! You can contact me directly
+              with the form below ^_^
             </p>
           </FadeInEffect>
         </div>

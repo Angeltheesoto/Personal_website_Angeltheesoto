@@ -2,10 +2,29 @@
   background-color: #061d3a;
   padding: 3rem 4rem;
   align-self: center;
+}
 
-  .skills-li-container {
-    color: white;
-    display: flex;
+.skills-container {
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.skills-percent-container {
+  display: flex;
+  align-items: center;
+  height: 10px;
+
+  .skills-percent {
+    font-size: 0.65rem;
+    margin: 0 10px 0 0;
+  }
+
+  .skills-percent-bar {
+    width: var(--percent);
+    border: 5px solid red;
+    border-radius: 10px;
+    opacity: 1;
   }
 }
 
@@ -13,9 +32,26 @@
   position: relative;
 }
 
+.skills-fix-width {
+  width: 100% !important;
+}
+
+.skills-space {
+  margin: 10rem 0 !important;
+}
+
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;
     padding: 3rem 4rem;
+  }
+
+  .skills-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .skills-container {
+    width: 45%;
   }
 }

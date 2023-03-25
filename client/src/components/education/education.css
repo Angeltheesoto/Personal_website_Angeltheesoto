@@ -18,6 +18,7 @@
 
 .education-school-container p {
   color: #061d3a;
+  max-width: 20rem;
 }
 
 .education-icon-container {
@@ -32,6 +33,23 @@
   margin: 10px;
 }
 
+.education-space {
+  margin: 10rem 0 !important;
+}
+
+.text-center {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .education-icon-container {
+    background-color: red;
+    display: none !important;
+  }
+  .education-space {
+    margin: 2rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .info-container2 {
     padding: 3rem 4rem;
