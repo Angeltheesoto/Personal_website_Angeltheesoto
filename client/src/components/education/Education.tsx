@@ -3,45 +3,47 @@ import { useLocation } from "react-router-dom";
 import Seemore from "../seemore/Seemore";
 import "./education.css";
 import SchoolIcon from "@mui/icons-material/School";
+import FadeInEffect from "../fadeineffect/FadeInEffect";
 
 export default function Education() {
   const location = useLocation();
   const loc = location.pathname;
   return (
-    <div className="info-container2 pos-rel ">
+    <React.Fragment>
       {loc === "/education" ? (
-        <React.Fragment>
-          <h2>Education</h2>
-
-          <div className="education-timeline-container d-flex ">
-            <div className="education-icon-container d-flex flex-column bd-highlight mb-3 justify-content-between">
-              <SchoolIcon sx={{ color: "white" }} />
-              <div className="vl"></div>
-              <SchoolIcon sx={{ color: "white" }} />
-              <div className="vl"></div>
-              <SchoolIcon sx={{ color: "white" }} />
-            </div>
-            <div>
-              <div className="education-school-container">
-                <h5>Hostos Community College</h5>
-                <p>Bronx, NY | Digital Design and Animation</p>
-                <i>September 2017 - May 2020</i>
+        <FadeInEffect>
+          <div className="education-space">
+            <h2 className="text-center">Education</h2>
+            <div className="education-timeline-container d-flex justify-content-center">
+              <div className="education-icon-container d-flex flex-column bd-highlight mb-3 justify-content-between">
+                <SchoolIcon sx={{ color: "white" }} />
+                <div className="vl"></div>
+                <SchoolIcon sx={{ color: "white" }} />
+                <div className="vl"></div>
+                <SchoolIcon sx={{ color: "white" }} />
               </div>
-              <div className="education-school-container">
-                <h5>Hostos Community College</h5>
-                <p>Bronx, NY | Digital Design and Animation</p>
-                <i>September 2017 - May 2020</i>
-              </div>
-              <div className="education-school-container">
-                <h5>Hostos Community College</h5>
-                <p>Bronx, NY | Digital Design and Animation</p>
-                <i>September 2017 - May 2020</i>
+              <div>
+                <div className="education-school-container">
+                  <h5>Zero to Mastery</h5>
+                  <p>Online | Data Structures and Algorithms</p>
+                  <i>December 2022 - February 2023</i>
+                </div>
+                <div className="education-school-container">
+                  <h5>New Jersey Institute of Technology</h5>
+                  <p>Newark, NJ | Software Development</p>
+                  <i>February 2022 - November 2022</i>
+                </div>
+                <div className="education-school-container">
+                  <h5>Hostos Community College</h5>
+                  <p>Bronx, NY | Digital Design and Animation</p>
+                  <i>September 2017 - May 2020</i>
+                </div>
               </div>
             </div>
           </div>
-        </React.Fragment>
+        </FadeInEffect>
       ) : (
-        <React.Fragment>
+        <div id="education" className="info-container2 pos-rel ">
           <h2>Education</h2>
           <p>
             I have recently graduated in November 2022 fom NJIT coding boot
@@ -51,8 +53,8 @@ export default function Education() {
             associates for digital design and animation.
           </p>
           <Seemore link="/education" />
-        </React.Fragment>
+        </div>
       )}
-    </div>
+    </React.Fragment>
   );
 }
