@@ -74,58 +74,56 @@ function App() {
 
   return (
     <div className="App" id="top">
-      <div className="cursor-circle">
-        {
-          <BrowserRouter>
-            <Helmet>
-              <title>Home Page</title>
-              <meta
-                name="Description"
-                content="My personal website showcasing my skills as a software engineer."
+      {
+        <BrowserRouter>
+          <Helmet>
+            <title>Home Page</title>
+            <meta
+              name="Description"
+              content="My personal website showcasing my skills as a software engineer."
+            />
+            <meta
+              name="keywords"
+              content="angeltheesoto, Angel Soto, software developer, frontend developer, backend developer, fullstack developer, portfolio"
+            />
+          </Helmet>
+          <div className="header-display"></div>
+          <Header />
+          <Container>
+            {/* This automatically scrolls to top when page url changes */}
+            <ScrollToTop />
+            <Routes>
+              <Route
+                path="/"
+                element={<Homepage homePageData={homePageData} />}
               />
-              <meta
-                name="keywords"
-                content="angeltheesoto, Angel Soto, software developer, frontend developer, backend developer, fullstack developer, portfolio"
+              <Route
+                path="/project/:id"
+                element={<Projectpage homePageData={homePageData} />}
               />
-            </Helmet>
-            <div className="header-display"></div>
-            <Header />
-            <Container>
-              {/* This automatically scrolls to top when page url changes */}
-              <ScrollToTop />
-              <Routes>
-                <Route
-                  path="/"
-                  element={<Homepage homePageData={homePageData} />}
-                />
-                <Route
-                  path="/project/:id"
-                  element={<Projectpage homePageData={homePageData} />}
-                />
-                <Route path="/aboutme" element={<Aboutme />} />
-                <Route path="/skills" element={<Skills />} />
-                <Route path="/education" element={<Education />} />
+              <Route path="/aboutme" element={<Aboutme />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/education" element={<Education />} />
 
-                <Route path="/*" element={<NotFoundPage />} />
-              </Routes>
-              <Footer envData={envData} />
-            </Container>
-            {showButton && (
-              <div className={showButton ? "show-container" : "none"}>
-                <Link to="top" offset={-300}>
-                  <NorthIcon
-                    sx={{
-                      fontSize: 50,
-                      color: "white",
-                      padding: "10px 7px 0 0",
-                    }}
-                  />
-                </Link>
-              </div>
-            )}
-          </BrowserRouter>
-        }
-      </div>
+              <Route path="/*" element={<NotFoundPage />} />
+            </Routes>
+            <Footer envData={envData} />
+          </Container>
+          {showButton && (
+            <div className={showButton ? "show-container" : "none"}>
+              <Link to="top" offset={-300}>
+                <NorthIcon
+                  sx={{
+                    fontSize: 50,
+                    color: "white",
+                    width: "100%",
+                  }}
+                />
+              </Link>
+            </div>
+          )}
+        </BrowserRouter>
+      }
     </div>
   );
 }

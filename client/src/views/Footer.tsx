@@ -17,6 +17,7 @@ export default function Footer(props: Props) {
       <FadeInEffect>
         <Contact />
         <Map envData={envData} />
+        <hr className="copyright-hr" />
         <p className="copyright">
           &copy; {currentYear} Made with ❤ by Angel Soto.
         </p>
