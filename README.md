@@ -45,5 +45,4 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
 <!-- WORKING ON:
   1. Start blog page.
-  2. Change Skills to show a bar of how well you know certain skills. Add more content and information to the pages.
   -->

@@ -41,6 +41,11 @@ const NavbarEl: React.FC = () => {
                   </Link>
                 </Nav>
                 <Nav className="text-white link-hover-effect">
+                  <Link to="skills" spy={true} offset={-400}>
+                    Education
+                  </Link>
+                </Nav>
+                <Nav className="text-white link-hover-effect">
                   <Link to="projects" spy={true} offset={-200}>
                     Projects
                   </Link>
@@ -103,6 +108,20 @@ const NavbarEl: React.FC = () => {
                   }`}
                 >
                   <Link
+                    to="education"
+                    spy={true}
+                    offset={-400}
+                    onClick={handleClick}
+                  >
+                    Education
+                  </Link>
+                </Nav>
+                <Nav
+                  className={`link-hover-effect nav-sidebar-center ${
+                    isShown ? "nav-sidebar-visible" : ""
+                  }`}
+                >
+                  <Link
                     to="projects"
                     spy={true}
                     offset={-200}
@@ -135,6 +154,9 @@ const NavbarEl: React.FC = () => {
                 </Nav>
                 <Nav className="text-white link-hover-effect">
                   <LinkRoute to="/skills">Skills</LinkRoute>
+                </Nav>
+                <Nav className="text-white link-hover-effect">
+                  <LinkRoute to="/education">Education</LinkRoute>
                 </Nav>
                 <Nav className="text-white link-hover-effect">
                   <LinkRoute to="/project/0">Projects</LinkRoute>
@@ -175,6 +197,15 @@ const NavbarEl: React.FC = () => {
                 >
                   <LinkRoute to="/skills" onClick={handleClick}>
                     Skills
+                  </LinkRoute>
+                </Nav>
+                <Nav
+                  className={`link-hover-effect nav-sidebar-center ${
+                    isShown ? "nav-sidebar-visible" : ""
+                  }`}
+                >
+                  <LinkRoute to="/education" onClick={handleClick}>
+                    Education
                   </LinkRoute>
                 </Nav>
                 <Nav
