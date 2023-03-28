@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Router,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import axios, { AxiosRequestConfig } from "axios";
 import { Helmet } from "react-helmet";
@@ -24,6 +18,8 @@ import Aboutme from "./components/aboutme/Aboutme";
 import Skills from "./components/skills/Skills";
 import Education from "./components/education/Education";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
+import Blog from "./components/blog/Blog";
+import BlogPage from "./views/blogpage/BlogPage";
 
 function App() {
   // ?fetch data ----------------------->>>>
@@ -104,7 +100,8 @@ function App() {
               <Route path="/aboutme" element={<Aboutme />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/education" element={<Education />} />
-
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPage />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Routes>
             <Footer envData={envData} />
