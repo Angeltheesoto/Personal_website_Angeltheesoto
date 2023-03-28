@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Seemore from "../seemore/Seemore";
 import "./skills.css";
 import FadeInEffect from "../fadeineffect/FadeInEffect";
+import { Helmet } from "react-helmet";
 
 const Skills: React.FC = () => {
   const location = useLocation();
@@ -12,6 +13,13 @@ const Skills: React.FC = () => {
     <div id="skills" className="info-container pos-rel">
       {loc === "/skills" ? (
         <FadeInEffect>
+          <Helmet>
+            <title>Skills Page</title>
+            <meta
+              name="Description"
+              content="A list of how well I feel I know these technologies."
+            />
+          </Helmet>
           <div className="skills-space">
             <h2 id="newtop" className="text-center">
               Skills
@@ -153,7 +161,7 @@ const Skills: React.FC = () => {
               />
             </div>
           </div>
-          <Seemore link="/skills" />
+          <Seemore link="/skills" text="See More" />
         </React.Fragment>
       )}
     </div>

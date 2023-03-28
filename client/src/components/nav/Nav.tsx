@@ -51,6 +51,11 @@ const NavbarEl: React.FC = () => {
                   </Link>
                 </Nav>
                 <Nav className="text-white link-hover-effect">
+                  <Link to="blog" spy={true} offset={-200}>
+                    Blog
+                  </Link>
+                </Nav>
+                <Nav className="text-white link-hover-effect">
                   <Link to="contact" spy={true} offset={-200}>
                     Contact
                   </Link>
@@ -136,6 +141,20 @@ const NavbarEl: React.FC = () => {
                   }`}
                 >
                   <Link
+                    to="blog"
+                    spy={true}
+                    offset={-200}
+                    onClick={handleClick}
+                  >
+                    Blog
+                  </Link>
+                </Nav>
+                <Nav
+                  className={`link-hover-effect nav-sidebar-center ${
+                    isShown ? "nav-sidebar-visible" : ""
+                  }`}
+                >
+                  <Link
                     to="contact"
                     spy={true}
                     offset={-200}
@@ -160,6 +179,9 @@ const NavbarEl: React.FC = () => {
                 </Nav>
                 <Nav className="text-white link-hover-effect">
                   <LinkRoute to="/project/0">Projects</LinkRoute>
+                </Nav>
+                <Nav className="text-white link-hover-effect">
+                  <LinkRoute to="/blog">Blog</LinkRoute>
                 </Nav>
                 <Nav className="text-white link-hover-effect">
                   <Link to="contact" spy={true} offset={-200}>
@@ -215,6 +237,15 @@ const NavbarEl: React.FC = () => {
                 >
                   <LinkRoute to="/project/0" onClick={handleClick}>
                     Projects
+                  </LinkRoute>
+                </Nav>
+                <Nav
+                  className={`link-hover-effect nav-sidebar-center ${
+                    isShown ? "nav-sidebar-visible" : ""
+                  }`}
+                >
+                  <LinkRoute to="/Blog" onClick={handleClick}>
+                    Blog
                   </LinkRoute>
                 </Nav>
                 <Nav

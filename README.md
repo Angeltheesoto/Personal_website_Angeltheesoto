@@ -44,7 +44,6 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Adobe XD
 
 <!-- WORKING ON:
-  1. Start blog page.
--->
-
+  BLOG
+  1. add sub-headings, bold-headings, links, lists, and italic to blogModel.js as objects.
 -->
