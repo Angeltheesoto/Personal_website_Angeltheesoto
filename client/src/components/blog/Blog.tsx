@@ -23,13 +23,13 @@ const Blog: React.FC = () => {
           </Helmet>
           <div className="blog-space blog-container">
             <h2 className="blog-center">Blog</h2>
-            <Blogs />
+            <Blogs homepage={false} />
           </div>
         </FadeInEffect>
       ) : (
         <div id="blog" className="info-container pos-rel  blog-container">
           <h2 className="blog-center">Blog</h2>
-          <Blogs />
+          <Blogs homepage={true} />
           <Seemore link="/blog" text="See More" />
         </div>
       )}

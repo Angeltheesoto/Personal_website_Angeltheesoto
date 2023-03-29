@@ -7,10 +7,23 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import FadeInEffect from "../../components/fadeineffect/FadeInEffect";
 import Seemore from "../../components/seemore/Seemore";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import {
+  vs,
+  // monokai, use for light/dark mode in furture
+  // dracula,
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Blogs: React.FC = () => {
   const { id } = useParams<{ id?: string }>();
   const newId = id ? parseInt(id) * 1 + 1 : undefined;
+  const customStyle = {
+    padding: "20px",
+    borderRadius: "3px",
+    overflow: "scroll",
+    maxWidth: "50rem",
+    margin: "0 auto",
+  };
 
   if (!Data) {
     return (
@@ -46,67 +59,105 @@ const Blogs: React.FC = () => {
                       <span className="blogpage-span">{blog.topic} - </span>
                       <i className="blogpage-timestamp">{blog.timestamp}</i>
                     </div>
-                    <div className="blogpage-banner-container">
-                      <img
-                        src={blog.coverImage}
-                        alt="cover image"
-                        className="blogpage-banner-image"
-                      />
-                    </div>
+                    {blog.coverImage ? (
+                      <div className="blogpage-banner-container">
+                        <img
+                          src={blog.coverImage}
+                          alt="cover image"
+                          className="blogpage-banner-image"
+                        />
+                      </div>
+                    ) : null}
                     <>
-                      {blog.paragraphs.map((item: any) => {
-                        return (
-                          <>
-                            <section className="blogpage-section-container">
-                              <h3 className="blogpage-subheading">
-                                {item.subheading}
-                              </h3>
-                              <p className="blogpage-text">{item.text}</p>
-                              <h3 className="blogpage-subheading">
-                                {item.imgSubHeading}
-                              </h3>
-                              <div className="blogpage-small-image-container">
-                                <img
-                                  src={item.img}
-                                  alt="image"
-                                  className="blogpage-small-image"
-                                />
-                              </div>
-                              <h3 className="blogpage-subheading">
-                                {item.listSubHeading}
-                              </h3>
-                              <ul className="blogpage-ul">
-                                {item.list.map((li: any) => (
-                                  <li className="blogpage-li">{li}</li>
-                                ))}
-                              </ul>
-                              <h3 className="blogpage-subheading">
-                                {item.linkSubHeading}
-                              </h3>
-                              <ul>
-                                {item.links.map((link: any) => (
-                                  <li>
-                                    <a href={link}>{link}</a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </section>
-                          </>
-                        );
-                      })}
+                      <div className="blogpage-width-container">
+                        {blog.paragraphs.map((item: any) => {
+                          return (
+                            <>
+                              <section className="blogpage-section-container">
+                                {item.subHeading ? (
+                                  <h3 className="blogpage-subheading">
+                                    {item.subHeading}
+                                  </h3>
+                                ) : null}
+                                {item.text ? (
+                                  <p className="blogpage-text">{item.text}</p>
+                                ) : null}
+                                {item.imgSubHeading ? (
+                                  <h3 className="blogpage-subheading">
+                                    {item.imgSubHeading}
+                                  </h3>
+                                ) : null}
+                                {item.img ? (
+                                  <div className="blogpage-small-image-container">
+                                    <img
+                                      src={item.img}
+                                      alt="image"
+                                      className="blogpage-small-image"
+                                    />
+                                  </div>
+                                ) : null}
+                                {item.code ? (
+                                  <SyntaxHighlighter
+                                    showLineNumbers
+                                    lineNumberStyle={{
+                                      color: "grey",
+                                    }}
+                                    customStyle={customStyle}
+                                    language={item.language}
+                                    style={vs}
+                                    // style={monokai}
+                                    // style={dracula}
+                                  >
+                                    {item.code}
+                                  </SyntaxHighlighter>
+                                ) : null}
+                                {item.listSubheading ? (
+                                  <h3 className="blogpage-subheading">
+                                    {item.listSubHeading}
+                                  </h3>
+                                ) : null}
+                                {item.list ? (
+                                  <ul className="blogpage-ul">
+                                    {item.list.map((li: any) =>
+                                      li ? (
+                                        <li className="blogpage-li">{li}</li>
+                                      ) : null
+                                    )}
+                                  </ul>
+                                ) : null}
+                                {item.linkSubHeading ? (
+                                  <h3 className="blogpage-subheading">
+                                    {item.linkSubHeading}
+                                  </h3>
+                                ) : null}
+                                {item.links ? (
+                                  <ul className="blogpage-ul">
+                                    {item.links.map((link: any) =>
+                                      link ? (
+                                        <li className="blogpage-li link">
+                                          <a href={link}>{link}</a>
+                                        </li>
+                                      ) : null
+                                    )}
+                                  </ul>
+                                ) : null}
+                              </section>
+                            </>
+                          );
+                        })}
+                      </div>
                     </>
+                    <div className="blogpage-goback">
+                      <Seemore link="/blog" text="Go Back" direction="left" />
+                    </div>
                   </FadeInEffect>
                 ) : null
               )}
           </div>
         </Container>
-        <div className="blogpage-goback">
-          <Seemore link="/blog" text="Go Back" direction="left" />
-        </div>
       </>
     );
   }
 };
-// Go Back
 
 export default Blogs;
