@@ -1,9 +1,30 @@
+// blog topic color
 .react {
-  border-bottom: 10px solid cyan;
+  border-bottom: 10px solid #61dafb;
 }
 
 .nodejs {
   border-bottom: 10px solid lightgreen;
+}
+
+.html {
+  border-bottom: 10px solid #f06529;
+}
+
+.css {
+  border-bottom: 10px solid #2965f1;
+}
+
+.javascript {
+  border-bottom: 10px solid #f0db4f;
+}
+
+.python {
+  background-image: linear-gradient(to right, #4b8bbe 50%, #ffe873 50%);
+  background-position: bottom;
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  padding-bottom: 26px !important;
 }
 
 .blogs-container {

@@ -1,6 +1,10 @@
 .blogpage-container {
   margin: 5rem 0 0 0;
 }
+.blogpage-container .blogpage-width-container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
 .blogpage-container .blogpage-banner-container,
 .blogpage-container .blogpage-small-image-container {
   display: flex;
@@ -17,6 +21,7 @@
   display: block;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-bottom: 1rem;
 }
 .blogpage-container .blogpage-info-container {
   margin: 0 0 1rem 0;
@@ -34,6 +39,25 @@
 }
 .blogpage-container .blogpage-ul {
   list-style-type: lower-alpha;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.blogpage-container .blogpage-ul .link {
+  border-bottom: 1px solid white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.blogpage-container .blogpage-ul .blogpage-li {
+  margin-bottom: 10px;
+}
+.blogpage-container .blogpage-toggle-code {
+  padding: 1rem;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.262);
+  border: 1px solid lightgray;
+  cursor: pointer;
+  border-radius: 3px 3px 0 0;
+  color: white;
 }
 
 .blogpage-goback {
@@ -46,5 +70,10 @@
 @media screen and (min-width: 1400px) {
   h1 {
     font-size: 5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=blogpage.css.map */

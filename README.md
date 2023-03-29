@@ -45,5 +45,5 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 
 <!-- WORKING ON:
   BLOG
-  1. add sub-headings, bold-headings, links, lists, and italic to blogModel.js as objects.
+  1. add data properties to backend and create example articles in mongodb.
 -->
