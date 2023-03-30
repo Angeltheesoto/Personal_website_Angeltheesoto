@@ -20,7 +20,6 @@ interface Props {
 }
 
 const BlogPage: React.FC<Props> = ({ blogData }) => {
-  console.log(blogData);
   const { id } = useParams<{ id?: string }>();
   const newId = id ? parseInt(id) * 1 + 1 : undefined;
   const customStyle = {

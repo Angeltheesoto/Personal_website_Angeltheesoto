@@ -1,5 +1,16 @@
 const blogModel = require("../models/blogModel");
 
+// this posts a blog
+const postBlog = async (req, res, next) => {
+  try {
+    const newBlog = await blogModel.create(req.body);
+    res.status(201).json(newBlog);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// This gets all blogs
 const getBlogs = (req, res, next) => {
   blogModel
     .find({})
@@ -11,6 +22,7 @@ const getBlogs = (req, res, next) => {
     });
 };
 
+// this gets blog by id
 const getBlogsByIds = (req, res, next) => {
   blogModel
     .find({})
@@ -23,4 +35,4 @@ const getBlogsByIds = (req, res, next) => {
     });
 };
 
-module.exports = { getBlogs, getBlogsByIds };
+module.exports = { getBlogs, getBlogsByIds, postBlog };

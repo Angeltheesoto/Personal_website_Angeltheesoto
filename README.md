@@ -44,6 +44,5 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Adobe XD
 
 <!-- WORKING ON:
-  BLOG
-  1. add data properties to backend and create example articles in mongodb.
+
 -->
