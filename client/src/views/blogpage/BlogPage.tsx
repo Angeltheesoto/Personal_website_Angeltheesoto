@@ -66,12 +66,14 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
               blogData?.map((blog: any) =>
                 blog.id == newId ? (
                   <FadeInEffect key={blog._id}>
-                    <h1 className="blogpage-title">{blog.title}</h1>
-                    <div className="blogpage-info-container">
-                      <span className="blogpage-span">{blog.topic} - </span>
-                      <i className="blogpage-timestamp">
-                        {format(blog.createdAt)}
-                      </i>
+                    <div className="blogpage-width-container">
+                      <h1 className="blogpage-title">{blog.title}</h1>
+                      <div className="blogpage-info-container">
+                        <span className="blogpage-span">{blog.topic} - </span>
+                        <i className="blogpage-timestamp">
+                          {format(blog.createdAt)}
+                        </i>
+                      </div>
                     </div>
                     {blog.coverImage ? (
                       <div className="blogpage-banner-container">

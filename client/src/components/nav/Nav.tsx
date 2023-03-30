@@ -14,7 +14,6 @@ const NavbarEl: React.FC = () => {
 
   const handleClick = () => {
     setIsShown(!isShown);
-    console.log(isShown);
   };
 
   return (
