@@ -7,7 +7,8 @@ const path = require("path");
 
 // FILES ---
 const connectDB = require("./config/db");
-const routes = require("./routes/projectRoute");
+const projectRoute = require("./routes/projectRoute");
+const blogRoute = require("./routes/blogRoute");
 // This is test data to be sent to front end.
 // const data = require("./data/data");
 
@@ -20,7 +21,8 @@ app.use(cors());
 app.use(express.json());
 
 // ROUTES ---
-app.use("/", routes);
+app.use("/api", projectRoute);
+app.use("/api", blogRoute);
 
 // This is test data route.
 // app.get("/API", (req, res) => {

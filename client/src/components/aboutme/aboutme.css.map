@@ -1,1 +1,10 @@
-{"version":3,"sources":["aboutme.scss","aboutme.css"],"names":[],"mappings":"AAAA;EACE,mBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,yBAAA;EACA,kBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,0BAAA;ACCF;;ADEA;EACE;IACE,0BAAA;ECCF;EDEA;IACE,6BAAA;ECAF;AACF;ADGA;EACE;IACE,aAAA;ECDF;AACF","file":"aboutme.css"}
+{
+  "version": 3,
+  "sources": [
+    "aboutme.scss",
+    "aboutme.css"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE,mBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,yBAAA;EACA,kBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,0BAAA;ACCF;;ADEA;EACE;IACE,0BAAA;ECCF;AACF;ADMA;EACE;IACE,aAAA;ECJF;AACF",
+  "file": "aboutme.css"
+}

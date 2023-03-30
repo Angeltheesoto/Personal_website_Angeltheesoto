@@ -4,6 +4,7 @@ import Seemore from "../seemore/Seemore";
 import "./education.css";
 import SchoolIcon from "@mui/icons-material/School";
 import FadeInEffect from "../fadeineffect/FadeInEffect";
+import { Helmet } from "react-helmet";
 
 export default function Education() {
   const location = useLocation();
@@ -12,6 +13,10 @@ export default function Education() {
     <React.Fragment>
       {loc === "/education" ? (
         <FadeInEffect>
+          <Helmet>
+            <title>Education Page</title>
+            <meta name="Description" content="A timeline of my education." />
+          </Helmet>
           <div className="education-space">
             <h2 className="text-center">Education</h2>
             <div className="education-timeline-container d-flex justify-content-center">
@@ -52,7 +57,7 @@ export default function Education() {
             <br /> I graduated from Hostos community college in May 2020 with an
             associates for digital design and animation.
           </p>
-          <Seemore link="/education" />
+          <Seemore link="/education" text="See More" />
         </div>
       )}
     </React.Fragment>

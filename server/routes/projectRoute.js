@@ -6,6 +6,6 @@ const getEnv = require("../controller/projectController");
 
 router.get("/projects", getProject.getProjects);
 router.get("/projects/:id", getProjectsById.getProjectsByIds);
-router.get("/api/map_key", getEnv.getEnv);
+router.get("/map_key", getEnv.getEnv);
 
 module.exports = router;

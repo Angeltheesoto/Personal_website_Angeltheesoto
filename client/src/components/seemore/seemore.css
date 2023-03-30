@@ -25,21 +25,3 @@
 .seemore-hover-effect:hover .seemore-single-arrow {
   display: none;
 }
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(0px);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(2px);
-  }
-  80% {
-    opacity: 1;
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-}/*# sourceMappingURL=seemore.css.map */

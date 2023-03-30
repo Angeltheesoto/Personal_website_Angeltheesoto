@@ -44,5 +44,5 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Adobe XD
 
 <!-- WORKING ON:
-  1. Start blog page.
-  -->
+
+-->

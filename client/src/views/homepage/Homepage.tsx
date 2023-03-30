@@ -10,12 +10,14 @@ import Education from "../../components/education/Education";
 import Projects from "../../components/projects/Projects";
 import FadeInEffect from "../../components/fadeineffect/FadeInEffect";
 import React from "react";
+import Blog from "../../components/blog/Blog";
 
 interface Props {
-  homePageData: object[];
+  projectData: object[];
+  blogData: object[];
 }
 
-const Homepage: React.FC<Props> = ({ homePageData }) => {
+const Homepage: React.FC<Props> = ({ projectData, blogData }) => {
   return (
     <React.Fragment>
       <div className="header-container flex-row-reverse">
@@ -34,13 +36,19 @@ const Homepage: React.FC<Props> = ({ homePageData }) => {
           <Education />
         </FadeInEffect>
       </div>
-      <div className="header-container margin-bottom">
+      <div className="header-container ">
         <div className="box-container">
           <FadeInEffect>
-            <Projects projectsData={homePageData} />
+            <Projects projectsData={projectData} />
           </FadeInEffect>
         </div>
         <Orbs />
+      </div>
+      {/* margin-bottom */}
+      <div className="header-container ">
+        <FadeInEffect>
+          <Blog blogData={blogData} />
+        </FadeInEffect>
       </div>
     </React.Fragment>
   );

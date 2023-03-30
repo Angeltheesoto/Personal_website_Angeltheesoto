@@ -2,6 +2,7 @@ import "./aboutme.css";
 import Seemore from "../seemore/Seemore";
 import { useLocation } from "react-router-dom";
 import FadeInEffect from "../fadeineffect/FadeInEffect";
+import { Helmet } from "react-helmet";
 
 export default function Aboutme() {
   const location = useLocation();
@@ -11,6 +12,10 @@ export default function Aboutme() {
       {loc === "/aboutme" ? (
         <div className="info-container aboutme-space">
           <FadeInEffect>
+            <Helmet>
+              <title>About Page</title>
+              <meta name="Description" content="This is my story." />
+            </Helmet>
             <h2>About Me</h2>
             <p>
               My journey in web-development started when I wanted to create my
@@ -41,14 +46,14 @@ export default function Aboutme() {
         <div className="info-container">
           <h2>About Me</h2>
           <p>
-            I am a passionate and inventive Entry-Level Web Developer with a
-            record of developing complex web-based applications using best
-            software practices.
+            I am a passionate and inventive Web Developer with a record of
+            developing complex web-based applications using best software
+            practices.
             <br />
-            <br /> Experienced at enhancing user interfaces, writing efficient
-            code, and creating dynamic products.
+            <br /> I have experience at enhancing user interfaces, writing
+            efficient code, and creating dynamic products.
           </p>
-          <Seemore link="/aboutme" />
+          <Seemore link="/aboutme" text="See More" />
         </div>
       )}
     </div>

@@ -32,6 +32,8 @@ h5 {
 
 p {
   color: white;
+  font-size: 20px;
+  font-weight: 100;
 }
 
 a {
@@ -45,8 +47,11 @@ a:hover {
 
 li {
   /* list-style-type: circle; */
+  color: white;
   list-style: none;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
+  font-size: 20px;
+  font-weight: 100;
 }
 
 li::before {
@@ -95,6 +100,7 @@ li::before {
 /* scroll bar styles */
 /* For Webkit-based browsers */
 ::-webkit-scrollbar {
+  height: 5px;
   width: 5px;
 }
 
@@ -110,6 +116,7 @@ li::before {
 /* For Firefox */
 ::-moz-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-moz-scrollbar-track {
@@ -130,6 +137,13 @@ li::before {
 .copyright-hr {
   color: white;
   margin: 2rem 10rem;
+}
+
+@media screen and (max-width: 550px) {
+  .info-container,
+  .info-container2 {
+    padding: 2rem 2rem !important;
+  }
 }
 
 @media screen and (min-width: 992px) {

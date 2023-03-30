@@ -31,7 +31,9 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.8",
     "react-scroll-motion": "^0.3.0",
+    "react-syntax-highlighter": "^15.5.0",
     "react-toastify": "^9.1.1",
+    "timeago.js": "^4.0.2",
     "typescript": "^5.0.2",
     "web-vitals": "^2.1.4"
   },
@@ -58,5 +60,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.6"
   }
 }
