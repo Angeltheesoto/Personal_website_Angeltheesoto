@@ -13,19 +13,26 @@ import {
   // monokai, use for light/dark mode in furture
   // dracula,
 } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { format } from "timeago.js";
 
-const Blogs: React.FC = () => {
+interface Props {
+  blogData: object[];
+}
+
+const BlogPage: React.FC<Props> = ({ blogData }) => {
+  console.log(blogData);
   const { id } = useParams<{ id?: string }>();
   const newId = id ? parseInt(id) * 1 + 1 : undefined;
   const customStyle = {
-    padding: "20px",
-    borderRadius: "3px",
-    overflow: "scroll",
-    maxWidth: "50rem",
-    margin: "0 auto",
+    // padding: "20px",
+    // borderRadius: "3px",
+    // overflow: "scroll",
+    // maxWidth: "50rem",
+    // margin: "0 auto",
   };
 
-  if (!Data) {
+  // if (!Data) {
+  if (!blogData) {
     return (
       <Container id="blog" className="hero-container projects-container">
         <Helmet>
@@ -49,15 +56,23 @@ const Blogs: React.FC = () => {
     return (
       <>
         <Container>
+          <Helmet>
+            <title>Blog Page</title>
+            <meta name="Description" content="A blog post." />
+          </Helmet>
           <div id="blog" className="blogpage-container">
-            {Data &&
-              Data?.map((blog: any) =>
-                blog.id === newId ? (
-                  <FadeInEffect>
+            {/* {Data &&
+              Data?.map((blog: any) => */}
+            {blogData &&
+              blogData?.map((blog: any) =>
+                blog.id == newId ? (
+                  <FadeInEffect key={blog._id}>
                     <h1 className="blogpage-title">{blog.title}</h1>
                     <div className="blogpage-info-container">
                       <span className="blogpage-span">{blog.topic} - </span>
-                      <i className="blogpage-timestamp">{blog.timestamp}</i>
+                      <i className="blogpage-timestamp">
+                        {format(blog.createdAt)}
+                      </i>
                     </div>
                     {blog.coverImage ? (
                       <div className="blogpage-banner-container">
@@ -73,7 +88,10 @@ const Blogs: React.FC = () => {
                         {blog.paragraphs.map((item: any) => {
                           return (
                             <>
-                              <section className="blogpage-section-container">
+                              <section
+                                className="blogpage-section-container"
+                                key={item._id}
+                              >
                                 {item.subHeading ? (
                                   <h3 className="blogpage-subheading">
                                     {item.subHeading}
@@ -96,21 +114,37 @@ const Blogs: React.FC = () => {
                                     />
                                   </div>
                                 ) : null}
-                                {item.code ? (
-                                  <SyntaxHighlighter
-                                    showLineNumbers
-                                    lineNumberStyle={{
-                                      color: "grey",
-                                    }}
-                                    customStyle={customStyle}
-                                    language={item.language}
-                                    style={vs}
-                                    // style={monokai}
-                                    // style={dracula}
-                                  >
-                                    {item.code}
-                                  </SyntaxHighlighter>
-                                ) : null}
+                                {/* ----working----- */}
+                                {item.code
+                                  ? (() => {
+                                      const formattedCode = item.code.replace(
+                                        // /\\n/g,
+                                        /\\n/g,
+                                        ""
+                                      );
+                                      const removeBackslash =
+                                        formattedCode.replace(/\\/g, "");
+                                      console.log(formattedCode);
+                                      return (
+                                        <SyntaxHighlighter
+                                          showLineNumbers
+                                          lineNumberStyle={{
+                                            color: "grey",
+                                          }}
+                                          customStyle={customStyle}
+                                          language={item.language}
+                                          style={vs}
+                                          wrapLines={true}
+                                          // style={monokai}
+                                          // style={dracula}
+                                        >
+                                          {removeBackslash}
+                                          {/* {item.code} */}
+                                        </SyntaxHighlighter>
+                                      );
+                                    })()
+                                  : null}
+                                {/* ----working----- */}
                                 {item.listSubheading ? (
                                   <h3 className="blogpage-subheading">
                                     {item.listSubHeading}
@@ -120,7 +154,12 @@ const Blogs: React.FC = () => {
                                   <ul className="blogpage-ul">
                                     {item.list.map((li: any) =>
                                       li ? (
-                                        <li className="blogpage-li">{li}</li>
+                                        <li
+                                          className="blogpage-li"
+                                          key={li._id}
+                                        >
+                                          {li}
+                                        </li>
                                       ) : null
                                     )}
                                   </ul>
@@ -134,8 +173,13 @@ const Blogs: React.FC = () => {
                                   <ul className="blogpage-ul">
                                     {item.links.map((link: any) =>
                                       link ? (
-                                        <li className="blogpage-li link">
-                                          <a href={link}>{link}</a>
+                                        <li
+                                          className="blogpage-li link"
+                                          key={link._id}
+                                        >
+                                          <a href={link} target="_blank">
+                                            {link}
+                                          </a>
                                         </li>
                                       ) : null
                                     )}
@@ -160,4 +204,4 @@ const Blogs: React.FC = () => {
   }
 };
 
-export default Blogs;
+export default BlogPage;

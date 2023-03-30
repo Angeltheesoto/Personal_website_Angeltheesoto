@@ -6,7 +6,11 @@ import Seemore from "../seemore/Seemore";
 import Blogs from "../blogs/Blogs";
 import { Helmet } from "react-helmet";
 
-const Blog: React.FC = () => {
+interface Props {
+  blogData: object[];
+}
+
+const Blog: React.FC<Props> = ({ blogData }) => {
   const location = useLocation();
   const loc = location.pathname;
 
@@ -23,13 +27,13 @@ const Blog: React.FC = () => {
           </Helmet>
           <div className="blog-space blog-container">
             <h2 className="blog-center">Blog</h2>
-            <Blogs homepage={false} />
+            <Blogs homepage={false} blogData={blogData} />
           </div>
         </FadeInEffect>
       ) : (
         <div id="blog" className="info-container pos-rel  blog-container">
           <h2 className="blog-center">Blog</h2>
-          <Blogs homepage={true} />
+          <Blogs homepage={true} blogData={blogData} />
           <Seemore link="/blog" text="See More" />
         </div>
       )}
