@@ -1,0 +1,87 @@
+{
+  "code": "function Seemore({ link, text, direction }) {
+    \n  return (
+    \n    <>
+    \n      {direction === \"left\" ? (
+    \n        <div className=\"seemore-container seemore-hover-effect-reverse\">
+    \n          <Link to={link} className=\"seemore-link\">
+    \n            <p className=\"seemore-text\">
+    \n              <span className=\"seemore-arrow\">
+    \n                <KeyboardDoubleArrowLeftIcon />
+    \n              </span>
+    \n              <span className=\"seemore-single-arrow\">
+    \n                <MoreHorizIcon />
+    \n              </span>
+    \n              {text}{' '}
+    \n            </p>
+    \n          </Link>
+    \n        </div>
+    \n      ) : (
+    \n        <div className=\"seemore-container seemore-hover-effect \">
+    \n          <Link to={link} className=\"seemore-link\">
+    \n            <p className=\"seemore-text\">
+    \n              {text}{' '}
+    \n              <span className=\"seemore-arrow\">
+    \n                <KeyboardDoubleArrowRightIcon />
+    \n              </span>
+    \n              <span className=\"seemore-single-arrow\">
+    \n                <MoreHorizIcon />
+    \n              </span>
+    \n            </p>
+    \n          </Link>
+    \n        </div>
+    \n      )}
+    \n    </>
+    \n  );
+    \n}"
+}
+
+// filterd code - new lines [\n] or /[\\n\s]+/g
+{item.code
+                                  ? (() => {
+                                      const formattedCode = item.code.replace(
+                                        /\\n/g,
+                                        ""
+                                      );
+                                      console.log(formattedCode);
+                                      return (
+                                        <pre>
+                                          <SyntaxHighlighter
+                                            showLineNumbers
+                                            lineNumberStyle={{
+                                              color: "grey",
+                                            }}
+                                            customStyle={customStyle}
+                                            language={item.language}
+                                            style={vs}
+                                            wrapLines={true}
+                                            // style={monokai}
+                                            // style={dracula}
+                                          >
+                                            {/* {item.code} */}
+                                            {/* {formattedCode} */}
+                                            {/* {Data[1].paragraphs[0].code} */}
+                                          </SyntaxHighlighter>
+                                        </pre>
+                                      );
+                                    })()
+                                  : null}
+
+// first code
+                                  {item.code ? (
+                                  <SyntaxHighlighter
+                                    showLineNumbers
+                                    lineNumberStyle={{
+                                      color: "grey",
+                                    }}
+                                    customStyle={customStyle}
+                                    language={item.language}
+                                    style={vs}
+                                    wrapLines={true}
+                                    // style={monokai}
+                                    // style={dracula}
+                                  >
+                                    {/* {item.code} */}
+                                    {Data[1].paragraphs[0].code}
+                                  </SyntaxHighlighter>
+                                ) : null}

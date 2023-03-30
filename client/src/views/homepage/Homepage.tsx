@@ -13,10 +13,11 @@ import React from "react";
 import Blog from "../../components/blog/Blog";
 
 interface Props {
-  homePageData: object[];
+  projectData: object[];
+  blogData: object[];
 }
 
-const Homepage: React.FC<Props> = ({ homePageData }) => {
+const Homepage: React.FC<Props> = ({ projectData, blogData }) => {
   return (
     <React.Fragment>
       <div className="header-container flex-row-reverse">
@@ -38,7 +39,7 @@ const Homepage: React.FC<Props> = ({ homePageData }) => {
       <div className="header-container ">
         <div className="box-container">
           <FadeInEffect>
-            <Projects projectsData={homePageData} />
+            <Projects projectsData={projectData} />
           </FadeInEffect>
         </div>
         <Orbs />
@@ -46,7 +47,7 @@ const Homepage: React.FC<Props> = ({ homePageData }) => {
       {/* margin-bottom */}
       <div className="header-container ">
         <FadeInEffect>
-          <Blog />
+          <Blog blogData={blogData} />
         </FadeInEffect>
       </div>
     </React.Fragment>

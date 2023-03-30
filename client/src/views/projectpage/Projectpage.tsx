@@ -9,15 +9,15 @@ import { Helmet } from "react-helmet";
 import React from "react";
 
 interface Props {
-  homePageData: object[] | any;
+  projectData: object[] | any;
 }
 
-const Projectpage: React.FC<Props> = ({ homePageData }) => {
+const Projectpage: React.FC<Props> = ({ projectData }) => {
   const { id } = useParams<{ id?: string }>();
   const newId = id ? parseInt(id) * 1 + 1 : undefined;
 
   // Use homepage data
-  if (!homePageData) {
+  if (!projectData) {
     return (
       <MutatingDots
         height="100"
@@ -41,7 +41,7 @@ const Projectpage: React.FC<Props> = ({ homePageData }) => {
             content="A collection of projects showcasing my work."
           />
         </Helmet>
-        {homePageData.map(
+        {projectData.map(
           (data: {
             _id: React.Key | null | undefined;
             title:
@@ -105,7 +105,7 @@ const Projectpage: React.FC<Props> = ({ homePageData }) => {
               </div>
             ) : null
         )}
-        <Projects projectsData={homePageData} />
+        <Projects projectsData={projectData} />
       </div>
     );
   }
