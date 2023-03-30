@@ -24,11 +24,11 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
   const { id } = useParams<{ id?: string }>();
   const newId = id ? parseInt(id) * 1 + 1 : undefined;
   const customStyle = {
-    // padding: "20px",
-    // borderRadius: "3px",
-    // overflow: "scroll",
-    // maxWidth: "50rem",
-    // margin: "0 auto",
+    padding: "20px",
+    borderRadius: "3px",
+    overflow: "scroll",
+    maxWidth: "50rem",
+    margin: "0 auto",
   };
 
   // if (!Data) {
@@ -114,17 +114,15 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                     />
                                   </div>
                                 ) : null}
-                                {/* ----working----- */}
                                 {item.code
                                   ? (() => {
+                                      // This code is removing [\n] and [\] from the string data to display it formatted in syntaxHighlighter. Make sure to format it the right way in mongodb
                                       const formattedCode = item.code.replace(
-                                        // /\\n/g,
                                         /\\n/g,
                                         ""
                                       );
                                       const removeBackslash =
                                         formattedCode.replace(/\\/g, "");
-                                      console.log(formattedCode);
                                       return (
                                         <SyntaxHighlighter
                                           showLineNumbers
@@ -139,12 +137,10 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                           // style={dracula}
                                         >
                                           {removeBackslash}
-                                          {/* {item.code} */}
                                         </SyntaxHighlighter>
                                       );
                                     })()
                                   : null}
-                                {/* ----working----- */}
                                 {item.listSubheading ? (
                                   <h3 className="blogpage-subheading">
                                     {item.listSubHeading}
