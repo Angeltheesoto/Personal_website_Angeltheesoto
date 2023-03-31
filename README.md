@@ -44,5 +44,9 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Adobe XD
 
 <!-- WORKING ON:
-
+    !! converter for code to json string
+    1. Have chatgpt convert the code to json and it will work when you put in the code copied from wherever you have it.
+    2. Fix blog homepage links, the description for the blog makes the box size too big.
+    3. Add more space between paragraphs above. 3rem so you can tell what is to what.
+    4. Add listSubheading and listSubheading to client and to mongodb. Make sure all the models are shown in client.
 -->
