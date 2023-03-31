@@ -1,4 +1,4 @@
-.aboutme-space h2 {
+.aboutme-h2 {
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -7,20 +7,6 @@
   background-color: #061d3a;
   padding: 3rem 4rem;
   align-self: center;
-}
-
-.aboutme-space {
-  margin: 15rem 0 !important;
-}
-
-@media screen and (max-width: 550px) {
-  .aboutme-space {
-    margin: 10rem 0 !important;
-  }
-
-  // .info-container {
-  //   padding: 2rem 2rem !important;
-  // }
 }
 
 @media screen and (min-width: 992px) {

@@ -39,6 +39,7 @@
   padding: 1rem;
   margin: 10px 0;
   transition: 1s ease;
+  width: 30rem;
 }
 
 .blogs-item-container:hover {
@@ -54,6 +55,14 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 600px) {
+  .blogs-container {
+    display: block;
+  }
+  .blogs-item-container {
+    width: auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .blogs-container {
     justify-content: space-evenly;

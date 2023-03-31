@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       <React.Fragment>
         <NavbarEl />
         <Container>
-          <div className="header-container">
+          <div className="header-container header-top">
             <div className="box-container">
               <FadeInEffect>
                 <Hero />

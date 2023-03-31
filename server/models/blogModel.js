@@ -11,7 +11,7 @@ const BlogSchema = new mongoose.Schema(
     paragraphs: [
       {
         subHeading: String,
-        text: String,
+        text: [String],
         imgSubHeading: String,
         img: String,
         listSubHeading: String,

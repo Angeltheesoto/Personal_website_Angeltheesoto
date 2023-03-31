@@ -1,4 +1,4 @@
-.aboutme-space h2 {
+.aboutme-h2 {
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -9,15 +9,6 @@
   align-self: center;
 }
 
-.aboutme-space {
-  margin: 15rem 0 !important;
-}
-
-@media screen and (max-width: 550px) {
-  .aboutme-space {
-    margin: 10rem 0 !important;
-  }
-}
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;

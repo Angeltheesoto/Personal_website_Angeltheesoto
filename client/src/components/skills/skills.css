@@ -35,10 +35,6 @@
   width: 100% !important;
 }
 
-.skills-space {
-  margin: 10rem 0 !important;
-}
-
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;

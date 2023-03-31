@@ -98,9 +98,20 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                     {item.subHeading}
                                   </h3>
                                 ) : null}
-                                {item.text ? (
-                                  <p className="blogpage-text">{item.text}</p>
-                                ) : null}
+
+                                {item.text
+                                  ? item.text.map((txt: any) =>
+                                      txt ? (
+                                        <p
+                                          className="blogpage-text"
+                                          key={txt._id}
+                                        >
+                                          {txt}
+                                        </p>
+                                      ) : null
+                                    )
+                                  : null}
+
                                 {item.imgSubHeading ? (
                                   <h3 className="blogpage-subheading">
                                     {item.imgSubHeading}
@@ -142,7 +153,7 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                       );
                                     })()
                                   : null}
-                                {item.listSubheading ? (
+                                {item.listSubHeading ? (
                                   <h3 className="blogpage-subheading">
                                     {item.listSubHeading}
                                   </h3>
@@ -161,9 +172,9 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                     )}
                                   </ul>
                                 ) : null}
-                                {item.linkSubHeading ? (
+                                {item.linksSubHeading ? (
                                   <h3 className="blogpage-subheading">
-                                    {item.linkSubHeading}
+                                    {item.linksSubHeading}
                                   </h3>
                                 ) : null}
                                 {item.links ? (

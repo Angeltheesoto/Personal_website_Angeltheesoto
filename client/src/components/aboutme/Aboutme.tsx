@@ -10,13 +10,13 @@ export default function Aboutme() {
   return (
     <div id="about">
       {loc === "/aboutme" ? (
-        <div className="info-container aboutme-space">
+        <div className="info-container space">
           <FadeInEffect>
             <Helmet>
               <title>About Page</title>
               <meta name="Description" content="This is my story." />
             </Helmet>
-            <h2>About Me</h2>
+            <h2 className="aboutme-h2">About Me</h2>
             <p>
               My journey in web-development started when I wanted to create my
               very own e-commerce website, I was curious on how to build such a

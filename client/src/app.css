@@ -71,6 +71,10 @@ li::before {
   display: block;
 }
 
+.space {
+  margin: 5rem 0 !important;
+}
+
 .show-container {
   display: block;
   background-color: red;

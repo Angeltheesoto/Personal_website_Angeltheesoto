@@ -25,7 +25,7 @@ const Blog: React.FC<Props> = ({ blogData }) => {
               content="A collection of blogs showcasing my work."
             />
           </Helmet>
-          <div className="blog-space blog-container">
+          <div className="space blog-container">
             <h2 className="blog-center">Blog</h2>
             <Blogs homepage={false} blogData={blogData} />
           </div>

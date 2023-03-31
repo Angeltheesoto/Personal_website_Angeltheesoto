@@ -17,7 +17,7 @@ export default function Education() {
             <title>Education Page</title>
             <meta name="Description" content="A timeline of my education." />
           </Helmet>
-          <div className="education-space">
+          <div className="space">
             <h2 className="text-center">Education</h2>
             <div className="education-timeline-container d-flex justify-content-center">
               <div className="education-icon-container d-flex flex-column bd-highlight mb-3 justify-content-between">

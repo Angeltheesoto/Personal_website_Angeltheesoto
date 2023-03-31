@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
               content="A list of how well I feel I know these technologies."
             />
           </Helmet>
-          <div className="skills-space">
+          <div className="space">
             <h2 id="newtop" className="text-center">
               Skills
             </h2>

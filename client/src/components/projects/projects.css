@@ -13,11 +13,11 @@
 
 .project-cards {
   height: 6rem;
-  width: 100%;
+  max-width: 35rem;
   color: #061d3a;
   background-color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 2rem;
   margin: auto;
   font-size: 1.5rem;
