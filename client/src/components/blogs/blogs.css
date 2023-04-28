@@ -18,6 +18,10 @@
   border-bottom: 10px solid #f0db4f;
 }
 
+.django {
+  border-bottom: 10px solid #145f42;
+}
+
 .python {
   background-image: linear-gradient(to right, #4b8bbe 50%, #ffe873 50%);
   background-position: bottom;
@@ -53,6 +57,10 @@
 
 .blogs-topic {
   font-weight: 500;
+}
+
+.blogsPadding {
+  margin: 0 10px;
 }
 
 @media screen and (max-width: 600px) {
