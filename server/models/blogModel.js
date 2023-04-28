@@ -8,6 +8,7 @@ const BlogSchema = new mongoose.Schema(
     title: { type: String, min: 3, max: 60, required: true },
     topic: { type: String, required: true },
     desc: { type: String, min: 3, max: 150, required: true },
+    dateCreated: { type: String },
     paragraphs: [
       {
         subHeading: String,

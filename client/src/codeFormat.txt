@@ -37,52 +37,21 @@
     \n}"
 }
 
-// filterd code - new lines [\n] or /[\\n\s]+/g ----------
-{item.code
-  ? (() => {
-      const formattedCode = item.code.replace(
-        /\\n/g,
-        ""
-      );
-      console.log(formattedCode);
-      return (
-        <pre>
-          <SyntaxHighlighter
-            showLineNumbers
-            lineNumberStyle={{
-              color: "grey",
-            }}
-            customStyle={customStyle}
-            language={item.language}
-            style={vs}
-            wrapLines={true}
-            // style={monokai}
-            // style={dracula}
-          >
-            {/* {item.code} */}
-            {/* {formattedCode} */}
-            {/* {Data[1].paragraphs[0].code} */}
-          </SyntaxHighlighter>
-        </pre>
-      );
-    })()
-  : null}
-
-// first code -----------
-{item.code ? (
-<SyntaxHighlighter
-  showLineNumbers
-  lineNumberStyle={{
-    color: "grey",
-  }}
-  customStyle={customStyle}
-  language={item.language}
-  style={vs}
-  wrapLines={true}
-  // style={monokai}
-  // style={dracula}
->
-  {/* {item.code} */}
-  {Data[1].paragraphs[0].code}
-</SyntaxHighlighter>
-) : null}
+# template for data
+{
+  "id": "2",
+  "title": "How to Set up a Django-Rest and React App | Part 1",
+  "topic": "react",
+  "desc": "Setting up a Django-REST backend.",
+  "paragraphs": [
+    {
+      "subHeading": "GETTING STARTED",
+      "text": [
+        "First things first, we want to make sure we have python installed on our systems. You can check if you have python installed by running"
+      ],
+      "code": "code",
+      "language": ""
+    }
+  ],
+  "coverImage": "https://i.postimg.cc/JzVRYCFh/Untitled-design.jpg"
+}

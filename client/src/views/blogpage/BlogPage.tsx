@@ -71,7 +71,8 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                       <div className="blogpage-info-container">
                         <span className="blogpage-span">{blog.topic} - </span>
                         <i className="blogpage-timestamp">
-                          {format(blog.createdAt)}
+                          {/* {format(blog.createdAt)} */}
+                          {blog.dateCreated}
                         </i>
                       </div>
                     </div>
