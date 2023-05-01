@@ -46,7 +46,6 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 <!-- WORKING ON:
     1. Remove the lava orbs and try to use something else on the header.
     !sidenote: Maybe have the lava box be square and white, then have the orbs appear when you hover over it and that follows the mouse movement over it like little bubbles appearing and floating up.
-    2. Add faded background text to make it look like theres depth.
-    3. have the projects display better examples instead of just a button. Actually show little image or preview of the project then when the user clicks it, it goes to the actual project page to show all the images of it. Also move the projects above the about me and remove the lava orbs next to it. Also center the containers.
-    4. Change navbar color to be like white glass.
+    2. have the projects display better examples instead of just a button. Actually show little image or preview of the project then when the user clicks it, it goes to the actual project page to show all the images of it. Also move the projects above the about me and remove the lava orbs next to it. Also center the containers.
+    3. Change navbar color to be like white glass.
 -->

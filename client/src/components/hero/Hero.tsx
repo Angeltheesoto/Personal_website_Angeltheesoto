@@ -25,7 +25,7 @@ function Hero() {
         </Nav.Link>
         <Nav.Link
           eventKey="link-2"
-          // href="https://www.instagram.com/angeltheesoto/"
+          href="https://www.instagram.com/angeltheesoto/"
           target="_Blank"
         >
           <Instagram />
