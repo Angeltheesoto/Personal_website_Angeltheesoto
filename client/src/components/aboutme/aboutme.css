@@ -9,6 +9,13 @@
   align-self: center;
 }
 
+.aboutme-text {
+  background-color: white;
+  color: #061d3a;
+  padding: 2rem;
+  font-weight: 400;
+}
+
 @media screen and (min-width: 992px) {
   .info-container {
     margin-top: 0;

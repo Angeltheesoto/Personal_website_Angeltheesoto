@@ -4,10 +4,11 @@ import "./hero.css";
 import GitHub from "../../misc/github";
 import LinkedIn from "../../misc/linkedin";
 import Instagram from "../../misc/Instagram";
+import Typewritter from "typewriter-effect";
 
 function Hero() {
   return (
-    <Container id="hero" className="hero-container hero-reverse-container">
+    <Container id="hero" className="hero-reverse-container">
       <Nav defaultActiveKey="/home" className="flex-column">
         <Nav.Link
           href="https://github.com/Angeltheesoto"
@@ -34,7 +35,24 @@ function Hero() {
       <Nav className="hero-text">
         <div>
           <h1>Angel Soto</h1>
-          <h3>Full-stack web Developer/ Digital Designer</h3>
+          <div className="hero-sub-text-container">
+            <h3 className="hero-space">I am a</h3>
+            <h3>
+              <Typewritter
+                options={{
+                  strings: [
+                    "web developer",
+                    "front-end developer",
+                    "back-end developer",
+                    "digital designer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 110,
+                }}
+              />
+            </h3>
+          </div>
         </div>
       </Nav>
     </Container>
@@ -42,3 +60,4 @@ function Hero() {
 }
 
 export default Hero;
+// npm i --save-dev @types/react-typical

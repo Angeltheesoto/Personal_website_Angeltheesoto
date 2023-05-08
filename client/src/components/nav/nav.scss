@@ -1,21 +1,11 @@
 .navbar-container {
-  background-color: #061d3a;
-  // background-color: rgb(6, 29, 58, 0.58);
-  box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.8);
+  // background-color: #061d3a;
+  // box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.8);
+  background-color: rgb(6, 29, 58, 0.58);
   position: fixed;
   z-index: 9999;
   margin-top: -5rem;
   width: 100%;
-
-  // padding-bottom: 10rem;
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   rgba(6, 29, 58, 1) 0%,
-  //   rgba(255, 255, 255, 0) 10%
-  // );
-
-  //   background-color: rgba(38, 38, 38, 0.35);
-  // border-color: 20px solid hsla(0, 0%, 100%, 0.08);
 }
 
 .bootstrap-container {
@@ -143,7 +133,8 @@
     width: 100%;
     height: 500px;
     background-color: #061d3a;
-    box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.517);
+    // box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.517);
+    // background-color: rgb(6, 29, 58, 0.58);
     transition: all 0.3s ease;
     z-index: -1;
   }

@@ -1,9 +1,9 @@
+#hero,
 .hero-container {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  height: 30rem;
   align-items: center;
   margin-top: 5rem;
 
@@ -15,6 +15,7 @@
     margin: 0 auto;
     text-align: center;
     align-content: center;
+    margin-left: 2rem;
   }
 }
 
@@ -25,6 +26,16 @@
 .socials:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+}
+
+.hero-sub-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-space {
+  margin-right: 7px;
 }
 
 @media screen and (max-width: 550px) {
@@ -45,14 +56,11 @@
   .header-container {
     align-items: center;
   }
-  .hero-container {
-    height: 46rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .header-container {
-    margin: 10rem 0;
+    margin: 17rem 0;
   }
 
   .header-top {
@@ -65,6 +73,6 @@
     font-size: 6rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }

@@ -16,8 +16,8 @@ h2 {
 }
 
 h3 {
-  color: lightgray;
-  font-size: 1rem;
+  color: white;
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -157,6 +157,20 @@ li::before {
   }
   .box-container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .info-container,
+  #projects {
+    margin: 10rem 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .skills {
+    margin-top: 10rem !important;
+    /* border: 1px solid red; */
   }
 }
 

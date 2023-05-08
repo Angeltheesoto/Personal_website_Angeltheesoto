@@ -10,7 +10,14 @@ const Skills: React.FC = () => {
   const loc = location.pathname;
 
   return (
-    <div id="skills" className="info-container pos-rel">
+    <div
+      id="skills"
+      className={
+        loc === "/skills"
+          ? "info-container pos-rel"
+          : "info-container pos-rel skills"
+      }
+    >
       {loc === "/skills" ? (
         <FadeInEffect>
           <Helmet>
