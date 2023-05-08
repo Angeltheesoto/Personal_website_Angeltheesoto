@@ -20,6 +20,7 @@ Frontend --
 [react-loader-spinner] - load spinner
 [react-helmet] - manipulate html head attributes from components
 [@mui/icons-material @mui/material @emotion/styled @emotion/react] - material ui icons
+[typewriter-effect] = Creates a typing animation.
 -->
 
 Angeltheesoto is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
