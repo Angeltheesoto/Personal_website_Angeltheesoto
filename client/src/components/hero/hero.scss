@@ -50,6 +50,11 @@
   .socials {
     width: auto;
   }
+
+  #hero,
+  .hero-text {
+    margin-left: 0rem !important;
+  }
 }
 
 @media screen and (min-width: 992px) {

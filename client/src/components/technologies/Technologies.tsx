@@ -6,7 +6,7 @@ const Technologies: any = () => {
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -20,7 +20,7 @@ const Technologies: any = () => {
       <a
         href="https://www.python.org/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -34,7 +34,7 @@ const Technologies: any = () => {
       <a
         href="https://www.typescriptlang.org/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -48,7 +48,7 @@ const Technologies: any = () => {
       <a
         href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -62,7 +62,7 @@ const Technologies: any = () => {
       <a
         href="https://www.w3.org/TR/CSS/#css"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -76,7 +76,7 @@ const Technologies: any = () => {
       <a
         href="https://reactjs.org/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -90,7 +90,7 @@ const Technologies: any = () => {
       <a
         href="https://sass-lang.com/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -104,7 +104,7 @@ const Technologies: any = () => {
       <a
         href="https://getbootstrap.com/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -118,7 +118,7 @@ const Technologies: any = () => {
       <a
         href="https://webpack.js.org/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -132,7 +132,7 @@ const Technologies: any = () => {
       <a
         href="https://babeljs.io/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -146,7 +146,7 @@ const Technologies: any = () => {
       <a
         href="https://nodejs.org/en/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -160,7 +160,7 @@ const Technologies: any = () => {
       <a
         href="https://expressjs.com/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -174,7 +174,7 @@ const Technologies: any = () => {
       <a
         href="https://www.mongodb.com/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -188,7 +188,7 @@ const Technologies: any = () => {
       <a
         href="https://www.postgresql.org/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -202,7 +202,7 @@ const Technologies: any = () => {
       <a
         href="https://www.heroku.com/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -216,7 +216,7 @@ const Technologies: any = () => {
       <a
         href="https://flask.palletsprojects.com/en/2.0.x/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img
@@ -230,7 +230,7 @@ const Technologies: any = () => {
       <a
         href="https://www.adobe.com/uk/products/xd.html"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="technologies-link"
       >
         <img

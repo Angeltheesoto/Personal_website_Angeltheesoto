@@ -28,18 +28,18 @@ const App = () => {
   const [blogData, setBlogData] = useState<Array<object>>([]);
   const [showButton, setShowButton] = useState<boolean>();
 
-  // data from mongodb
-  const dataUrl = ["/api/projects", "/api/map_key", "/api/blog"];
-  const config: AxiosRequestConfig = {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  };
-
   // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there
   useEffect(() => {
+    // data from mongodb
+    const dataUrl = ["/api/projects", "/api/map_key", "/api/blog"];
+    const config: AxiosRequestConfig = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    };
+
     let requests = async () => {
       await axios
         .all(dataUrl.map((promise) => axios.get(promise, config)))
@@ -58,6 +58,7 @@ const App = () => {
     // return () => clearTimeout(timer);
 
     // Scroll to top button
+
     const handleScrollButtonVisibility = () => {
       window.pageYOffset > 1000 ? setShowButton(true) : setShowButton(false);
     };
@@ -65,7 +66,6 @@ const App = () => {
 
     requests();
   }, []);
-  console.log();
   // ?fetch data ----------------------->>>>
 
   return (

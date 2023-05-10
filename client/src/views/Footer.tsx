@@ -1,8 +1,6 @@
-import React from "react";
 import Contact from "../components/contact/Contact";
 import Map from "../components/map/Map";
 import FadeInEffect from "../components/fadeineffect/FadeInEffect";
-import { type } from "os";
 
 type Props = {
   envData?: string;

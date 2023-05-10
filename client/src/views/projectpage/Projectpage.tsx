@@ -17,12 +17,16 @@ const Projectpage: React.FC<Props> = ({ projectData }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseOver = () => {
-    videoRef.current.play();
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   };
 
   const handleMouseOut = () => {
-    videoRef.current.pause();
-    videoRef.current.currentTime = 0;
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
   };
 
   // Use homepage data
@@ -74,6 +78,7 @@ const Projectpage: React.FC<Props> = ({ projectData }) => {
                             href={data.link}
                             target="_Blank"
                             className="socials project-video-gitlink"
+                            rel="noreferrer"
                           >
                             <GitHub />
                           </a>

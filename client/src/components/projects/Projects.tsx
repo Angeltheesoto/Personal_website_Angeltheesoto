@@ -1,6 +1,5 @@
 import Container from "react-bootstrap/Container";
 import "./projects.css";
-import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
 import { MutatingDots } from "react-loader-spinner";
 import React from "react";

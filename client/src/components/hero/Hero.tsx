@@ -11,9 +11,10 @@ function Hero() {
     <Container id="hero" className="hero-reverse-container">
       <Nav defaultActiveKey="/home" className="flex-column">
         <Nav.Link
+          className="socials"
           href="https://github.com/Angeltheesoto"
           target="_Blank"
-          className="socials"
+          rel="noreferrer"
         >
           <GitHub />
         </Nav.Link>
@@ -21,6 +22,7 @@ function Hero() {
           eventKey="link-1"
           href="https://www.linkedin.com/in/angel-soto-a19a04233/"
           target="_Blank"
+          rel="noreferrer"
         >
           <LinkedIn />
         </Nav.Link>
@@ -28,6 +30,7 @@ function Hero() {
           eventKey="link-2"
           href="https://www.instagram.com/angeltheesoto/"
           target="_Blank"
+          rel="noreferrer"
         >
           <Instagram />
         </Nav.Link>

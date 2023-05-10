@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
 import FloatingLabel from "react-bootstrap/FloatingLabel";

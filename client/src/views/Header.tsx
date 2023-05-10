@@ -4,7 +4,6 @@ import React, { useState } from "react";
 // Components
 import NavbarEl from "../components/nav/Nav";
 import Hero from "../components/hero/Hero";
-// import Orbs from "../components/orbs/Orbs";
 import FadeInEffect from "../components/fadeineffect/FadeInEffect";
 import { useLocation } from "react-router-dom";
 import "./header.css";
@@ -42,7 +41,7 @@ const Header: React.FC = () => {
     container.style.setProperty("--yAngle", containerYAngle.toFixed(2) + "deg");
   };
 
-  if (path == "/") {
+  if (path === "/") {
     return (
       <React.Fragment>
         <NavbarEl />

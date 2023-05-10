@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import "./blogpage.css";
 import { MutatingDots } from "react-loader-spinner";
 import React from "react";
-import { Data } from "../../data";
+// import { Data } from "../../data";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import FadeInEffect from "../../components/fadeineffect/FadeInEffect";
@@ -13,7 +13,7 @@ import {
   // monokai, use for light/dark mode in furture
   // dracula,
 } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { format } from "timeago.js";
+// import { format } from "timeago.js";
 
 interface Props {
   blogData: object[];
@@ -80,7 +80,7 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                       <div className="blogpage-banner-container">
                         <img
                           src={blog.coverImage}
-                          alt="cover image"
+                          alt="blog banner"
                           className="blogpage-banner-image"
                         />
                       </div>
@@ -122,7 +122,7 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                   <div className="blogpage-small-image-container">
                                     <img
                                       src={item.img}
-                                      alt="image"
+                                      alt={`banner-of-${item.imgSubHeading}`}
                                       className="blogpage-small-image"
                                     />
                                   </div>
@@ -186,7 +186,11 @@ const BlogPage: React.FC<Props> = ({ blogData }) => {
                                           className="blogpage-li link"
                                           key={link._id}
                                         >
-                                          <a href={link} target="_blank">
+                                          <a
+                                            href={link}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                          >
                                             {link}
                                           </a>
                                         </li>

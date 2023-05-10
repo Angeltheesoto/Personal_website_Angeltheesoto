@@ -13,9 +13,7 @@ const Skills: React.FC = () => {
     <div
       id="skills"
       className={
-        loc === "/skills"
-          ? "info-container pos-rel"
-          : "info-container pos-rel skills"
+        loc === "/skills" ? "pos-rel" : "info-container pos-rel skills"
       }
     >
       {loc === "/skills" ? (

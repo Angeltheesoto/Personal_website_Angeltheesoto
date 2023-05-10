@@ -46,7 +46,9 @@
   border-radius: 100%;
   background-color: #fff;
   /* box-shadow: inset -5px 0px 10px 0px rgba(0, 0, 0, 0.9); */
-  transform: translate(50px) rotate(var(--eyeAngle, 0deg));
+
+  /* !slants the eyes when moving */
+  /* transform: translate(50px) rotate(var(--eyeAngle, 0deg)); */
 }
 
 .pupil {

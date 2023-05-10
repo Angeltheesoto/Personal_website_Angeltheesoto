@@ -1,11 +1,10 @@
 import Container from "react-bootstrap/Container";
 import "./blogs.css";
-import { Link } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
 import { MutatingDots } from "react-loader-spinner";
 import React from "react";
-import { format } from "timeago.js";
-import { Data } from "../../data";
+// import { format } from "timeago.js";
+// import { Data } from "../../data";
 
 interface Props {
   homepage: boolean;
