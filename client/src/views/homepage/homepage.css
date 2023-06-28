@@ -1,0 +1,15 @@
+.flex-row-reverse {
+  border: 1px solid white;
+}
+
+.margin-bottom {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 992px) {
+  .margin-bottom {
+    margin-bottom: 10rem;
+    flex-direction: inherit;
+  }
+}

@@ -1,0 +1,31 @@
+.logo {
+  width: 4rem;
+  height: 3rem;
+  padding-left: 10px;
+  margin-right: -10px;
+}
+
+.socials {
+  width: 2rem;
+}
+
+.github:hover {
+  filter: url(#github-change-color);
+  transition: 1s;
+}
+
+.linkedin:hover {
+  filter: url(#linkedin-change-color);
+  transition: 1s;
+}
+
+.instagram:hover {
+  filter: url(#instagram-change-color);
+  transition: 1s;
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    width: 4rem;
+  }
+}

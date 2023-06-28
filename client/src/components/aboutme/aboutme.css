@@ -1,0 +1,24 @@
+.aboutme-h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.info-container {
+  background-color: #061d3a;
+  padding: 3rem 4rem;
+  align-self: center;
+}
+
+.aboutme-text {
+  background-color: white;
+  color: #061d3a;
+  padding: 2rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .info-container {
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=aboutme.css.map */

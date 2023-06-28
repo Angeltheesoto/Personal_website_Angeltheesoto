@@ -1,0 +1,177 @@
+body {
+  background-color: #061d3a;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+h4 {
+  color: #061d3a;
+  font-size: 3rem;
+}
+
+h5 {
+  color: #061d3a;
+  margin: auto;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+li {
+  /* list-style-type: circle; */
+  color: white;
+  list-style: none;
+  /* font-size: 1.1rem; */
+  font-size: 20px;
+  font-weight: 100;
+}
+
+li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.space {
+  margin: 5rem 0 !important;
+}
+
+.show-container {
+  display: block;
+  background-color: red;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9999;
+
+  border-radius: 100%;
+  transition: 1s ease;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.show-container:hover {
+  transition: 1s ease;
+  bottom: 3rem;
+}
+
+.header-display {
+  height: 5rem;
+  width: 100%;
+}
+
+/* scroll bar styles */
+/* For Webkit-based browsers */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #061d3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-moz-scrollbar-track {
+  background-color: #061d3a;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 2rem;
+  cursor: default;
+}
+
+.copyright-hr {
+  color: white;
+  margin: 2rem 10rem;
+}
+
+@media screen and (max-width: 550px) {
+  .info-container,
+  .info-container2 {
+    padding: 2rem 2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header-container {
+    display: flex;
+    max-height: auto;
+  }
+  .box-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .info-container,
+  #projects {
+    margin: 10rem 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .skills {
+    margin-top: 10rem !important;
+    /* border: 1px solid red; */
+  }
+}
+
+/* background-color: rgba(0, 0, 0, 0.2); */

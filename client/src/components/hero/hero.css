@@ -1,0 +1,78 @@
+#hero,
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+#hero a,
+.hero-container a {
+  max-width: 4rem;
+}
+#hero .hero-text,
+.hero-container .hero-text {
+  margin: 0 auto;
+  text-align: center;
+  align-content: center;
+  margin-left: 2rem;
+}
+
+.socials {
+  transition: all 0.3s ease-in-out;
+}
+
+.socials:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-sub-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-space {
+  margin-right: 7px;
+}
+
+@media screen and (max-width: 550px) {
+  .hero-reverse-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .flex-column {
+    margin-top: 3rem;
+    flex-direction: row !important;
+  }
+  .socials {
+    width: auto;
+  }
+  #hero,
+  .hero-text {
+    margin-left: 0rem !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header-container {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-container {
+    margin: 17rem 0;
+  }
+  .header-top {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=hero.css.map */

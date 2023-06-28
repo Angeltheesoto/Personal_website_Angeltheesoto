@@ -1,0 +1,55 @@
+.info-container2 {
+  padding: 3rem 4rem;
+  z-index: 9998;
+  align-self: center;
+  position: relative;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.education-school-container {
+  border: 1px solid white;
+  margin-bottom: 10px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.education-school-container p {
+  color: #061d3a;
+  max-width: 20rem;
+}
+
+.education-icon-container {
+  margin: 3rem 4rem 4rem 0 !important;
+}
+
+.vl {
+  border-left: 1px solid white;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.text-center {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .education-icon-container {
+    background-color: red;
+    display: none !important;
+  }
+
+  .education-space {
+    margin: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .info-container2 {
+    padding: 3rem 4rem;
+  }
+}
