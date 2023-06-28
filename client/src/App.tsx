@@ -31,7 +31,11 @@ const App = () => {
   // This fetches data from more than one url and sending it through footer.js to map.js and sending the key there
   useEffect(() => {
     // data from mongodb
-    const dataUrl = ["/api/projects", "/api/map_key", "/api/blog"];
+    const dataUrl = [
+      "https://personal-website-angeltheesoto.vercel.app/api/projects",
+      "https://personal-website-angeltheesoto.vercel.app/api/map_key",
+      "https://personal-website-angeltheesoto.vercel.app/api/blog",
+    ];
     const config: AxiosRequestConfig = {
       method: "GET",
       headers: {

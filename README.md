@@ -45,7 +45,9 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 [typewriter-effect] = Creates a typing animation.
 -->
 
-<!-- !--WORKING ON--!:
+<!--
+    !Note: [app.tsx] and [api.tsx] have api urls.
+    !--WORKING ON--!:
 
     !GENERAL FIXES
     - Change p font-style to a serif style
