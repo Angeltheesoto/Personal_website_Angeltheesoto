@@ -29,18 +29,18 @@ app.use("/api", blogRoute);
 //   res.json("API DATA HERE");
 // });
 
-// DEPLOYMENT --------------
-__dirname = path.resolve();
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running..");
-  });
-}
-// DEPLOYMENT --------------
+// !DEPLOYMENT --------------
+// __dirname = path.resolve();
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "/client/build")));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   });
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running..");
+//   });
+// }
+// !DEPLOYMENT --------------
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
