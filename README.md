@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Angeltheesoto is my web portfolio showcasing my skills, education and more as a software developer. This is a single page application.
+Angeltheesoto is my web portfolio showcasing my skills, education and more as a software developer. This is a client-side rendering, single page application.
 Check out the link below!
 
 ![angeltheesoto](https://i.postimg.cc/mZKHs7xL/angeltheesoto.png)
@@ -48,9 +48,12 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 <!-- !--WORKING ON--!:
 
     !GENERAL FIXES
+    - Change p font-style to a serif style
     - shorten code in technologies.tsx and skills.tsx, create an array and loop through it.
+    - How to make a underconstruction page for website.
+    - work on error handling and loaders.
 
     !MOBILE FIXES
     - Projects videos are not showing on mobile view. When you tap or hold it shows it sometimes but it usually is not showing the video.
-    ?ANS:
+    ?ANS: Maybe create an if statement for if the data is being passed else create a loader.
 -->
