@@ -29,7 +29,7 @@ app.use("/api", blogRoute);
 //   res.json("API DATA HERE");
 // });
 
-// !DEPLOYMENT --------------
+// !DEPLOYMENT | DEVELOPMENT --------------
 // __dirname = path.resolve();
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, "/client/build")));
@@ -41,6 +41,6 @@ app.use("/api", blogRoute);
 //     res.send("API is running..");
 //   });
 // }
-// !DEPLOYMENT --------------
+// !DEPLOYMENT | DEVELOPMENT --------------
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
