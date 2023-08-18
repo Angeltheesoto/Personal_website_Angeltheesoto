@@ -13,9 +13,37 @@ const Header: React.FC = () => {
   const path = location.pathname;
 
   let [mouseLocation, setMouseLocation]: Object | any = useState({});
-  const handleMouseMove = (e: Event) => {
+  // const handleMouseMove = (e: MouseEvent) => {
+  //   // !move eyes
+  //   const eye = document.querySelector(".eye")!;
+  //   const eyeRect = eye.getBoundingClientRect();
+  //   const yPos = e.clientY;
+  //   const xPos = e.clientX;
+  //   const deltaX = eyeRect.x + eyeRect.width / 2 - xPos;
+  //   const deltaY = eyeRect.y + eyeRect.height / 2 - yPos;
+  //   const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+  //   setMouseLocation({ x: xPos, y: yPos, deg: angle });
+
+  //   // !tilt the face
+  //   const container = document.querySelector(".eyesHead");
+  //   const containerRect = container?.getBoundingClientRect();
+  //   const mouseXRelativeToContainer =
+  //     xPos - containerRect.x - containerRect.width / 2;
+  //   const mouseYRelativeToContainer =
+  //     yPos - containerRect.y - containerRect.height / 2;
+  //   const containerXAngle =
+  //     50 * (mouseXRelativeToContainer / window.innerWidth);
+  //   const containerYAngle =
+  //     -50 * (mouseYRelativeToContainer / window.innerWidth);
+
+  //   container.style.setProperty("--eyeAngle", angle.toFixed(2) + "deg");
+  //   container.style.setProperty("--xAngle", containerXAngle.toFixed(2) + "deg");
+  //   container.style.setProperty("--yAngle", containerYAngle.toFixed(2) + "deg");
+  // };
+
+  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
     // !move eyes
-    const eye = document.querySelector(".eye");
+    const eye = document.querySelector(".eye")!;
     const eyeRect = eye.getBoundingClientRect();
     const yPos = e.clientY;
     const xPos = e.clientX;
@@ -25,8 +53,10 @@ const Header: React.FC = () => {
     setMouseLocation({ x: xPos, y: yPos, deg: angle });
 
     // !tilt the face
-    const container = document.querySelector(".eyesHead");
-    const containerRect = container.getBoundingClientRect();
+    const container = document.querySelector(".eyesHead") as HTMLDivElement; // Cast to HTMLDivElement
+    const containerRect = container?.getBoundingClientRect();
+    if (!container || !containerRect) return;
+
     const mouseXRelativeToContainer =
       xPos - containerRect.x - containerRect.width / 2;
     const mouseYRelativeToContainer =
