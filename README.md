@@ -20,7 +20,6 @@ Website URL: [https://www.angeltheesoto.com/](https://www.angeltheesoto.com/)
 - Git | Github
 - React-Bootstrap
 - Adobe XD
-
 <!-- !Npm packages
  ?Shorthand react component boilerplate [rafce]
 ?Backend --
